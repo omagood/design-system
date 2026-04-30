@@ -1,0 +1,105 @@
+{
+  "grid-margin": {
+    "$type": "number",
+    "$value": 24,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:105:1009",
+      "com.figma.scopes": [
+        "GAP"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
+  "grid-gutter": {
+    "$type": "number",
+    "$value": 20,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:105:1010",
+      "com.figma.scopes": [
+        "GAP"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
+  "grid-columns": {
+    "$type": "number",
+    "$value": 8,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:105:1011",
+      "com.figma.scopes": [
+        "GAP"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
+  "workspace-width": {
+    "$type": "number",
+    "$value": 768,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:143:16069",
+      "com.figma.scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
+  "workspace-min-width": {
+    "$type": "number",
+    "$value": 640,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:144:16147",
+      "com.figma.scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
+  "workspace-max-width": {
+    "$type": "number",
+    "$value": 1024,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:144:16148",
+      "com.figma.scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
+  "canvas-max-width": {
+    "$type": "number",
+    "$value": 1080,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:144:16150",
+      "com.figma.scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
+  "canvas-min-width": {
+    "$type": "number",
+    "$value": 696,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:144:16151",
+      "com.figma.scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
+  "show-sidebar": {
+    "$type": "number",
+    "$value": 1,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:144:16152",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.type": "boolean",
+      "com.figma.isOverride": true
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Tablet"
+  }
+}

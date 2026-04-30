@@ -1,0 +1,43 @@
+{
+  "name": "@your-username/design-system",
+  "version": "0.1.0",
+  "description": "Token-driven design system built from Figma source of truth",
+  "type": "module",
+  "scripts": {
+    "tokens:build": "node tokens/style-dictionary.config.js",
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.4",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "style-dictionary": "^4.4.0",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^5.7.3",
+    "vite": "^5.4.19",
+    "vitest": "^2.1.9"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./tokens/css": "./tokens/transformed/css/variables.css"
+  },
+  "files": [
+    "dist",
+    "tokens/transformed"
+  ]
+}
