@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* ── Typeface ─────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('./fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('./fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ── Design system token variables ───────────────────────────────────────── */
+@import "../tokens/transformed/css/variables.css";
+@import "../tokens/transformed/css/variables-dark.css";
+
+/* ── Base styles ─────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--content-primary);
+    background-color: var(--background-screen);
+  }
+}
