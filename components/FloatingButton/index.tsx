@@ -6,21 +6,29 @@ import { cn } from '@/lib/utils'
 // All values reference CSS variables from the token system — no hardcoded values.
 // Token source: tokens/transformed/css/variables.css
 //
-// Shadow tokens used:
-//   elevation-small (default/disabled):
-//     0 1px 3px var(--shadow-shadow-soft), 0 3px 6px var(--shadow-shadow-strong)
-//   elevation-medium (hover/active):
+// Shadow tokens (confirmed from Figma):
+//   elevation-medium (default / hover / pressed):
 //     0 1px 8px var(--shadow-shadow-soft), 0 4px 10px var(--shadow-shadow-strong)
+//   elevation-small (disabled only):
+//     0 1px 3px var(--shadow-shadow-soft), 0 3px 6px var(--shadow-shadow-strong)
+//
+// Multi-layer box-shadow with CSS vars requires [box-shadow:...] arbitrary property
+// syntax — Tailwind's shadow-[...] utility cannot parse comma-separated layers.
+//
+// Hover/pressed overlay: Figma uses rgba(255,255,255,0.20) and rgba(255,255,255,0.32)
+// layered on top via backgroundImage. Applied via inline style in the component.
 //
 // ⚠ Token gaps flagged to Design System Lead:
 //   1. --typography-weight-label resolves to "600px" — using font-semibold workaround
-//   2. Hover overlay uses opacity reduction (hover:opacity-90) to approximate
-//      --state-hovered-primary (rgba white overlay), same as Button
+
+// CSS var references for the two-layer shadows
+const SHADOW_MEDIUM =
+  '0px 1px var(--shadow-medium-shadow-medium-blur-1) 0px var(--shadow-shadow-soft),' +
+  '0px var(--shadow-medium-shadow-y-l2-2) var(--shadow-medium-shadow-medium-blur-2) 0px var(--shadow-shadow-strong)'
 
 const SHADOW_SMALL =
-  '0px_1px_3px_var(--shadow-shadow-soft),0px_3px_6px_var(--shadow-shadow-strong)'
-const SHADOW_MEDIUM =
-  '0px_1px_8px_var(--shadow-shadow-soft),0px_4px_10px_var(--shadow-shadow-strong)'
+  '0px var(--shadow-small-shadow-small-y-1) var(--shadow-small-shadow-small-blur-1) 0px var(--shadow-shadow-soft),' +
+  '0px var(--shadow-small-shadow-small-y-2) var(--shadow-small-shadow-small-blur-2) 0px var(--shadow-shadow-strong)'
 
 const floatingButtonVariants = cva(
   [
@@ -34,12 +42,9 @@ const floatingButtonVariants = cva(
     // Typography
     'font-semibold',
     // Transition — colours + shadow
-    'transition-[colors,box-shadow,opacity] duration-150',
-    // Shadow — elevation-small at rest
-    `shadow-[${SHADOW_SMALL}]`,
-    // Hover / active
-    `hover:opacity-90 hover:shadow-[${SHADOW_MEDIUM}]`,
-    `active:opacity-80 active:shadow-[${SHADOW_MEDIUM}]`,
+    'transition-[box-shadow,opacity] duration-150',
+    // Shadow — elevation-medium at rest (default/hover/pressed per Figma)
+    `[box-shadow:${SHADOW_MEDIUM}]`,
     // Focus ring
     'focus-visible:outline-none',
     'focus-visible:ring-2 focus-visible:ring-[var(--state-focus-ring)]',
@@ -82,13 +87,13 @@ const floatingButtonVariants = cva(
         true: [],
       },
 
-      // Applied when disabled OR isLoading
+      // Applied when disabled OR isLoading — drops to elevation-small per Figma
       isDisabled: {
         true: [
           '!bg-[var(--action-disabled)]',
           '!text-[var(--content-disabled)]',
           '!opacity-100',
-          `!shadow-[${SHADOW_SMALL}]`,
+          `![box-shadow:${SHADOW_SMALL}]`,
         ],
       },
     },
@@ -177,6 +182,10 @@ export const FloatingButton = forwardRef<HTMLButtonElement, FloatingButtonProps>
             iconOnly: iconOnly || undefined,
             isDisabled: isDisabled || undefined,
           }),
+          // Hover/pressed overlay: Figma uses a white tint (20% hover, 32% pressed)
+          // layered via background-image on top of --action-primary.
+          // We apply it with group + CSS pseudo-classes on a sibling overlay layer.
+          'group relative overflow-hidden',
           className
         )}
         disabled={isDisabled}
@@ -216,6 +225,19 @@ export const FloatingButton = forwardRef<HTMLButtonElement, FloatingButtonProps>
 
         {/* Label — hidden when icon-only, always visible otherwise (even when loading) */}
         {!iconOnly && children}
+
+        {/* Hover / pressed white overlay — matches Figma's rgba white tint layers */}
+        {!isDisabled && (
+          <span
+            aria-hidden="true"
+            className={[
+              'absolute inset-0 rounded-[inherit] pointer-events-none',
+              'opacity-0',
+              'group-hover:opacity-100 group-hover:bg-white/20',
+              'group-active:bg-white/30',
+            ].join(' ')}
+          />
+        )}
       </button>
     )
   }
