@@ -13,8 +13,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@testing-library/react": "^16.3.2",
+    "@types/jest-axe": "^3.5.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "jest-axe": "^10.0.0",
+    "jsdom": "^29.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "tailwind-merge": "^3.5.0"
