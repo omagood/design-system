@@ -45,6 +45,7 @@
  *   elevation-small  → disabled state (lower perceived elevation)
  */
 @layer utilities {
+  /* ── Elevation shadows (FloatingButton) ───────────────────────────────── */
   .shadow-elevation-medium {
     box-shadow:
       0px var(--shadow-medium-shadow-medium-y-1)  var(--shadow-medium-shadow-medium-blur-1) 0px var(--shadow-shadow-soft),
@@ -55,5 +56,40 @@
     box-shadow:
       0px var(--shadow-small-shadow-small-y-1)   var(--shadow-small-shadow-small-blur-1) 0px var(--shadow-shadow-soft),
       0px var(--shadow-small-shadow-small-y-2)   var(--shadow-small-shadow-small-blur-2) 0px var(--shadow-shadow-strong);
+  }
+
+  /* ── TextField border states ──────────────────────────────────────────── */
+  /*
+   * Tailwind v4's static scanner doesn't always detect `border-2` in
+   * conditional ternary strings — same limitation as the shadow template
+   * literals. Define border variants as named utilities here.
+   *
+   * 1px default / filled / disabled  →  thin visible border
+   * 2px error / focus                →  thicker border (Figma spec)
+   */
+  .field-border-default {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-outline);
+  }
+  .field-border-filled {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #b4bac8;
+  }
+  .field-border-disabled {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-outline);
+  }
+  .field-border-error {
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--sentiment-negative-border);
+  }
+  .field-border-focus {
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--action-primary);
   }
 }
