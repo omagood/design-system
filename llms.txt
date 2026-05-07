@@ -1,0 +1,119 @@
+# Design System
+
+A token-driven component library built from a Figma source of truth.
+Follows shadcn/ui conventions. Black/white base with semantic color roles.
+
+## Tech Stack
+
+- React 18
+- TypeScript 5
+- Tailwind CSS 4 (utility classes driven by CSS variables)
+- class-variance-authority (CVA) for component variants
+- Style Dictionary 4 (Figma JSON → CSS variables)
+- Storybook 8 (visual documentation)
+- Vite 5 (build tool)
+
+## Structure
+
+```
+src/
+  components/ui/   ← All components live here (shadcn-style, lowercase filenames)
+    button.tsx
+  stories/         ← Storybook stories (one per component)
+    button.stories.tsx
+  lib/
+    utils.ts       ← cn() helper (clsx + tailwind-merge)
+  global.css       ← Tailwind entry + @import of token CSS variables
+
+tokens/
+  figma/           ← Source of truth exported from Figma (never edit manually)
+  transformed/
+    css/
+      variables.css       ← Light-mode CSS custom properties (:root)
+      variables-dark.css  ← Dark-mode overrides ([data-theme="dark"])
+    ts/
+      tokens.ts           ← TypeScript token constants
+  style-dictionary.config.js  ← Build config
+```
+
+## Components
+
+### Button — `src/components/ui/button.tsx`
+
+```tsx
+import { Button } from '@/components/ui/button'
+
+// Variants: primary | secondary | ghost | negative
+// Sizes:    lg | md | sm | xs
+
+<Button variant="primary" size="md">Save changes</Button>
+<Button variant="secondary">Cancel</Button>
+<Button variant="ghost">Learn more</Button>
+<Button variant="negative">Delete account</Button>
+
+// States
+<Button isLoading>Saving…</Button>
+<Button disabled>Unavailable</Button>
+
+// Icons
+<Button leftIcon={<PlusIcon />}>Add item</Button>
+<Button rightIcon={<ArrowRightIcon />}>Continue</Button>
+```
+
+Props: `variant`, `size`, `isLoading`, `leftIcon`, `rightIcon`, `disabled`, `className`, `data-testid`, all native `<button>` attributes. Supports `ref` forwarding.
+
+## Design Tokens
+
+All color, spacing, radius, and typography values are CSS custom properties.
+They are defined in `tokens/transformed/css/variables.css` and imported via `src/global.css`.
+
+**Critical:** Any file that uses components from this library must import the CSS variables.
+In a Vite/Next.js project: `import '@your-username/design-system/tokens/css'`
+In a standalone HTML file: copy the contents of `tokens/transformed/css/variables.css` into a `<style>` tag.
+
+Key token groups:
+- `--action-primary` / `--action-primary-inverse` → primary button fill / text
+- `--action-distructive` → negative/destructive button fill
+- `--content-primary` / `--content-secondary` → text colors
+- `--surface-primary` / `--background-screen` → backgrounds
+- `--border-outline` / `--border-divider` → borders
+- `--state-focus-ring` (#068BEE) → focus ring, always visible
+- `--corner-radius-corner-medium` (8px) → default border radius
+- `--spacing-space-*` → spacing scale (2px → 64px)
+
+Never hardcode color, spacing, radius, or font values. Always use CSS variables.
+
+## Using in Another Project
+
+```bash
+npm install github:omagood/design-system
+```
+
+```tsx
+// 1. Import the token CSS (required — without this, components render unstyled)
+import '@your-username/design-system/tokens/css'
+
+// 2. Import components
+import { Button } from '@your-username/design-system'
+
+export default function App() {
+  return <Button variant="primary">Hello</Button>
+}
+```
+
+## Updating Tokens from Figma
+
+1. Export tokens from Figma (Tokens Studio plugin → Export → W3C JSON)
+2. Replace files in `tokens/figma/`
+3. Run `npm run tokens:build`
+4. Commit the updated `tokens/transformed/` files
+
+## Running Locally
+
+```bash
+npm install
+npm run storybook   # Component browser at http://localhost:6006
+npm run dev         # Vite dev server
+npm run typecheck   # TypeScript check
+npm run tokens:build  # Rebuild CSS variables from Figma JSON
+```

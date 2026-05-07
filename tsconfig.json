@@ -11,11 +11,10 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "types": ["vitest/globals", "@testing-library/jest-dom"],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "components"],
-  "exclude": ["**/*.stories.tsx", "node_modules"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
