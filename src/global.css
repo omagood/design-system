@@ -33,3 +33,27 @@
     background-color: var(--background-screen);
   }
 }
+
+/* ── Shadow composition utilities ────────────────────────────────────────── */
+/*
+ * Named shadow classes so Tailwind generates them statically.
+ * Using arbitrary [box-shadow:...] with template literals is NOT scanned
+ * by Tailwind's content scanner and produces no CSS output.
+ *
+ * Values match Figma exactly:
+ *   elevation-medium → default / hover / pressed states
+ *   elevation-small  → disabled state (lower perceived elevation)
+ */
+@layer utilities {
+  .shadow-elevation-medium {
+    box-shadow:
+      0px var(--shadow-medium-shadow-medium-y-1)  var(--shadow-medium-shadow-medium-blur-1) 0px var(--shadow-shadow-soft),
+      0px var(--shadow-medium-shadow-y-l2-2)       var(--shadow-medium-shadow-medium-blur-2) 0px var(--shadow-shadow-strong);
+  }
+
+  .shadow-elevation-small {
+    box-shadow:
+      0px var(--shadow-small-shadow-small-y-1)   var(--shadow-small-shadow-small-blur-1) 0px var(--shadow-shadow-soft),
+      0px var(--shadow-small-shadow-small-y-2)   var(--shadow-small-shadow-small-blur-2) 0px var(--shadow-shadow-strong);
+  }
+}

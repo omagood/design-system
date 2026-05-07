@@ -2,13 +2,9 @@ import { forwardRef } from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
-const SHADOW_MEDIUM =
-  '0px 1px var(--shadow-medium-shadow-medium-blur-1) 0px var(--shadow-shadow-soft),' +
-  '0px var(--shadow-medium-shadow-y-l2-2) var(--shadow-medium-shadow-medium-blur-2) 0px var(--shadow-shadow-strong)'
-
-const SHADOW_SMALL =
-  '0px var(--shadow-small-shadow-small-y-1) var(--shadow-small-shadow-small-blur-1) 0px var(--shadow-shadow-soft),' +
-  '0px var(--shadow-small-shadow-small-y-2) var(--shadow-small-shadow-small-blur-2) 0px var(--shadow-shadow-strong)'
+// Shadow utilities are defined in global.css as .shadow-elevation-medium / .shadow-elevation-small.
+// Do NOT use template-literal [box-shadow:${...}] — Tailwind's scanner won't see dynamic
+// class strings and will generate no CSS for them.
 
 const floatingButtonVariants = cva(
   [
@@ -17,8 +13,9 @@ const floatingButtonVariants = cva(
     'rounded-[var(--corner-radius-corner-full)]',
     'bg-[var(--action-primary)] text-[var(--action-primary-inverse)]',
     'font-semibold',
-    'transition-[box-shadow,opacity] duration-150',
-    `[box-shadow:${SHADOW_MEDIUM}]`,
+    // elevation-medium at rest — named utility so Tailwind generates the CSS
+    'shadow-elevation-medium',
+    'transition-shadow duration-150',
     'focus-visible:outline-none',
     'focus-visible:ring-2 focus-visible:ring-[var(--state-focus-ring)]',
     'focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--state-focus-offset)]',
@@ -44,19 +41,23 @@ const floatingButtonVariants = cva(
           '[&_svg]:size-5',
         ],
       },
+
       iconOnly: {
         false: [],
         true: [],
       },
+
+      // Disabled drops to elevation-small per Figma spec
       isDisabled: {
         true: [
           '!bg-[var(--action-disabled)]',
           '!text-[var(--content-disabled)]',
           '!opacity-100',
-          `![box-shadow:${SHADOW_SMALL}]`,
+          '!shadow-elevation-small',
         ],
       },
     },
+
     compoundVariants: [
       {
         size: 'lg',
@@ -69,6 +70,7 @@ const floatingButtonVariants = cva(
         className: ['!p-[var(--inset-component-inset-component-md-y)]', 'aspect-square'],
       },
     ],
+
     defaultVariants: { size: 'lg', iconOnly: false },
   }
 )
@@ -125,6 +127,8 @@ const FloatingButton = forwardRef<HTMLButtonElement, FloatingButtonProps>(
             iconOnly: iconOnly || undefined,
             isDisabled: isDisabled || undefined,
           }),
+          // overflow-hidden clips the white hover overlay to the pill shape,
+          // but does NOT clip box-shadow (box-shadow is rendered outside the border box)
           'group relative overflow-hidden',
           className
         )}
@@ -151,10 +155,11 @@ const FloatingButton = forwardRef<HTMLButtonElement, FloatingButtonProps>(
 
         {!iconOnly && children}
 
+        {/* Hover / pressed white overlay — matches Figma's rgba white tint */}
         {!isDisabled && (
           <span
             aria-hidden="true"
-            className="absolute inset-0 rounded-[inherit] pointer-events-none opacity-0 group-hover:opacity-100 group-hover:bg-white/20 group-active:bg-white/30"
+            className="absolute inset-0 rounded-[inherit] pointer-events-none opacity-0 group-hover:bg-white/20 group-hover:opacity-100 group-active:bg-white/30"
           />
         )}
       </button>
