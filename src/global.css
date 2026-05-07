@@ -60,36 +60,27 @@
 
   /* ── TextField border states ──────────────────────────────────────────── */
   /*
-   * Tailwind v4's static scanner doesn't always detect `border-2` in
-   * conditional ternary strings — same limitation as the shadow template
-   * literals. Define border variants as named utilities here.
+   * Borders painted as inset box-shadows so 1px → 2px transitions never
+   * shift the layout (helper text stays put). box-shadow: inset respects
+   * border-radius automatically, so no CSS border is needed.
    *
-   * 1px default / filled / disabled  →  thin visible border
-   * 2px error / focus                →  thicker border (Figma spec)
+   * Stroke widths use Figma stroke tokens:
+   *   --stroke-stroke-thin   = 1px   (default / filled / disabled)
+   *   --stroke-stroke-bold   = 2px   (focus / error)
    */
   .field-border-default {
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--border-outline);
+    box-shadow: inset 0 0 0 var(--stroke-stroke-thin) var(--border-outline);
   }
   .field-border-filled {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #b4bac8;
+    box-shadow: inset 0 0 0 var(--stroke-stroke-thin) #b4bac8;
   }
   .field-border-disabled {
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--border-outline);
+    box-shadow: inset 0 0 0 var(--stroke-stroke-thin) var(--border-outline);
   }
   .field-border-error {
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--sentiment-negative-border);
+    box-shadow: inset 0 0 0 var(--stroke-stroke-bold) var(--sentiment-negative-border);
   }
   .field-border-focus {
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--action-primary);
+    box-shadow: inset 0 0 0 var(--stroke-stroke-bold) var(--action-primary);
   }
 }
