@@ -105,29 +105,34 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
       ? 'bg-[var(--surface-disabled)]'
       : 'bg-[var(--surface-tertiary)]'
 
-    // ── Label background strip (cuts through the border when floated) ───────
+    // ── Label background strip colour (cuts through border when floated) ────
     const labelBgClass = disabled
       ? 'bg-[var(--surface-disabled)]'
       : 'bg-[var(--surface-tertiary)]'
 
-    // ── Vertical padding shrinks when the label is floating ──────────────────
-    // (label is absolutely positioned above the box, so the content area height stays stable)
-    const pyClass = labelFloated
-      ? 'py-[var(--inset-component-inset-component-sm-y)]'
-      : 'py-[var(--inset-component-inset-component-md-y)]'
+    // ── Floating label position ──────────────────────────────────────────────
+    // Error floated position is 1px higher and 1px further left (Figma spec)
+    const labelFloatedPos = error
+      ? 'top-[-10px] left-[14px]'
+      : 'top-[-9px] left-[15px]'
 
     return (
       <div className={cn('flex flex-col gap-[4px] w-full', className)}>
         {/* ── Input box ───────────────────────────────────────────────────── */}
+        {/*
+         * IMPORTANT: padding is FIXED at md-y (12px) for all states.
+         * The label moves via absolute positioning only — the box height
+         * never changes. (Figma: Large size always uses inset-component-md-y.)
+         */}
         <div
           className={cn(
             'group relative flex items-center w-full',
             'rounded-[var(--corner-radius-corner-medium)]',
             'px-[var(--inset-component-inset-component-md-x)]',
-            pyClass,
+            'py-[var(--inset-component-inset-component-md-y)]',
             bgClass,
             borderClass,
-            'transition-[padding,border-width,border-color] duration-150',
+            'transition-[border-width,border-color] duration-150',
             disabled && 'cursor-not-allowed',
           )}
         >
@@ -146,13 +151,14 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
               'absolute pointer-events-none select-none',
               'transition-all duration-150',
               labelFloated
-                ? 'top-[-9px] left-[15px]'
+                ? labelFloatedPos
                 : 'top-1/2 -translate-y-1/2 left-[var(--inset-component-inset-component-md-x)]',
             )}
           >
             {/*
-             * Background strip — visually "cuts" the border so the floating
-             * label text sits on top of the box edge cleanly.
+             * Background strip — visually breaks the border so the floating
+             * label sits cleanly on top of the box edge.
+             * Transparent when label is in-field (empty/hover state).
              */}
             <span
               aria-hidden="true"
@@ -227,7 +233,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           >
             <AlertCircleIcon
               className={cn(
-                'shrink-0 size-4',
+                'shrink-0',
                 disabled
                   ? 'text-[color:var(--content-disabled)]'
                   : error
