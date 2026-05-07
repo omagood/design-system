@@ -12,13 +12,14 @@ const floatingButtonVariants = cva(
     'select-none whitespace-nowrap',
     'rounded-[var(--corner-radius-corner-full)]',
     'bg-[var(--action-primary)] text-[var(--action-primary-inverse)]',
-    'font-semibold',
+    '[font-family:var(--typography-font-family)]',
+    '[font-weight:var(--typography-weight-label)]',
     // elevation-medium at rest — named utility so Tailwind generates the CSS
     'shadow-elevation-medium',
     'transition-shadow duration-150',
     'focus-visible:outline-none',
-    'focus-visible:ring-2 focus-visible:ring-[var(--state-focus-ring)]',
-    'focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--state-focus-offset)]',
+    'focus-visible:ring-[length:var(--focus-focus-ring-width)] focus-visible:ring-[var(--state-focus-ring)]',
+    'focus-visible:ring-offset-[var(--focus-focus-ring-offset)]',
     'disabled:pointer-events-none disabled:cursor-not-allowed',
   ],
   {
@@ -159,7 +160,7 @@ const FloatingButton = forwardRef<HTMLButtonElement, FloatingButtonProps>(
         {!isDisabled && (
           <span
             aria-hidden="true"
-            className="absolute inset-0 rounded-[inherit] pointer-events-none opacity-0 group-hover:bg-white/20 group-hover:opacity-100 group-active:bg-white/30"
+            className="absolute inset-0 rounded-[inherit] pointer-events-none bg-[var(--state-hover)] opacity-0 group-hover:opacity-100 group-active:bg-[var(--state-pressed)] transition-opacity duration-150"
           />
         )}
       </button>

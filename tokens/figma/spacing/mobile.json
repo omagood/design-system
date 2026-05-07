@@ -3,7 +3,7 @@
     "component": {
       "inset-component-sm-x": {
         "$type": "number",
-        "$value": 12,
+        "$value": 8,
         "$description": "Horizontal (left/right) padding of small interactive controls — compact buttons, small inputs in dense tables. Always larger than inset-component-sm-y for optical balance. | ai-group:density | ai-impact:medium | ai-constraint:must be > inset-component-sm-y",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7878",
@@ -11,17 +11,16 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
-            "targetVariableName": "Spacing/space-12px",
+            "targetVariableId": "VariableID:e5d12c0302c3b1021049b62ee9dab3e12e555992/-1:-1",
+            "targetVariableName": "spacing/space-8px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-component-sm-y": {
         "$type": "number",
-        "$value": 8,
+        "$value": 4,
         "$description": "Vertical (top/bottom) padding of small interactive controls. Ratio ~0.67 of inset-component-sm-x. Directly controls tap target height. | ai-group:density | ai-impact:medium | ai-constraint:must be < inset-component-sm-x",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7879",
@@ -29,17 +28,16 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:e5d12c0302c3b1021049b62ee9dab3e12e555992/-1:-1",
-            "targetVariableName": "Spacing/space-8px",
+            "targetVariableId": "VariableID:401923d72399a1435225b5d540fb593cf6ddea6e/-1:-1",
+            "targetVariableName": "spacing/space-4px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-component-md-x": {
         "$type": "number",
-        "$value": 16,
+        "$value": 12,
         "$description": "Horizontal padding of default/medium interactive controls — standard buttons and inputs. Most-used inset token. Increasing makes controls feel more generous and spacious. | ai-group:density | ai-impact:high | ai-constraint:must be > inset-component-md-y",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7880",
@@ -47,17 +45,16 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
-            "targetVariableName": "Spacing/space-16px",
+            "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
+            "targetVariableName": "spacing/space-12px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-component-md-y": {
         "$type": "number",
-        "$value": 12,
+        "$value": 8,
         "$description": "Vertical padding of medium interactive controls. Directly determines tap target height. Ratio ~0.75 of inset-component-md-x. Never set equal to or greater than x. | ai-group:density | ai-impact:high | ai-constraint:must be < inset-component-md-x, ratio ~0.75",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7881",
@@ -65,17 +62,16 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
-            "targetVariableName": "Spacing/space-12px",
+            "targetVariableId": "VariableID:e5d12c0302c3b1021049b62ee9dab3e12e555992/-1:-1",
+            "targetVariableName": "spacing/space-8px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-component-lg-x": {
         "$type": "number",
-        "$value": 24,
+        "$value": 16,
         "$description": "Horizontal padding of large interactive controls — prominent CTAs, hero inputs, full-width actions. | ai-group:density | ai-impact:medium | ai-constraint:must be > inset-component-lg-y",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7882",
@@ -83,17 +79,16 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:c8f196ae6402c0b330b4af0eff6b61fe8e7cb3e7/-1:-1",
-            "targetVariableName": "Spacing/space-24px",
+            "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
+            "targetVariableName": "spacing/space-16px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-component-lg-y": {
         "$type": "number",
-        "$value": 16,
+        "$value": 12,
         "$description": "Vertical padding of large interactive controls. Ratio ~0.67 of inset-component-lg-x. | ai-group:density | ai-impact:medium | ai-constraint:must be < inset-component-lg-x",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7883",
@@ -101,12 +96,11 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
-            "targetVariableName": "Spacing/space-16px",
+            "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
+            "targetVariableName": "spacing/space-12px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
@@ -122,11 +116,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:e5d12c0302c3b1021049b62ee9dab3e12e555992/-1:-1",
-            "targetVariableName": "Spacing/space-8px",
+            "targetVariableName": "spacing/space-8px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-inline-sm-y": {
@@ -140,11 +133,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:401923d72399a1435225b5d540fb593cf6ddea6e/-1:-1",
-            "targetVariableName": "Spacing/space-4px",
+            "targetVariableName": "spacing/space-4px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-inline-md-x": {
@@ -158,11 +150,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
-            "targetVariableName": "Spacing/space-12px",
+            "targetVariableName": "spacing/space-12px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-inline-md-y": {
@@ -176,11 +167,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:401923d72399a1435225b5d540fb593cf6ddea6e/-1:-1",
-            "targetVariableName": "Spacing/space-4px",
+            "targetVariableName": "spacing/space-4px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-inline-lg-x": {
@@ -194,11 +184,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
-            "targetVariableName": "Spacing/space-16px",
+            "targetVariableName": "spacing/space-16px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-inline-lg-y": {
@@ -212,18 +201,17 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:e5d12c0302c3b1021049b62ee9dab3e12e555992/-1:-1",
-            "targetVariableName": "Spacing/space-8px",
+            "targetVariableName": "spacing/space-8px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
     "container": {
       "inset-container-sm": {
         "$type": "number",
-        "$value": 12,
+        "$value": 8,
         "$description": "Compact container padding — dense lists, compact cards, tight info boxes. Equal on all sides — do not split x/y for containers. | ai-group:density | ai-impact:medium",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7890",
@@ -231,17 +219,16 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
-            "targetVariableName": "Spacing/space-12px",
+            "targetVariableId": "VariableID:e5d12c0302c3b1021049b62ee9dab3e12e555992/-1:-1",
+            "targetVariableName": "spacing/space-8px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-container-md": {
         "$type": "number",
-        "$value": 16,
+        "$value": 12,
         "$description": "Default card and panel padding. The most common container inset. Equal on all sides. | ai-group:density | ai-impact:high",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7891",
@@ -249,17 +236,16 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
-            "targetVariableName": "Spacing/space-16px",
+            "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
+            "targetVariableName": "spacing/space-12px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-container-lg": {
         "$type": "number",
-        "$value": 24,
+        "$value": 16,
         "$description": "Comfortable padding for modals, bottom sheets, prominent panels. Equal on all sides. | ai-group:density | ai-impact:high",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7892",
@@ -267,17 +253,16 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:c8f196ae6402c0b330b4af0eff6b61fe8e7cb3e7/-1:-1",
-            "targetVariableName": "Spacing/space-24px",
+            "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
+            "targetVariableName": "spacing/space-16px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-container-xl": {
         "$type": "number",
-        "$value": 32,
+        "$value": 24,
         "$description": "Generous padding for hero cards, onboarding panels, full-page sections. Equal on all sides. | ai-group:density | ai-impact:medium",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7893",
@@ -285,19 +270,18 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:49a5556e1a7af55e2f40a2581110b1ab09e00b74/-1:-1",
-            "targetVariableName": "Spacing/space-32px",
+            "targetVariableId": "VariableID:c8f196ae6402c0b330b4af0eff6b61fe8e7cb3e7/-1:-1",
+            "targetVariableName": "spacing/space-24px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
     "section": {
       "inset-section-sm": {
         "$type": "number",
-        "$value": 24,
+        "$value": 16,
         "$description": "Compact page section padding — mobile default and dense content pages. Controls macro breathing room of the full page layout. | ai-group:density | ai-impact:high",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7894",
@@ -305,17 +289,16 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:c8f196ae6402c0b330b4af0eff6b61fe8e7cb3e7/-1:-1",
-            "targetVariableName": "Spacing/space-24px",
+            "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
+            "targetVariableName": "spacing/space-16px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-section-md": {
         "$type": "number",
-        "$value": 48,
+        "$value": 24,
         "$description": "Standard page section padding — tablet and desktop default. Main lever for overall page airiness. Increasing alone makes the page feel editorial and open. | ai-group:density | ai-impact:high",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7895",
@@ -323,17 +306,16 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:ffac3990146dc9edd0101dd949fc613b58d327bd/-1:-1",
-            "targetVariableName": "Spacing/space-48px",
+            "targetVariableId": "VariableID:c8f196ae6402c0b330b4af0eff6b61fe8e7cb3e7/-1:-1",
+            "targetVariableName": "spacing/space-24px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "inset-section-lg": {
         "$type": "number",
-        "$value": 0,
+        "$value": 32,
         "$description": "Spacious page section padding — hero sections, feature showcases, marketing pages. | ai-group:density | ai-impact:high",
         "$extensions": {
           "com.figma.variableId": "VariableID:300:7896",
@@ -341,12 +323,11 @@
             "GAP"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:daaf86a119d19739a797c71f7b4f6e45bb770856/-1:-1",
-            "targetVariableName": "Spacing/space-80px",
+            "targetVariableId": "VariableID:49a5556e1a7af55e2f40a2581110b1ab09e00b74/-1:-1",
+            "targetVariableName": "spacing/space-32px",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     }
@@ -363,11 +344,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:e5d12c0302c3b1021049b62ee9dab3e12e555992/-1:-1",
-          "targetVariableName": "Spacing/space-8px",
+          "targetVariableName": "spacing/space-8px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-items-default": {
@@ -381,16 +361,15 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
-          "targetVariableName": "Spacing/space-12px",
+          "targetVariableName": "spacing/space-12px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-items-comfortable": {
       "$type": "number",
-      "$value": 16,
+      "$value": 12,
       "$description": "Gap for grid items and navigation — card grid cells, nav rail items. Larger than default to give breathing room between cards. | ai-group:density | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:300:7901",
@@ -398,12 +377,11 @@
           "GAP"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
-          "targetVariableName": "Spacing/space-16px",
+          "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
+          "targetVariableName": "spacing/space-12px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-stack-tight": {
@@ -417,16 +395,15 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:e5d12c0302c3b1021049b62ee9dab3e12e555992/-1:-1",
-          "targetVariableName": "Spacing/space-8px",
+          "targetVariableName": "spacing/space-8px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-stack-default": {
       "$type": "number",
-      "$value": 16,
+      "$value": 12,
       "$description": "Vertical gap between distinct but related content groups — between a form group and the next, between a heading and body text. The primary lever for vertical page rhythm. | ai-group:density | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:300:7903",
@@ -434,12 +411,11 @@
           "GAP"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
-          "targetVariableName": "Spacing/space-16px",
+          "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
+          "targetVariableName": "spacing/space-12px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-stack-loose": {
@@ -453,16 +429,15 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:c8f196ae6402c0b330b4af0eff6b61fe8e7cb3e7/-1:-1",
-          "targetVariableName": "Spacing/space-24px",
+          "targetVariableName": "spacing/space-24px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-stack-section": {
       "$type": "number",
-      "$value": 64,
+      "$value": 32,
       "$description": "Vertical gap between major page sections. Largest gap token in the system. Reducing makes the page feel like a continuous scroll; increasing creates distinct visual chapters. | ai-group:density | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:300:7905",
@@ -470,12 +445,11 @@
           "GAP"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:d363c64c6f588635015bd1e75d1c298f88023459/-1:-1",
-          "targetVariableName": "Spacing/space-64px",
+          "targetVariableId": "VariableID:49a5556e1a7af55e2f40a2581110b1ab09e00b74/-1:-1",
+          "targetVariableName": "spacing/space-32px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-inline-tight": {
@@ -489,11 +463,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:e5d12c0302c3b1021049b62ee9dab3e12e555992/-1:-1",
-          "targetVariableName": "Spacing/space-8px",
+          "targetVariableName": "spacing/space-8px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-inline-default": {
@@ -507,11 +480,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
-          "targetVariableName": "Spacing/space-12px",
+          "targetVariableName": "spacing/space-12px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-inline-loose": {
@@ -525,11 +497,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
-          "targetVariableName": "Spacing/space-16px",
+          "targetVariableName": "spacing/space-16px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-related-tight": {
@@ -542,35 +513,33 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:e5d12c0302c3b1021049b62ee9dab3e12e555992/-1:-1",
-          "targetVariableName": "Spacing/space-8px",
+          "targetVariableName": "spacing/space-8px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "gap-related-default": {
       "$type": "number",
-      "$value": 16,
+      "$value": 12,
       "$extensions": {
         "com.figma.variableId": "VariableID:302:7926",
         "com.figma.scopes": [
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
-          "targetVariableName": "Spacing/space-16px",
+          "targetVariableId": "VariableID:821133cbd066f9c05b0f8dd90cbcc68d53679055/-1:-1",
+          "targetVariableName": "spacing/space-12px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     }
   },
   "layout": {
     "layout-page-margin": {
       "$type": "number",
-      "$value": 40,
+      "$value": 16,
       "$description": "Distance from the viewport edge to the content area. Controls how close content sits to the screen edge. Scales up on larger breakpoints — 16px mobile, 24px tablet, 40px desktop. | ai-group:density | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:300:7909",
@@ -578,17 +547,16 @@
           "GAP"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:8c9b5304fa8893571eac2d955f509ce7c4945227/-1:-1",
-          "targetVariableName": "Spacing/space-40px",
+          "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
+          "targetVariableName": "spacing/space-16px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "layout-page-gutter": {
       "$type": "number",
-      "$value": 24,
+      "$value": 16,
       "$description": "Gap between grid columns. Mirrors the grid.gutter value. Scales up on larger breakpoints — 16px mobile, 20px tablet, 24px desktop. | ai-group:density | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:300:7910",
@@ -596,17 +564,16 @@
           "GAP"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:c8f196ae6402c0b330b4af0eff6b61fe8e7cb3e7/-1:-1",
-          "targetVariableName": "Spacing/space-24px",
+          "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
+          "targetVariableName": "spacing/space-16px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "layout-content-gap": {
       "$type": "number",
-      "$value": 32,
+      "$value": 16,
       "$description": "Gap between major content regions — main content area and sidebar. Responsive. | ai-group:density | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:300:7911",
@@ -614,17 +581,16 @@
           "GAP"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:49a5556e1a7af55e2f40a2581110b1ab09e00b74/-1:-1",
-          "targetVariableName": "Spacing/space-32px",
+          "targetVariableId": "VariableID:e7ebbd094cc71b1bb42ac05a18cca43c460862c3/-1:-1",
+          "targetVariableName": "spacing/space-16px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "layout-content-gap-large": {
       "$type": "number",
-      "$value": 64,
+      "$value": 32,
       "$description": "Large content region gap for wide two-column layouts on desktop. | ai-group:density | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:300:7912",
@@ -632,16 +598,15 @@
           "GAP"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:d363c64c6f588635015bd1e75d1c298f88023459/-1:-1",
-          "targetVariableName": "Spacing/space-64px",
+          "targetVariableId": "VariableID:49a5556e1a7af55e2f40a2581110b1ab09e00b74/-1:-1",
+          "targetVariableName": "spacing/space-32px",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     }
   },
   "$extensions": {
-    "com.figma.modeName": "Desktop"
+    "com.figma.modeName": "Mobile"
   }
 }

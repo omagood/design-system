@@ -1,46 +1,4 @@
 {
-  "core": {
-    "white": {
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          1,
-          1
-        ],
-        "alpha": 1,
-        "hex": "#FFFFFF"
-      },
-      "$extensions": {
-        "com.figma.variableId": "VariableID:90:11926",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.isOverride": true
-      }
-    },
-    "black": {
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0,
-          0,
-          0
-        ],
-        "alpha": 1,
-        "hex": "#000000"
-      },
-      "$extensions": {
-        "com.figma.variableId": "VariableID:90:11927",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.isOverride": true
-      }
-    }
-  },
   "background": {
     "screen": {
       "$type": "color",
@@ -54,6 +12,7 @@
         "alpha": 1,
         "hex": "#000000"
       },
+      "$description": "Main app background — lowest layer, always behind everything. Changing this shifts the overall mood of the product. | ai-group:expressiveness | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:34:5020",
         "com.figma.scopes": [
@@ -61,11 +20,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:805339b215880eb2eeaaa6ce5427278dec5a462e/-1:-1",
-          "targetVariableName": "Colors/black",
+          "targetVariableName": "colors/black",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "elevated": {
@@ -80,6 +38,7 @@
         "alpha": 1,
         "hex": "#000000"
       },
+      "$description": "Elevated surface above screen — page content areas, sidebar backgrounds. Must always appear lighter than background/screen to communicate depth. | ai-group:expressiveness | ai-impact:high | ai-constraint:must be lighter than background/screen",
       "$extensions": {
         "com.figma.variableId": "VariableID:34:5021",
         "com.figma.scopes": [
@@ -88,11 +47,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:805339b215880eb2eeaaa6ce5427278dec5a462e/-1:-1",
-          "targetVariableName": "Colors/black",
+          "targetVariableName": "colors/black",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "overlay": {
@@ -107,12 +65,12 @@
         "alpha": 0.699999988079071,
         "hex": "#000000"
       },
+      "$description": "Semi-transparent scrim behind modals, drawers, bottom sheets. Alpha 0.25–0.6: too low loses focus, too high feels oppressive. | ai-group:elevation | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:150:1944",
         "com.figma.scopes": [
           "ALL_SCOPES"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     }
   },
@@ -129,6 +87,7 @@
         "alpha": 1,
         "hex": "#141519"
       },
+      "$description": "Default surface for cards, panels, modal bodies, list containers. Most common surface in the system. | ai-group:expressiveness | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2409",
         "com.figma.scopes": [
@@ -136,11 +95,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:28a88c5f8cfba8049575b607b64ed33089870fcb/-1:-1",
-          "targetVariableName": "Colors/cool-gray900",
+          "targetVariableName": "colors/cool-gray900",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "secondary": {
@@ -155,6 +113,7 @@
         "alpha": 1,
         "hex": "#2C2F3A"
       },
+      "$description": "Slightly off-white surface for nested containers, table rows, secondary panels. Creates subtle depth within a primary surface. | ai-group:expressiveness | ai-impact:medium | ai-constraint:must be visually distinct from surface/primary",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2410",
         "com.figma.scopes": [
@@ -162,11 +121,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:4fc3a01a9c3d864ecb616d90389ccd33608c241d/-1:-1",
-          "targetVariableName": "Colors/cool-gray700",
+          "targetVariableName": "colors/cool-gray700",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "tertiary": {
@@ -181,6 +139,7 @@
         "alpha": 1,
         "hex": "#202229"
       },
+      "$description": "Deeply nested surfaces — third-level containers, inline code blocks. | ai-group:expressiveness | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:8667",
         "com.figma.scopes": [
@@ -188,11 +147,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:63fa32a10866c3b4afd39f77647c506d0822666c/-1:-1",
-          "targetVariableName": "Colors/cool-gray800",
+          "targetVariableName": "colors/cool-gray800",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "accent": {
@@ -207,6 +165,7 @@
         "alpha": 1,
         "hex": "#022255"
       },
+      "$description": "Brand-tinted surface for selected states, highlighted rows, active nav backgrounds. Always a very light tint of the accent color — never saturated. | ai-group:expressiveness | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:90:10990",
         "com.figma.scopes": [
@@ -214,11 +173,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:f14eddc35e7736b141211f6e6b82a03ee1f77bc3/-1:-1",
-          "targetVariableName": "Colors/blue900",
+          "targetVariableName": "colors/blue900",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "disabled": {
@@ -233,6 +191,7 @@
         "alpha": 1,
         "hex": "#141519"
       },
+      "$description": "Background of disabled interactive surfaces. Communicates non-interactivity. Do not change. | ai-group:locked | ai-locked:true",
       "$extensions": {
         "com.figma.variableId": "VariableID:189:6461",
         "com.figma.scopes": [
@@ -240,11 +199,36 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:28a88c5f8cfba8049575b607b64ed33089870fcb/-1:-1",
-          "targetVariableName": "Colors/cool-gray900",
+          "targetVariableName": "colors/cool-gray900",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
+      }
+    },
+    "overlay": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.125490203499794,
+          0.13333334028720856,
+          0.16078431904315948
+        ],
+        "alpha": 1,
+        "hex": "#202229"
+      },
+      "$description": "Surface color of modals, bottom sheets, popovers — the element appearing above the background/overlay scrim. | ai-group:expressiveness | ai-impact:medium",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:316:7001",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:63fa32a10866c3b4afd39f77647c506d0822666c/-1:-1",
+          "targetVariableName": "colors/cool-gray800",
+          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetName": "primitives"
+        }
       }
     }
   },
@@ -261,6 +245,7 @@
         "alpha": 1,
         "hex": "#F9F9FC"
       },
+      "$description": "Fill color for primary buttons and secondary outline stroke. In light mode near-black, in dark mode near-white — always the opposite of the button foreground. | ai-group:expressiveness | ai-impact:high ",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2411",
         "com.figma.scopes": [
@@ -268,11 +253,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:7b1b385e9c697ef46fb0f600906bd04b6b6c4179/-1:-1",
-          "targetVariableName": "Colors/cool-gray50",
+          "targetVariableName": "colors/cool-gray50",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "primary-inverse": {
@@ -287,6 +271,7 @@
         "alpha": 1,
         "hex": "#0D0D0D"
       },
+      "$description": "Fill for primary buttons inverse. In light mode near-white, in dark mode near-black — always the opposite of the button foreground. | ai-group:expressiveness | ai-impact:high ",
       "$extensions": {
         "com.figma.variableId": "VariableID:80:7603",
         "com.figma.scopes": [
@@ -294,11 +279,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:7ac794c794d3a7692789b5c2c3c88d0cce52d79a/-1:-1",
-          "targetVariableName": "Colors/gray950",
+          "targetVariableName": "colors/gray950",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "secondary": {
@@ -313,6 +297,7 @@
         "alpha": 1,
         "hex": "#D4D9E2"
       },
+      "$description": "Fill color for secondary, ghost, and outline buttons. Muted gray — communicates lower visual priority than action/primary. Also used for tertiary icon button fills. | ai-group:expressiveness | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2412",
         "com.figma.scopes": [
@@ -320,11 +305,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:34d64c8e7b945929c916f16264a598bbb08f1381/-1:-1",
-          "targetVariableName": "Colors/cool-gray300",
+          "targetVariableName": "colors/cool-gray300",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "disabled": {
@@ -339,6 +323,7 @@
         "alpha": 1,
         "hex": "#2C2F3A"
       },
+      "$description": "Fill color of disabled buttons and controls. Flat muted gray that signals non-interactivity. ",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2413",
         "com.figma.scopes": [
@@ -346,11 +331,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:4fc3a01a9c3d864ecb616d90389ccd33608c241d/-1:-1",
-          "targetVariableName": "Colors/cool-gray700",
+          "targetVariableName": "colors/cool-gray700",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "distructive": {
@@ -365,6 +349,7 @@
         "alpha": 1,
         "hex": "#F83446"
       },
+      "$description": "Fill color of destructive button surfaces (delete, remove, danger CTAs). Signals irreversibility and risk. Always red-family hue — never change the hue, only lightness allowed. Text on this background must use action/destructive-content. | ai-group:locked | ai-locked:true | ai-constraint:always red-family hue, action/destructive-content must maintain 4.5:1 on this background",
       "$extensions": {
         "com.figma.variableId": "VariableID:150:1974",
         "com.figma.scopes": [
@@ -372,11 +357,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:f84d8b9ea88e72f342ee1ccead1d961d9b9a4f1b/-1:-1",
-          "targetVariableName": "Colors/red500",
+          "targetVariableName": "colors/red500",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "accent": {
@@ -398,11 +382,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:5cd08d23422f763a7b92095fbb434d3666985db6/-1:-1",
-          "targetVariableName": "Colors/blue500",
+          "targetVariableName": "colors/blue500",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     }
   },
@@ -419,6 +402,7 @@
         "alpha": 1,
         "hex": "#F9F9FC"
       },
+      "$description": "Main body text, headings, primary labels. Highest-contrast text color in the system. | ai-group:expressiveness | ai-impact:high | ai-constraint:7:1 contrast vs background/elevated for AAA compliance",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2420",
         "com.figma.scopes": [
@@ -426,11 +410,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:7b1b385e9c697ef46fb0f600906bd04b6b6c4179/-1:-1",
-          "targetVariableName": "Colors/cool-gray50",
+          "targetVariableName": "colors/cool-gray50",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "secondary": {
@@ -445,6 +428,7 @@
         "alpha": 1,
         "hex": "#A1A9BA"
       },
+      "$description": "Supporting text — captions, metadata, helper text, timestamps. Clearly subordinate to content/primary. | ai-group:expressiveness | ai-impact:medium | ai-constraint:4.5:1 contrast vs surface/primary",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2421",
         "com.figma.scopes": [
@@ -452,11 +436,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:26d658f96c683386987802ccd6fb0f81de4b0b6e/-1:-1",
-          "targetVariableName": "Colors/cool-gray400",
+          "targetVariableName": "colors/cool-gray400",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "disabled": {
@@ -471,6 +454,7 @@
         "alpha": 1,
         "hex": "#636B7F"
       },
+      "$description": "Placeholder text, ghost labels, very subtle hints. Lowest legibility tier — never use for critical information. | ai-group:expressiveness | ai-impact:low | ai-constraint:minimum 3:1 contrast",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2422",
         "com.figma.scopes": [
@@ -478,11 +462,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:a1b5522bc0b0f69a05d2f898956fbfa667ff28be/-1:-1",
-          "targetVariableName": "Colors/cool-gray500",
+          "targetVariableName": "colors/cool-gray500",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "primary-inverse": {
@@ -497,6 +480,7 @@
         "alpha": 1,
         "hex": "#141519"
       },
+      "$description": "Primary text on dark surfaces — tooltips, dark cards, filled dark headers, primary buttons Inverse of content/primary. | ai-group:expressiveness | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:21663",
         "com.figma.scopes": [
@@ -504,11 +488,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:28a88c5f8cfba8049575b607b64ed33089870fcb/-1:-1",
-          "targetVariableName": "Colors/cool-gray900",
+          "targetVariableName": "colors/cool-gray900",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "accent": {
@@ -523,6 +506,7 @@
         "alpha": 1,
         "hex": "#266EF1"
       },
+      "$description": "Accent-colored text — inline links, active labels, highlighted values. Always the brand color applied to text. | ai-group:expressiveness | ai-impact:medium | ai-constraint:4.5:1 contrast vs surface/primary",
       "$extensions": {
         "com.figma.variableId": "VariableID:90:10992",
         "com.figma.scopes": [
@@ -530,11 +514,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:fbb33a51d057e629b982c86be64a0e3ec2fed1e8/-1:-1",
-          "targetVariableName": "Colors/blue600",
+          "targetVariableName": "colors/blue600",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     }
   },
@@ -551,6 +534,7 @@
         "alpha": 1,
         "hex": "#2C2F3A"
       },
+      "$description": "Passive structural dividers — between list rows, table cells, section separators. Should be barely perceptible. If clearly visible at arm's length it is too strong. | ai-group:weight | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:13294",
         "com.figma.scopes": [
@@ -560,11 +544,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:4fc3a01a9c3d864ecb616d90389ccd33608c241d/-1:-1",
-          "targetVariableName": "Colors/cool-gray700",
+          "targetVariableName": "colors/cool-gray700",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "outline": {
@@ -579,6 +562,7 @@
         "alpha": 1,
         "hex": "#464D60"
       },
+      "$description": "Border of interactive form elements at rest — inputs, selects, textareas. Must clearly define the clickable area. Always stronger than border/divider. | ai-group:weight | ai-impact:medium | ai-constraint:must be stronger than border/divider",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:23434",
         "com.figma.scopes": [
@@ -588,11 +572,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:299f59f04bbe1bf781113b6ad6e8664cbd7f385d/-1:-1",
-          "targetVariableName": "Colors/cool-gray600",
+          "targetVariableName": "colors/cool-gray600",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "action": {
@@ -607,6 +590,7 @@
         "alpha": 1,
         "hex": "#266EF1"
       },
+      "$description": "Border of outline-variant interactive elements — outline buttons, active input borders. Matches content/accent for consistency. | ai-group:expressiveness | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:90:11928",
         "com.figma.scopes": [
@@ -616,16 +600,15 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:fbb33a51d057e629b982c86be64a0e3ec2fed1e8/-1:-1",
-          "targetVariableName": "Colors/blue600",
+          "targetVariableName": "colors/blue600",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     }
   },
   "state": {
-    "hovered-primary": {
+    "hover": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -637,6 +620,7 @@
         "alpha": 0.20000000298023224,
         "hex": "#000000"
       },
+      "$description": "Universal hover overlay — semi-transparent layer on top of any interactive surface on mouse enter. Apply to buttons, list items, nav items. Flips to white-opacity in dark mode. | ai-group:locked | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:150:2144",
         "com.figma.scopes": [
@@ -644,14 +628,13 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:61405bb7f74450f9584eaae7c0c89a69b2edd05d/-1:-1",
-          "targetVariableName": "Colors/dark-opacity-400",
+          "targetVariableName": "colors/dark-opacity-400",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
-    "hovered-secondary": {
+    "hover-surface": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -663,6 +646,7 @@
         "alpha": 1,
         "hex": "#202229"
       },
+      "$description": "Solid hover state for list rows and table rows where an overlay layer is not possible. Changes the background directly. | ai-group:locked | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:171:9049",
         "com.figma.scopes": [
@@ -670,11 +654,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:63fa32a10866c3b4afd39f77647c506d0822666c/-1:-1",
-          "targetVariableName": "Colors/cool-gray800",
+          "targetVariableName": "colors/cool-gray800",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "selected": {
@@ -696,14 +679,13 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:63fa32a10866c3b4afd39f77647c506d0822666c/-1:-1",
-          "targetVariableName": "Colors/cool-gray800",
+          "targetVariableName": "colors/cool-gray800",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
-    "pressed-primary": {
+    "pressed": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -715,6 +697,7 @@
         "alpha": 0.3199999928474426,
         "hex": "#000000"
       },
+      "$description": "Universal pressed/active overlay — stronger than state/hover. Applied on mouse down for tactile feedback. Alpha always greater than state/hover. | ai-group:locked | ai-constraint:alpha must be > state/hover alpha",
       "$extensions": {
         "com.figma.variableId": "VariableID:150:2145",
         "com.figma.scopes": [
@@ -722,11 +705,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:32a5dad699d0ab0ecaf16a38b3eac77432f99ba0/-1:-1",
-          "targetVariableName": "Colors/dark-opacity-600",
+          "targetVariableName": "colors/dark-opacity-600",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "pressed-secondary": {
@@ -741,6 +723,7 @@
         "alpha": 1,
         "hex": "#2C2F3A"
       },
+      "$description": "Solid pressed state for list rows where overlay is not possible. | ai-group:locked | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:213:8545",
         "com.figma.scopes": [
@@ -748,11 +731,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:4fc3a01a9c3d864ecb616d90389ccd33608c241d/-1:-1",
-          "targetVariableName": "Colors/cool-gray700",
+          "targetVariableName": "colors/cool-gray700",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "focus-ring": {
@@ -774,22 +756,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:07fd2a88059d26339869781f41d358e2bf9888f4/-1:-1",
-          "targetVariableName": "Colors/blue400",
+          "targetVariableName": "colors/blue400",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
-      }
-    },
-    "focus-offset": {
-      "$type": "color",
-      "$value": "{core.black}",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:178:10194",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     }
   },
@@ -814,11 +784,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:920497a03daffbdb23df8611344ce0ec9559e3e1/-1:-1",
-            "targetVariableName": "Colors/green400",
+            "targetVariableName": "colors/green400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "background-light": {
@@ -840,11 +809,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:1764b5435e4aa1329193d967ac7aeeb26710e864/-1:-1",
-            "targetVariableName": "Colors/green100",
+            "targetVariableName": "colors/green100",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "foreground": {
@@ -866,11 +834,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:91f6cee69f7bb4c8144430e7d94a138a09ddcee9/-1:-1",
-            "targetVariableName": "Colors/green600",
+            "targetVariableName": "colors/green600",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "border": {
@@ -892,11 +859,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:920497a03daffbdb23df8611344ce0ec9559e3e1/-1:-1",
-            "targetVariableName": "Colors/green400",
+            "targetVariableName": "colors/green400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
@@ -920,11 +886,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:a8e03fd669db903b0053686a86599f12c6ea36ea/-1:-1",
-            "targetVariableName": "Colors/orange400",
+            "targetVariableName": "colors/orange400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "background-light": {
@@ -946,11 +911,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:d992600bd4f5baeb92302b561d74e82e9d06114d/-1:-1",
-            "targetVariableName": "Colors/orange100",
+            "targetVariableName": "colors/orange100",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "foreground": {
@@ -972,11 +936,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:6bc92b4bd0dc7d46f30dc0a10bd2117307b3049c/-1:-1",
-            "targetVariableName": "Colors/orange600",
+            "targetVariableName": "colors/orange600",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "border": {
@@ -998,11 +961,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:a8e03fd669db903b0053686a86599f12c6ea36ea/-1:-1",
-            "targetVariableName": "Colors/orange400",
+            "targetVariableName": "colors/orange400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
@@ -1026,11 +988,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:ba54d344ab5f5858ce1d1bb2d597f7f8e8f68787/-1:-1",
-            "targetVariableName": "Colors/red400",
+            "targetVariableName": "colors/red400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "background-light": {
@@ -1052,11 +1013,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:21b6ac009ecf053ed737f30ac613edd8f8ae1b00/-1:-1",
-            "targetVariableName": "Colors/red100",
+            "targetVariableName": "colors/red100",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "foreground": {
@@ -1078,11 +1038,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:868d5bcb9059d110353562619901e57311f46606/-1:-1",
-            "targetVariableName": "Colors/red600",
+            "targetVariableName": "colors/red600",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "border": {
@@ -1104,11 +1063,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:ba54d344ab5f5858ce1d1bb2d597f7f8e8f68787/-1:-1",
-            "targetVariableName": "Colors/red400",
+            "targetVariableName": "colors/red400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
@@ -1132,11 +1090,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:26d658f96c683386987802ccd6fb0f81de4b0b6e/-1:-1",
-            "targetVariableName": "Colors/cool-gray400",
+            "targetVariableName": "colors/cool-gray400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "background-light": {
@@ -1158,11 +1115,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:8dfcfb0d85cd3684e8f9756996d50df67775d4cd/-1:-1",
-            "targetVariableName": "Colors/cool-gray200",
+            "targetVariableName": "colors/cool-gray200",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "foreground": {
@@ -1184,11 +1140,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:299f59f04bbe1bf781113b6ad6e8664cbd7f385d/-1:-1",
-            "targetVariableName": "Colors/cool-gray600",
+            "targetVariableName": "colors/cool-gray600",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "border": {
@@ -1210,11 +1165,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:26d658f96c683386987802ccd6fb0f81de4b0b6e/-1:-1",
-            "targetVariableName": "Colors/cool-gray400",
+            "targetVariableName": "colors/cool-gray400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     }
@@ -1239,11 +1193,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:eb0670ba9726dfa8c590c711349b660564ea6402/-1:-1",
-          "targetVariableName": "Colors/light-opacity-100",
+          "targetVariableName": "colors/light-opacity-100",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "shadow-strong": {
@@ -1265,11 +1218,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:7e9e1c17e2c98f3932280fcd2206ff172df4ed0e/-1:-1",
-          "targetVariableName": "Colors/light-opacity-300",
+          "targetVariableName": "colors/light-opacity-300",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     },
     "shadow-medium": {
@@ -1291,11 +1243,10 @@
         ],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:b391d79f0ddd2a20d8b0fb0f8395f094711b91cf/-1:-1",
-          "targetVariableName": "Colors/light-opacity-200",
+          "targetVariableName": "colors/light-opacity-200",
           "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "Primitives"
-        },
-        "com.figma.isOverride": true
+          "targetVariableSetName": "primitives"
+        }
       }
     }
   },
@@ -1320,11 +1271,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:07fd2a88059d26339869781f41d358e2bf9888f4/-1:-1",
-            "targetVariableName": "Colors/blue400",
+            "targetVariableName": "colors/blue400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "blue-background-light": {
@@ -1346,11 +1296,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:b00628e43dde32a99bc4abcc89bf4c0da0473032/-1:-1",
-            "targetVariableName": "Colors/blue100",
+            "targetVariableName": "colors/blue100",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "blue-foreground": {
@@ -1372,11 +1321,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:e874f5acd2e87243c0d4c2f662ec24cfe397dacf/-1:-1",
-            "targetVariableName": "Colors/blue800",
+            "targetVariableName": "colors/blue800",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
@@ -1400,11 +1348,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:ff3a1f3e25bccd71747a0ea42b26b7798be61c26/-1:-1",
-            "targetVariableName": "Colors/magenta400",
+            "targetVariableName": "colors/magenta400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "magenta-background-light": {
@@ -1426,11 +1373,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:44ca93a32e1b4f8f06e7112b1d23c6535173eea7/-1:-1",
-            "targetVariableName": "Colors/magenta100",
+            "targetVariableName": "colors/magenta100",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "magenta-foreground": {
@@ -1452,11 +1398,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:950c10349ddd97d616a5f8818dea8a12d24925a2/-1:-1",
-            "targetVariableName": "Colors/magenta800",
+            "targetVariableName": "colors/magenta800",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
@@ -1480,11 +1425,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:7ebc95a6c0eeb06f44087946ee1b738ae86ef3ec/-1:-1",
-            "targetVariableName": "Colors/teal400",
+            "targetVariableName": "colors/teal400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "teal-background-light": {
@@ -1506,11 +1450,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:6f4d690b97da0f313fc54c8d267079d6089fc436/-1:-1",
-            "targetVariableName": "Colors/teal100",
+            "targetVariableName": "colors/teal100",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "teal-foreground": {
@@ -1532,11 +1475,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:d181b118ddca0319f6c405b04c3f1e4e82ab00f1/-1:-1",
-            "targetVariableName": "Colors/teal700",
+            "targetVariableName": "colors/teal700",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
@@ -1560,11 +1502,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:79063cd7a1c5e0c1bfdb09818e51e2ff8cbb2097/-1:-1",
-            "targetVariableName": "Colors/purple400",
+            "targetVariableName": "colors/purple400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "purple-background-light": {
@@ -1586,11 +1527,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:ef4692632f9e046e268c5ecbc3d555e6ce4a6eed/-1:-1",
-            "targetVariableName": "Colors/purple100",
+            "targetVariableName": "colors/purple100",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "purple-foreground": {
@@ -1612,11 +1552,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:2f475e3b8aa0baca4b62b7dfd56ac291afafb473/-1:-1",
-            "targetVariableName": "Colors/purple800",
+            "targetVariableName": "colors/purple800",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
@@ -1640,11 +1579,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:ee906cfa5f3ee4ed2e5668460f42affdff2cb8fe/-1:-1",
-            "targetVariableName": "Colors/lime400",
+            "targetVariableName": "colors/lime400",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "lime-background-light": {
@@ -1666,11 +1604,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:a05d3ec8f1654dafc58e4c9d25adee6b27b90923/-1:-1",
-            "targetVariableName": "Colors/lime100",
+            "targetVariableName": "colors/lime100",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       },
       "lime-foreground": {
@@ -1692,11 +1629,10 @@
           ],
           "com.figma.aliasData": {
             "targetVariableId": "VariableID:b1abcba4fff43fb07cf65e664179f0bcbf4e6c0c/-1:-1",
-            "targetVariableName": "Colors/lime700",
+            "targetVariableName": "colors/lime700",
             "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-            "targetVariableSetName": "Primitives"
-          },
-          "com.figma.isOverride": true
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     }
@@ -1718,8 +1654,7 @@
         "com.figma.variableId": "VariableID:230:12570",
         "com.figma.scopes": [
           "ALL_SCOPES"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     }
   },
@@ -1740,8 +1675,7 @@
         "com.figma.variableId": "VariableID:281:14138",
         "com.figma.scopes": [
           "ALL_SCOPES"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "brand-secondary": {
@@ -1760,8 +1694,7 @@
         "com.figma.variableId": "VariableID:281:14139",
         "com.figma.scopes": [
           "ALL_SCOPES"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     }
   },

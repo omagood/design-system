@@ -1,119 +1,551 @@
-# Design System
+# Ambient DS — AI Reference
 
-A token-driven component library built from a Figma source of truth.
-Follows shadcn/ui conventions. Black/white base with semantic color roles.
+## What This Is
 
-## Tech Stack
+A token-driven React component library. Every visual value (color, spacing, typography,
+radius, shadow) is a CSS custom property derived from Figma. To customize the design system,
+edit tokens in Figma → export JSON → run `npm run tokens:build`. No component code changes needed.
 
-- React 18
-- TypeScript 5
-- Tailwind CSS 4 (utility classes driven by CSS variables)
+## Stack
+
+- React 18 + TypeScript 5
+- Tailwind CSS v4 (utility classes only, always with CSS variable values)
 - class-variance-authority (CVA) for component variants
-- Style Dictionary 4 (Figma JSON → CSS variables)
-- Storybook 8 (visual documentation)
-- Vite 5 (build tool)
+- Vite 5 + Storybook 10
+- Font: Plus Jakarta Sans (variable font, 200–800 weight axis)
 
-## Structure
+## Install in a Consumer Project
+
+```bash
+npm install github:YOUR_ORG/altir-ds
+```
+
+```tsx
+// 1. Import token CSS — required, components render unstyled without this
+import 'altir-ds/tokens/css'
+
+// 2. Import components
+import { Button, FloatingButton, TextField } from 'altir-ds'
+```
+
+## Token System
+
+All CSS custom properties live in `src/tokens.generated.css` (auto-generated).
+They are available globally after importing `src/global.css`.
+
+### Naming Convention
 
 ```
-src/
-  components/ui/   ← All components live here (shadcn-style, lowercase filenames)
-    button.tsx
-  stories/         ← Storybook stories (one per component)
-    button.stories.tsx
-  lib/
-    utils.ts       ← cn() helper (clsx + tailwind-merge)
-  global.css       ← Tailwind entry + @import of token CSS variables
-
-tokens/
-  figma/           ← Source of truth exported from Figma (never edit manually)
-  transformed/
-    css/
-      variables.css       ← Light-mode CSS custom properties (:root)
-      variables-dark.css  ← Dark-mode overrides ([data-theme="dark"])
-    ts/
-      tokens.ts           ← TypeScript token constants
-  style-dictionary.config.js  ← Build config
+--{collection}-{group}-{variant}
 ```
+
+Examples:
+- `--typography-size-label-medium`   → typography collection, size group, label-medium variant
+- `--corner-radius-corner-full`      → shapes collection, corner-radius group, full variant
+- `--spacing-space-16px`             → spacing collection, space group, 16px step
+- `--inset-component-inset-component-md-x` → spacing collection, component inset, md size, x axis
+
+### Token Collections
+
+#### Colors — Semantic (use these in components)
+```
+--background-screen          page background
+--background-elevated        card / modal background
+--background-overlay         scrim behind modals (rgba)
+
+--surface-primary            white surface
+--surface-secondary          slightly tinted surface
+--surface-tertiary           input / field background
+--surface-disabled           disabled element background
+--surface-accent             accent-tinted surface
+
+--action-primary             primary button fill (black in light, white in dark)
+--action-primary-inverse     text on primary button (white in light, black in dark)
+--action-secondary           secondary action color
+--action-disabled            disabled button fill
+--action-distructive         destructive/negative action fill
+--action-accent              accent action (blue)
+
+--content-primary            body text
+--content-secondary          secondary / label text
+--content-disabled           disabled text
+--content-primary-inverse    text on dark surfaces
+--content-accent             accent text (blue)
+
+--border-divider             subtle divider lines
+--border-outline             input borders, card outlines
+--border-action              active / focused border
+
+--state-hover                white 20% overlay (apply on top of bg for hover)
+--state-pressed              white 32% overlay (apply on top of bg for pressed)
+--state-hover-surface        solid hover background for ghost/secondary buttons
+--state-pressed-secondary    solid pressed background
+--state-focus-ring           focus ring color (#068BEE)
+
+--sentiment-positive-background-strong / -light / -foreground / -border
+--sentiment-warning-background-strong  / -light / -foreground / -border
+--sentiment-negative-background-strong / -light / -foreground / -border
+--sentiment-neutral-background-strong  / -light / -foreground / -border
+```
+
+#### Colors — Primitive (use only in token definitions, not in components)
+```
+--colors-{name}{shade}   e.g. --colors-blue-500, --colors-cool-gray-100
+```
+
+#### Typography
+```
+--typography-font-family                  'Plus Jakarta Sans', sans-serif
+
+--typography-weight-display               700
+--typography-weight-heading               700
+--typography-weight-label                 600
+--typography-weight-paragraph             400
+
+--typography-size-display-large           96px
+--typography-size-display-medium          64px
+--typography-size-display-small           48px
+--typography-size-heading-xxlarge         40px
+--typography-size-heading-xlarge          36px
+--typography-size-heading-large           32px
+--typography-size-heading-medium          28px
+--typography-size-heading-small           24px
+--typography-size-heading-xsmall          20px
+--typography-size-label-large             18px
+--typography-size-label-medium            16px   ← default button label
+--typography-size-label-small             14px
+--typography-size-label-xsmall            12px
+--typography-size-paragraph-large         18px
+--typography-size-paragraph-medium        16px   ← default body / input
+--typography-size-paragraph-small         14px
+--typography-size-paragraph-xsmall        12px   ← helper text / captions
+
+--typography-line-height-{scale}-{size}   matches every size token above
+  e.g. --typography-line-height-label-medium    24px
+       --typography-line-height-paragraph-xsmall 16px
+```
+
+#### Spacing
+```
+--spacing-space-2px    2px
+--spacing-space-4px    4px
+--spacing-space-8px    8px
+--spacing-space-12px   12px
+--spacing-space-16px   16px
+--spacing-space-20px   20px
+--spacing-space-24px   24px
+--spacing-space-28px   28px
+--spacing-space-32px   32px
+--spacing-space-40px   40px
+--spacing-space-48px   48px
+--spacing-space-64px   64px
+```
+
+#### Component Insets (padding inside interactive components)
+```
+--inset-component-inset-component-sm-x   12px   (responsive: 8px tablet/mobile)
+--inset-component-inset-component-sm-y    8px   (responsive: 4px tablet/mobile)
+--inset-component-inset-component-md-x   16px   (responsive: 12px tablet/mobile)
+--inset-component-inset-component-md-y   12px   (responsive: 8px tablet/mobile)
+--inset-component-inset-component-lg-x   24px   (responsive: 16px tablet/mobile)
+--inset-component-inset-component-lg-y   16px   (responsive: 12px tablet/mobile)
+```
+
+#### Gap
+```
+--gap-gap-items-tight        8px    items in a tight cluster
+--gap-gap-items-default      12px   standard item gap
+--gap-gap-items-comfortable  16px   comfortable item gap
+--gap-gap-stack-tight        8px    vertical stack tight
+--gap-gap-stack-default      16px   vertical stack default
+--gap-gap-stack-loose        24px   vertical stack loose
+--gap-gap-stack-section      64px   between page sections
+--gap-gap-inline-tight       8px
+--gap-gap-inline-default     12px
+--gap-gap-inline-loose       16px
+```
+
+#### Shapes
+```
+--corner-radius-corner-none      0px
+--corner-radius-corner-xsmall    2px
+--corner-radius-corner-small     4px
+--corner-radius-corner-medium    8px    ← default cards, inputs, buttons
+--corner-radius-corner-large     12px
+--corner-radius-corner-xlarge    16px
+--corner-radius-corner-2xlarge   24px
+--corner-radius-corner-full      999px  ← pills, FAB
+
+--stroke-stroke-hairline         0.5px
+--stroke-stroke-thin             1px
+--stroke-stroke-medium           1.5px  ← secondary button border
+--stroke-stroke-bold             2px    ← focus / error borders
+
+--focus-focus-ring-width         2px
+--focus-focus-ring-offset        2px
+```
+
+#### Elevation / Shadows
+```
+--shadow-shadow-soft     rgba(0,0,0,0.08)   shadow color, soft layer
+--shadow-shadow-medium   rgba(0,0,0,0.12)   shadow color, medium layer
+--shadow-shadow-strong   rgba(0,0,0,0.16)   shadow color, strong layer
+
+Shadow utilities (defined in global.css, use as Tailwind class):
+  shadow-elevation-small    subtle shadow (disabled state)
+  shadow-elevation-medium   standard shadow (floating button)
+```
+
+#### Brand
+```
+--brand-brand-primary    #AACB42   brand green
+--brand-brand-secondary  #7A7A7C   brand grey
+```
+
+---
 
 ## Components
 
-### Button — `src/components/ui/button.tsx`
+### Button
 
 ```tsx
 import { Button } from '@/components/ui/button'
 
-// Variants: primary | secondary | ghost | negative
-// Sizes:    lg | md | sm | xs
+// Variants
+<Button variant="primary">Save</Button>        // default — filled black
+<Button variant="secondary">Cancel</Button>    // outlined, 1.5px border
+<Button variant="ghost">Learn more</Button>    // text + underline
+<Button variant="negative">Delete</Button>     // filled destructive red
 
-<Button variant="primary" size="md">Save changes</Button>
-<Button variant="secondary">Cancel</Button>
-<Button variant="ghost">Learn more</Button>
-<Button variant="negative">Delete account</Button>
+// Sizes — all use label-medium (16px) typography; size affects padding only
+<Button size="lg">Large</Button>   // inset-lg padding
+<Button size="md">Medium</Button>  // inset-md padding (default)
+<Button size="sm">Small</Button>   // inset-sm padding
+<Button size="xs">X-Small</Button> // space-8px / space-4px padding
 
 // States
-<Button isLoading>Saving…</Button>
 <Button disabled>Unavailable</Button>
+<Button isLoading>Saving…</Button>
 
 // Icons
 <Button leftIcon={<PlusIcon />}>Add item</Button>
 <Button rightIcon={<ArrowRightIcon />}>Continue</Button>
 ```
 
-Props: `variant`, `size`, `isLoading`, `leftIcon`, `rightIcon`, `disabled`, `className`, `data-testid`, all native `<button>` attributes. Supports `ref` forwarding.
+Props:
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `variant` | `primary\|secondary\|ghost\|negative` | `primary` | |
+| `size` | `lg\|md\|sm\|xs` | `md` | |
+| `isLoading` | `boolean` | `false` | shows spinner, disables button |
+| `disabled` | `boolean` | `false` | |
+| `leftIcon` | `ReactNode` | — | shown before children |
+| `rightIcon` | `ReactNode` | — | shown after children, hidden when loading |
+| `className` | `string` | — | merged via cn() |
+| `data-testid` | `string` | `'button'` | |
+All native `<button>` attributes are forwarded. Supports `ref`.
 
-## Design Tokens
-
-All color, spacing, radius, and typography values are CSS custom properties.
-They are defined in `tokens/transformed/css/variables.css` and imported via `src/global.css`.
-
-**Critical:** Any file that uses components from this library must import the CSS variables.
-In a Vite/Next.js project: `import '@your-username/design-system/tokens/css'`
-In a standalone HTML file: copy the contents of `tokens/transformed/css/variables.css` into a `<style>` tag.
-
-Key token groups:
-- `--action-primary` / `--action-primary-inverse` → primary button fill / text
-- `--action-distructive` → negative/destructive button fill
-- `--content-primary` / `--content-secondary` → text colors
-- `--surface-primary` / `--background-screen` → backgrounds
-- `--border-outline` / `--border-divider` → borders
-- `--state-focus-ring` (#068BEE) → focus ring, always visible
-- `--corner-radius-corner-medium` (8px) → default border radius
-- `--spacing-space-*` → spacing scale (2px → 64px)
-
-Never hardcode color, spacing, radius, or font values. Always use CSS variables.
-
-## Using in Another Project
-
-```bash
-npm install github:omagood/design-system
-```
+### FloatingButton (FAB)
 
 ```tsx
-// 1. Import the token CSS (required — without this, components render unstyled)
-import '@your-username/design-system/tokens/css'
+import { FloatingButton } from '@/components/ui/floating-button'
 
-// 2. Import components
-import { Button } from '@your-username/design-system'
+// Default: lg size, plus icon, pill shape
+<FloatingButton>New item</FloatingButton>
 
-export default function App() {
-  return <Button variant="primary">Hello</Button>
-}
+// Sizes
+<FloatingButton size="lg">Create</FloatingButton>
+<FloatingButton size="md">Add</FloatingButton>
+
+// Custom icon
+<FloatingButton icon={<EditIcon />}>Edit</FloatingButton>
+
+// Icon-only (square aspect ratio)
+<FloatingButton iconOnly icon={<PlusIcon />} />
+<FloatingButton size="md" iconOnly />
+
+// States
+<FloatingButton disabled />
+<FloatingButton isLoading />
 ```
 
-## Updating Tokens from Figma
+Props:
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `size` | `lg\|md` | `lg` | |
+| `iconOnly` | `boolean` | `false` | removes label, square pad |
+| `icon` | `ReactNode` | `<PlusIcon />` | defaults to plus if omitted |
+| `isLoading` | `boolean` | `false` | |
+| `disabled` | `boolean` | `false` | drops to elevation-small |
+| `className` | `string` | — | |
+| `data-testid` | `string` | `'floating-button'` | |
+Supports `ref`.
 
-1. Export tokens from Figma (Tokens Studio plugin → Export → W3C JSON)
-2. Replace files in `tokens/figma/`
-3. Run `npm run tokens:build`
-4. Commit the updated `tokens/transformed/` files
+### TextField
 
-## Running Locally
+```tsx
+import { TextField } from '@/components/ui/text-field'
 
-```bash
-npm install
-npm run storybook   # Component browser at http://localhost:6006
-npm run dev         # Vite dev server
-npm run typecheck   # TypeScript check
-npm run tokens:build  # Rebuild CSS variables from Figma JSON
+// Basic — floating label, no helper
+<TextField label="Email" />
+
+// With helper text
+<TextField label="Password" helperText="Must be at least 8 characters" />
+
+// Error state
+<TextField label="Email" error helperText="Invalid email address" />
+
+// Right icon
+<TextField label="Search" rightIcon={<SearchIcon />} />
+
+// Disabled
+<TextField label="Username" disabled defaultValue="john_doe" />
+
+// Controlled
+<TextField
+  label="Name"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+/>
+```
+
+Props:
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `label` | `string` | `'Label'` | floating label text |
+| `helperText` | `string` | — | shown below field with icon |
+| `error` | `boolean` | `false` | red border + red helper text |
+| `rightIcon` | `ReactNode` | — | icon in right side of input |
+| `disabled` | `boolean` | `false` | |
+| `value` | `string` | — | controlled mode |
+| `defaultValue` | `string` | — | uncontrolled mode |
+| `className` | `string` | — | applied to outer wrapper |
+| `data-testid` | `string` | `'text-field-input'` | on the `<input>` element |
+All native `<input>` attributes except `size` are forwarded. Supports `ref`.
+
+Border states (inset box-shadow, layout-stable):
+- Empty: 1px `--border-outline`
+- Filled: 1px `--border-outline`
+- Focus: 2px `--action-primary`
+- Error: 2px `--sentiment-negative-border`
+- Disabled: 1px `--border-outline`
+
+---
+
+## Rules for AI Builders
+
+### Always
+
+1. Import tokens CSS before using any component:
+   ```tsx
+   import 'altir-ds/tokens/css'   // in a consumer app
+   // or in this repo: src/global.css is already imported in Storybook
+   ```
+
+2. Use CSS variables for **every** visual value — color, spacing, size, radius, shadow:
+   ```tsx
+   // ✅ correct
+   className="px-[var(--spacing-space-16px)] text-[color:var(--content-primary)]"
+   className="rounded-[var(--corner-radius-corner-medium)]"
+
+   // ❌ wrong
+   className="px-4 text-gray-900 rounded-md"
+   ```
+
+3. Use explicit Tailwind arbitrary property syntax for font properties:
+   ```tsx
+   // ✅ correct — unambiguous
+   '[font-weight:var(--typography-weight-label)]'
+   '[font-family:var(--typography-font-family)]'
+   'text-[length:var(--typography-size-label-medium)]'
+   'leading-[var(--typography-line-height-label-medium)]'
+
+   // ❌ wrong — font-[var(...)] is ambiguous in Tailwind v4, may resolve as font-family
+   'font-[var(--typography-weight-label)]'
+   'font-semibold'
+   'text-sm'
+   ```
+
+4. Use semantic color tokens (not primitive `--colors-*`):
+   ```tsx
+   // ✅ correct
+   'bg-[var(--surface-tertiary)]'
+   'text-[color:var(--content-primary)]'
+
+   // ❌ wrong — primitives are not themeable
+   'bg-[var(--colors-cool-gray-100)]'
+   '#F3F5F9'
+   ```
+
+5. Use inset box-shadow for borders on components whose height must stay stable:
+   ```css
+   /* ✅ inset shadow — doesn't affect layout */
+   box-shadow: inset 0 0 0 var(--stroke-stroke-thin) var(--border-outline);
+
+   /* ❌ border-width pushes siblings when it changes */
+   border: 1px solid var(--border-outline);
+   ```
+
+6. Define named utilities in `global.css @layer utilities` for any class Tailwind's
+   static scanner can't detect (conditional ternaries, template literals):
+   ```css
+   @layer utilities {
+     .my-border-active {
+       box-shadow: inset 0 0 0 var(--stroke-stroke-bold) var(--action-primary);
+     }
+   }
+   ```
+
+### Never
+
+- Hardcode any color hex, rgba, or named color (`text-white`, `bg-black`)
+- Use plain Tailwind scale utilities: `p-4`, `text-sm`, `font-bold`, `rounded-lg`, `shadow-md`
+- Use `font-[var(...)]` — it's ambiguous; use `[font-weight:var(...)]` instead
+- Use `--colors-*` primitives directly in components
+- Invent values for missing tokens — report them instead
+
+### If a Token Is Missing
+
+Report it clearly:
+> "No `--duration-*` token exists. Need `--duration-fast` (100ms) and `--duration-default` (150ms)
+> added to a Motion collection in Figma."
+
+Do not use hardcoded fallbacks silently.
+
+---
+
+## Adding a New Component
+
+Follow this pattern exactly:
+
+```tsx
+// src/components/ui/my-component.tsx
+import { forwardRef } from 'react'
+import { cva, type VariantProps } from 'class-variance-authority'
+import { cn } from '@/lib/utils'
+
+const myComponentVariants = cva(
+  [
+    // Base classes — all token-based
+    '[font-family:var(--typography-font-family)]',
+    '[font-weight:var(--typography-weight-label)]',
+    'rounded-[var(--corner-radius-corner-medium)]',
+    'transition-colors duration-150',   // duration-150: no token yet, flag it
+    // Focus ring — always include for accessibility
+    'focus-visible:outline-none',
+    'focus-visible:ring-[length:var(--focus-focus-ring-width)]',
+    'focus-visible:ring-[var(--state-focus-ring)]',
+    'focus-visible:ring-offset-[var(--focus-focus-ring-offset)]',
+  ],
+  {
+    variants: {
+      variant: {
+        default: ['bg-[var(--surface-primary)]', 'text-[color:var(--content-primary)]'],
+      },
+      size: {
+        md: [
+          'px-[var(--inset-component-inset-component-md-x)]',
+          'py-[var(--inset-component-inset-component-md-y)]',
+          'text-[length:var(--typography-size-label-medium)]',
+          'leading-[var(--typography-line-height-label-medium)]',
+        ],
+      },
+    },
+    defaultVariants: { variant: 'default', size: 'md' },
+  }
+)
+
+export interface MyComponentProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof myComponentVariants> {}
+
+const MyComponent = forwardRef<HTMLDivElement, MyComponentProps>(
+  ({ className, variant, size, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(myComponentVariants({ variant, size }), className)}
+      {...props}
+    />
+  )
+)
+
+MyComponent.displayName = 'MyComponent'
+export { MyComponent }
+```
+
+Add a story at `src/stories/my-component.stories.tsx`.
+
+---
+
+## Dark Mode
+
+Apply `data-theme="dark"` or class `dark` to any ancestor element.
+All semantic tokens (`--action-*`, `--content-*`, `--surface-*`, etc.) automatically switch.
+No component code changes needed — dark mode is fully token-driven.
+
+```tsx
+<div data-theme="dark">
+  <Button variant="primary">Looks correct in dark mode</Button>
+</div>
+```
+
+---
+
+## Responsive Tokens
+
+Spacing and grid tokens automatically adjust at breakpoints via CSS media queries
+in `src/tokens.generated.css`. Components using `--inset-component-*` and
+`--spacing-space-*` are responsive by default — no Tailwind breakpoint prefixes needed
+for standard padding/gaps.
+
+- Desktop: ≥ 1024px (base values)
+- Tablet:  ≤ 1024px (`@media (max-width: 1024px)`)
+- Mobile:  ≤ 768px  (`@media (max-width: 768px)`)
+
+---
+
+## Customizing the Design System
+
+1. Open Figma → Variables panel
+2. Edit token values (colors, sizes, spacing, etc.)
+3. Export updated JSON files to `tokens/figma/`
+4. Run `npm run tokens:build`
+5. `src/tokens.generated.css` is regenerated — all components update automatically
+
+Token collections in Figma:
+- `primitives` → raw color palette (never use directly)
+- `colors` → semantic light + dark color roles
+- `typography` → font-family, weight, size, line-height
+- `spacing` → space scale + component insets + gaps
+- `shapes` → corner radius + stroke widths + focus ring
+- `elevation` → shadow values (light + dark)
+- `grid` → margin, gutter, columns per breakpoint
+
+---
+
+## Project Structure
+
+```
+src/
+  components/ui/     ← components (one file per component, lowercase)
+  stories/           ← Storybook stories (one per component)
+  fonts/             ← Plus Jakarta Sans variable font files
+  lib/utils.ts       ← cn() = clsx + tailwind-merge
+  global.css         ← Tailwind entry, @font-face, token import, named utilities
+  tokens.generated.css ← AUTO-GENERATED — do not edit manually
+
+tokens/
+  build.js           ← converts tokens/figma/**/*.json → src/tokens.generated.css
+  figma/             ← Figma export source files (never edit manually)
+    primitives.json
+    colors/light.json + dark.json
+    elevation/light.json + dark.json
+    shapes/shapes.json
+    typography/desktop.json + tablet.json + mobile.json
+    spacing/desktop.json + tablet.json + mobile.json
+    grid/desktop.json + tablet.json + mobile.json
+
+.storybook/
+  main.ts            ← Storybook config with Tailwind v4 plugin
+  preview.ts         ← imports global.css for Storybook
 ```

@@ -7,11 +7,14 @@ const buttonVariants = cva(
     'inline-flex items-center justify-center',
     'select-none whitespace-nowrap',
     'rounded-[var(--corner-radius-corner-medium)]',
-    'font-semibold',
+    '[font-family:var(--typography-font-family)]',
+    // Explicit property syntax — font-[var(...)] is ambiguous in Tailwind v4
+    // and may be interpreted as font-family. [font-weight:...] is unambiguous.
+    '[font-weight:var(--typography-weight-label)]',
     'transition-colors duration-100',
     'focus-visible:outline-none',
-    'focus-visible:ring-2 focus-visible:ring-[var(--state-focus-ring)]',
-    'focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--state-focus-offset)]',
+    'focus-visible:ring-[length:var(--focus-focus-ring-width)] focus-visible:ring-[var(--state-focus-ring)]',
+    'focus-visible:ring-offset-[var(--focus-focus-ring-offset)]',
     'disabled:pointer-events-none disabled:cursor-not-allowed',
   ],
   {
@@ -23,30 +26,33 @@ const buttonVariants = cva(
         ],
         secondary: [
           'bg-transparent',
-          'border border-[var(--border-outline)]',
+          // Figma: 1.5px border (stroke-medium), colour = action-primary
+          'border-[length:var(--stroke-stroke-medium)] border-solid border-[color:var(--action-primary)]',
           'text-[var(--content-primary)]',
-          'hover:bg-[var(--state-hovered-secondary)]',
+          'hover:bg-[var(--state-hover-surface)]',
           'active:bg-[var(--state-pressed-secondary)]',
         ],
         ghost: [
           'bg-transparent',
           'text-[var(--content-primary)]',
           'underline underline-offset-2',
-          'hover:bg-[var(--state-hovered-secondary)]',
+          'hover:bg-[var(--state-hover-surface)]',
           'active:bg-[var(--state-pressed-secondary)]',
         ],
         negative: [
-          'bg-[var(--action-distructive)] text-white',
+          'bg-[var(--action-distructive)] text-[var(--action-primary-inverse)]',
           'hover:opacity-90 active:opacity-80',
         ],
       },
 
       size: {
+        // All sizes use label-medium typography (16px/24px) — Figma spec.
+        // Size differences are padding-only, not font-size.
         lg: [
           'px-[var(--inset-component-inset-component-lg-x)]',
           'py-[var(--inset-component-inset-component-lg-y)]',
-          'text-[length:var(--typography-size-label-large)]',
-          'leading-[var(--typography-line-height-label-large)]',
+          'text-[length:var(--typography-size-label-medium)]',
+          'leading-[var(--typography-line-height-label-medium)]',
           'gap-[var(--spacing-space-8px)]',
           '[&_svg]:size-5',
         ],
@@ -61,16 +67,16 @@ const buttonVariants = cva(
         sm: [
           'px-[var(--inset-component-inset-component-sm-x)]',
           'py-[var(--inset-component-inset-component-sm-y)]',
-          'text-[length:var(--typography-size-label-small)]',
-          'leading-[var(--typography-line-height-label-small)]',
+          'text-[length:var(--typography-size-label-medium)]',
+          'leading-[var(--typography-line-height-label-medium)]',
           'gap-[var(--spacing-space-4px)]',
           '[&_svg]:size-4',
         ],
         xs: [
           'px-[var(--spacing-space-8px)]',
           'py-[var(--spacing-space-4px)]',
-          'text-[length:var(--typography-size-label-xsmall)]',
-          'leading-[var(--typography-line-height-label-xsmall)]',
+          'text-[length:var(--typography-size-label-medium)]',
+          'leading-[var(--typography-line-height-label-medium)]',
           'gap-[var(--spacing-space-4px)]',
           '[&_svg]:size-3',
         ],

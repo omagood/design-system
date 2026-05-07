@@ -117,7 +117,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
       : 'top-[-9px] left-[15px]'
 
     return (
-      <div className={cn('flex flex-col gap-[4px] w-full', className)}>
+      <div className={cn('flex flex-col gap-[var(--spacing-space-4px)] w-full [font-family:var(--typography-font-family)]', className)}>
         {/* ── Input box ───────────────────────────────────────────────────── */}
         {/*
          * IMPORTANT: padding is FIXED at md-y (12px) for all states.
@@ -140,7 +140,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           {!disabled && !focused && (
             <span
               aria-hidden="true"
-              className="absolute inset-0 rounded-[inherit] pointer-events-none opacity-0 group-hover:bg-white/20 group-hover:opacity-100 transition-opacity duration-150"
+              className="absolute inset-0 rounded-[inherit] pointer-events-none bg-[var(--state-hover)] opacity-0 group-hover:opacity-100 transition-opacity duration-150"
             />
           )}
 
@@ -171,7 +171,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
             <span
               className={cn(
                 'relative z-10 block whitespace-nowrap',
-                'font-[var(--typography-weight-paragraph)]',
+                '[font-weight:var(--typography-weight-paragraph)]',
                 'transition-all duration-150',
                 labelFloated
                   ? [
@@ -199,7 +199,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
               'flex-1 min-w-0 bg-transparent outline-none border-none p-0',
               'text-[length:var(--typography-size-paragraph-medium)]',
               'leading-[var(--typography-line-height-paragraph-medium)]',
-              'font-[var(--typography-weight-paragraph)]',
+              '[font-weight:var(--typography-weight-paragraph)]',
               disabled
                 ? 'cursor-not-allowed text-[color:var(--content-disabled)]'
                 : 'text-[color:var(--content-primary)]',
@@ -219,7 +219,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
 
           {/* ── Right icon slot ─────────────────────────────────────────── */}
           {rightIcon && (
-            <div className="flex items-center shrink-0 ml-2 [&_svg]:size-6 text-[color:var(--content-secondary)]">
+            <div className="flex items-center shrink-0 ml-[var(--spacing-space-8px)] [&_svg]:size-6 text-[color:var(--content-secondary)]">
               {rightIcon}
             </div>
           )}
@@ -229,7 +229,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
         {helperText && (
           <div
             id={`${id}-helper`}
-            className="flex gap-[4px] items-center w-full px-4"
+            className="flex gap-[var(--spacing-space-4px)] items-center w-full px-[var(--inset-component-inset-component-md-x)]"
           >
             <AlertCircleIcon
               className={cn(
@@ -246,7 +246,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
                 'flex-1 min-w-0 overflow-hidden text-ellipsis whitespace-nowrap',
                 'text-[length:var(--typography-size-paragraph-xsmall)]',
                 'leading-[var(--typography-line-height-paragraph-xsmall)]',
-                'font-[var(--typography-weight-paragraph)]',
+                '[font-weight:var(--typography-weight-paragraph)]',
                 disabled
                   ? 'text-[color:var(--content-disabled)]'
                   : error

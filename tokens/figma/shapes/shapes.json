@@ -1,5 +1,5 @@
 {
-  "Corner Radius": {
+  "corner radius": {
     "corner-none": {
       "$type": "number",
       "$value": 0,
@@ -8,8 +8,7 @@
         "com.figma.variableId": "VariableID:300:7855",
         "com.figma.scopes": [
           "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "corner-xsmall": {
@@ -20,8 +19,7 @@
         "com.figma.variableId": "VariableID:300:7856",
         "com.figma.scopes": [
           "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "corner-small": {
@@ -32,8 +30,7 @@
         "com.figma.variableId": "VariableID:300:7857",
         "com.figma.scopes": [
           "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "corner-medium": {
@@ -44,8 +41,7 @@
         "com.figma.variableId": "VariableID:300:7858",
         "com.figma.scopes": [
           "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "corner-large": {
@@ -56,8 +52,7 @@
         "com.figma.variableId": "VariableID:300:7859",
         "com.figma.scopes": [
           "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "corner-xlarge": {
@@ -68,8 +63,7 @@
         "com.figma.variableId": "VariableID:300:7860",
         "com.figma.scopes": [
           "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "corner-2xlarge": {
@@ -80,8 +74,7 @@
         "com.figma.variableId": "VariableID:300:7861",
         "com.figma.scopes": [
           "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "corner-full": {
@@ -92,12 +85,11 @@
         "com.figma.variableId": "VariableID:300:7862",
         "com.figma.scopes": [
           "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     }
   },
-  "Stroke": {
+  "stroke": {
     "stroke-hairline": {
       "$type": "number",
       "$value": 0.5,
@@ -106,8 +98,7 @@
         "com.figma.variableId": "VariableID:300:7863",
         "com.figma.scopes": [
           "STROKE_FLOAT"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "stroke-thin": {
@@ -118,8 +109,7 @@
         "com.figma.variableId": "VariableID:300:7864",
         "com.figma.scopes": [
           "STROKE_FLOAT"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "stroke-medium": {
@@ -130,8 +120,7 @@
         "com.figma.variableId": "VariableID:300:7865",
         "com.figma.scopes": [
           "STROKE_FLOAT"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "stroke-bold": {
@@ -142,98 +131,11 @@
         "com.figma.variableId": "VariableID:300:7866",
         "com.figma.scopes": [
           "STROKE_FLOAT"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     }
   },
-  "Radius": {
-    "radius-interactive": {
-      "$type": "number",
-      "$value": 4,
-      "$description": "Corner radius of all interactive controls — buttons, inputs, selects, dropdowns. The single biggest lever for roundness personality. Changing this shifts product character from sharp/corporate to soft/modern. | ai-group:roundness | ai-impact:high | ai-constraint:must be <= radius.container",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:300:7867",
-        "com.figma.scopes": [
-          "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
-      }
-    },
-    "radius-container": {
-      "$type": "number",
-      "$value": 8,
-      "$description": "Corner radius of card-like containers — cards, panels, info boxes. Should always be >= radius.interactive to maintain visual harmony. | ai-group:roundness | ai-impact:high | ai-constraint:must be >= radius.interactive",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:300:7868",
-        "com.figma.scopes": [
-          "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
-      }
-    },
-    "radius-overlay": {
-      "$type": "number",
-      "$value": 12,
-      "$description": "Corner radius of floating surfaces — modals, bottom sheets, popovers, tooltips. Larger radius signals softness and approachability. | ai-group:roundness | ai-impact:medium",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:300:7869",
-        "com.figma.scopes": [
-          "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
-      }
-    },
-    "radius-tag": {
-      "$type": "number",
-      "$value": 999,
-      "$description": "Corner radius of chips, badges, tags — fully rounded pill shape by default. Reducing creates rectangular labels. Only change if brand calls for square badges. | ai-group:roundness | ai-impact:medium",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:300:7870",
-        "com.figma.scopes": [
-          "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
-      }
-    },
-    "radius-avatar": {
-      "$type": "number",
-      "$value": 999,
-      "$description": "Corner radius for user avatars and profile images — circular by default. Avoid changing unless brand explicitly calls for square avatars. | ai-group:roundness | ai-impact:low",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:300:7871",
-        "com.figma.scopes": [
-          "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
-      }
-    },
-    "radius-image": {
-      "$type": "number",
-      "$value": 4,
-      "$description": "Corner radius for media thumbnails and content images. Matches radius.interactive by default. | ai-group:roundness | ai-impact:low",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:300:7872",
-        "com.figma.scopes": [
-          "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
-      }
-    },
-    "radius-none": {
-      "$type": "number",
-      "$value": 0,
-      "$description": "Explicitly no rounding — for full-bleed elements that should never have rounded corners regardless of personality mode. | ai-group:locked | ai-locked:true",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:300:7873",
-        "com.figma.scopes": [
-          "CORNER_RADIUS"
-        ],
-        "com.figma.isOverride": true
-      }
-    }
-  },
-  "Focus": {
+  "focus": {
     "focus-ring-width": {
       "$type": "number",
       "$value": 2,
@@ -242,8 +144,7 @@
         "com.figma.variableId": "VariableID:300:7874",
         "com.figma.scopes": [
           "STROKE_FLOAT"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     },
     "focus-ring-offset": {
@@ -254,8 +155,7 @@
         "com.figma.variableId": "VariableID:300:7875",
         "com.figma.scopes": [
           "GAP"
-        ],
-        "com.figma.isOverride": true
+        ]
       }
     }
   },
