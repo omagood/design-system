@@ -8,7 +8,10 @@ import { iconArgType, resolveIcon } from './story-utils'
 
 // ── DropdownItem meta ──────────────────────────────────────────────────────────
 
-const itemMeta: Meta<typeof DropdownItem> = {
+type ItemStoryArgs = DropdownItemProps & { iconName?: string }
+type Story = StoryObj<ItemStoryArgs>
+
+const itemMeta: Meta<ItemStoryArgs> = {
   title: 'UI/DropdownItem',
   component: DropdownItem,
   parameters: {
@@ -44,23 +47,25 @@ const itemMeta: Meta<typeof DropdownItem> = {
       control: 'text',
       description: 'Secondary description (single-select only)',
     },
-    // Hide raw ReactNode icon — replaced by name select below
+    // Hide raw ReactNode icon — replaced by iconName select
     icon: { control: false, table: { disable: true } },
+    // Icon select available on every story
+    iconName: { ...iconArgType, description: 'Optional leading icon' },
   },
+  // Default render: all single-item stories inherit this — no per-story render needed
+  render: ({ iconName, ...args }: ItemStoryArgs) => (
+    <div style={{ width: 320 }}>
+      <DropdownItem {...args} icon={resolveIcon(iconName)} />
+    </div>
+  ),
   tags: ['autodocs'],
 }
 
 export default itemMeta
 
-type ItemStoryArgs = DropdownItemProps & { iconName?: string }
-type Story = StoryObj<ItemStoryArgs>
-
 // ── Playground ─────────────────────────────────────────────────────────────────
 
 export const Playground: Story = {
-  argTypes: {
-    iconName: { ...iconArgType, description: 'Optional leading icon' },
-  },
   args: {
     label: 'Option label',
     description: 'Supporting description text',
@@ -69,11 +74,6 @@ export const Playground: Story = {
     disabled: false,
     iconName: '(none)',
   },
-  render: ({ iconName, ...args }) => (
-    <div style={{ width: 320 }}>
-      <DropdownItem {...args} icon={resolveIcon(iconName)} />
-    </div>
-  ),
 }
 
 // ── Single-select ──────────────────────────────────────────────────────────────
@@ -81,21 +81,11 @@ export const Playground: Story = {
 export const SingleSelectDefault: Story = {
   name: 'Single-select — default',
   args: { label: 'Option label', variant: 'single-select' },
-  render: (args) => (
-    <div style={{ width: 320 }}>
-      <DropdownItem {...args} />
-    </div>
-  ),
 }
 
 export const SingleSelectSelected: Story = {
   name: 'Single-select — selected',
   args: { label: 'Selected option', variant: 'single-select', selected: true },
-  render: (args) => (
-    <div style={{ width: 320 }}>
-      <DropdownItem {...args} />
-    </div>
-  ),
 }
 
 export const SingleSelectWithDescription: Story = {
@@ -106,11 +96,6 @@ export const SingleSelectWithDescription: Story = {
     variant: 'single-select',
     selected: false,
   },
-  render: (args) => (
-    <div style={{ width: 320 }}>
-      <DropdownItem {...args} />
-    </div>
-  ),
 }
 
 export const SingleSelectWithIcon: Story = {
@@ -118,13 +103,8 @@ export const SingleSelectWithIcon: Story = {
   args: {
     label: 'With icon',
     variant: 'single-select',
-    icon: <Icon icon={HugeIcons.Home01Icon} />,
+    iconName: 'Home01Icon',
   },
-  render: (args) => (
-    <div style={{ width: 320 }}>
-      <DropdownItem {...args} />
-    </div>
-  ),
 }
 
 // ── Multi-select ───────────────────────────────────────────────────────────────
@@ -132,21 +112,16 @@ export const SingleSelectWithIcon: Story = {
 export const MultiSelectDefault: Story = {
   name: 'Multi-select — default',
   args: { label: 'Option label', variant: 'multi-select', selected: false },
-  render: (args) => (
-    <div style={{ width: 320 }}>
-      <DropdownItem {...args} />
-    </div>
-  ),
 }
 
 export const MultiSelectSelected: Story = {
   name: 'Multi-select — selected',
   args: { label: 'Selected option', variant: 'multi-select', selected: true },
-  render: (args) => (
-    <div style={{ width: 320 }}>
-      <DropdownItem {...args} />
-    </div>
-  ),
+}
+
+export const MultiSelectWithIcon: Story = {
+  name: 'Multi-select — with icon',
+  args: { label: 'With icon', variant: 'multi-select', iconName: 'Settings01Icon' },
 }
 
 // ── Radio ──────────────────────────────────────────────────────────────────────
@@ -154,21 +129,11 @@ export const MultiSelectSelected: Story = {
 export const RadioDefault: Story = {
   name: 'Radio — default',
   args: { label: 'Option label', variant: 'radio', selected: false },
-  render: (args) => (
-    <div style={{ width: 320 }}>
-      <DropdownItem {...args} />
-    </div>
-  ),
 }
 
 export const RadioSelected: Story = {
   name: 'Radio — selected',
   args: { label: 'Selected option', variant: 'radio', selected: true },
-  render: (args) => (
-    <div style={{ width: 320 }}>
-      <DropdownItem {...args} />
-    </div>
-  ),
 }
 
 // ── Disabled states ────────────────────────────────────────────────────────────
@@ -176,11 +141,6 @@ export const RadioSelected: Story = {
 export const DisabledSingleSelect: Story = {
   name: 'Disabled — single-select',
   args: { label: 'Disabled option', variant: 'single-select', disabled: true },
-  render: (args) => (
-    <div style={{ width: 320 }}>
-      <DropdownItem {...args} />
-    </div>
-  ),
 }
 
 // ── All states ─────────────────────────────────────────────────────────────────
