@@ -82,4 +82,45 @@
   .field-border-focus {
     box-shadow: inset 0 0 0 var(--stroke-stroke-bold) var(--action-primary);
   }
+
+  /* ── Checkbox box visual states ───────────────────────────────────────── */
+  /*
+   * Built as named utilities because the component chooses the class inside
+   * ternary expressions — Tailwind's scanner can't see those strings.
+   * Hover / active for unchecked use the CSS group-descendant pattern.
+   */
+  .cb-box-unchecked {
+    background-color: var(--surface-primary);
+    border-color: var(--action-secondary);
+    border-width: var(--stroke-stroke-medium);
+    border-style: solid;
+    transition: background-color 150ms, border-color 150ms;
+  }
+  .group:hover .cb-box-unchecked {
+    background-color: var(--state-hover-surface);
+  }
+  .group:active .cb-box-unchecked {
+    background-color: var(--state-pressed-secondary);
+  }
+
+  .cb-box-filled {
+    background-color: var(--action-primary);
+    border-color: var(--action-primary);
+    border-width: var(--stroke-stroke-medium);
+    border-style: solid;
+  }
+
+  .cb-box-unchecked-disabled {
+    background-color: var(--surface-tertiary);
+    border-color: var(--action-disabled);
+    border-width: var(--stroke-stroke-medium);
+    border-style: solid;
+  }
+
+  .cb-box-filled-disabled {
+    background-color: var(--action-disabled);
+    border-color: var(--action-disabled);
+    border-width: var(--stroke-stroke-medium);
+    border-style: solid;
+  }
 }

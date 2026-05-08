@@ -11,8 +11,9 @@ Stack: React, TypeScript, Tailwind CSS v4, Vite, Storybook.
 Components: src/components/ui/
 Tokens source: tokens/figma/
 Tokens output: src/tokens.generated.css
-Build tokens: npm run tokens:build
+Build tokens: npm run tokens:build  ← run this first in any new worktree (tokens.generated.css is gitignored)
 Full AI reference: llms.txt
+Icons: @hugeicons/core-free-icons — import icon data and pass to <Icon icon={...} />
 
 ## Rules — Always Follow
 - ALWAYS use CSS variables from src/tokens.generated.css for ALL values
@@ -22,6 +23,7 @@ Full AI reference: llms.txt
 - If a token is missing — report it, never invent a value
 - Every new component must follow the CVA pattern in llms.txt
 - Every new component must have a Storybook story
+- ALWAYS use icons from @hugeicons/core-free-icons via the <Icon> wrapper — never use inline SVGs or other icon libraries
 
 ## Decisions
 - 2026-05-07: font-weight uses [font-weight:var(--typography-weight-label)], not Tailwind font-semibold
@@ -31,3 +33,8 @@ Full AI reference: llms.txt
 - 2026-05-07: all button sizes (lg/md/sm/xs) use label-medium typography — size differences are padding-only per Figma spec
 - 2026-05-07: secondary button border is 1.5px stroke-medium + action-primary color per Figma spec
 - 2026-05-07: named @layer utilities in global.css for any class Tailwind's scanner can't detect statically (conditional ternaries, dynamic strings)
+- 2026-05-08: icons use @hugeicons/react + @hugeicons/core-free-icons; always wrap with <Icon icon={...} /> from src/components/ui/icon.tsx — never inline SVGs
+- 2026-05-08: Checkbox hover/pressed on unchecked uses bg color swap (--state-hover-surface / --state-pressed-secondary); filled uses white opacity overlay span — white overlay on white bg is invisible
+- 2026-05-08: Checkbox visual state classes (cb-box-*) live in global.css @layer utilities because component builds class names in ternaries that Tailwind's scanner can't detect
+- 2026-05-08: Storybook icon controls use string-name args (leftIconName, rightIconName, iconName) + resolveIcon() helper in story-utils.tsx — ReactNode props can't be driven by select controls directly
+- 2026-05-08: src/tokens.generated.css is gitignored — run npm run tokens:build in every new worktree before starting Storybook

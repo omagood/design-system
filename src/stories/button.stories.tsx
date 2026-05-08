@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button } from '@/components/ui/button'
+import { Button, type ButtonProps } from '@/components/ui/button'
+import { Icon } from '@/components/ui/icon'
+import { iconMap, iconArgType, resolveIcon } from './story-utils'
 
 const meta: Meta<typeof Button> = {
   title: 'UI/Button',
@@ -34,18 +36,45 @@ const meta: Meta<typeof Button> = {
       control: 'boolean',
       description: 'Disable the button',
     },
-    leftIcon: { control: false },
-    rightIcon: { control: false },
+    // Hide raw ReactNode props — replaced by icon name selects below
+    leftIcon:  { control: false, table: { disable: true } },
+    rightIcon: { control: false, table: { disable: true } },
   },
   tags: ['autodocs'],
 }
 
 export default meta
-type Story = StoryObj<typeof Button>
+
+// ── Custom args type: keeps original ReactNode props + adds string-name variants
+// The Playground uses leftIconName/rightIconName (select dropdown).
+// Static stories can still pass leftIcon/rightIcon directly as ReactNode.
+type ButtonStoryArgs = ButtonProps & {
+  leftIconName?: string
+  rightIconName?: string
+}
+
+type Story = StoryObj<ButtonStoryArgs>
 
 // ── Playground ─────────────────────────────────────────────────────────────────
 export const Playground: Story = {
-  args: { children: 'Button', variant: 'primary', size: 'md' },
+  argTypes: {
+    leftIconName:  { ...iconArgType, description: 'Left icon' },
+    rightIconName: { ...iconArgType, description: 'Right icon' },
+  },
+  args: {
+    children: 'Button',
+    variant: 'primary',
+    size: 'md',
+    leftIconName: '(none)',
+    rightIconName: '(none)',
+  },
+  render: ({ leftIconName, rightIconName, ...args }) => (
+    <Button
+      {...args}
+      leftIcon={resolveIcon(leftIconName)}
+      rightIcon={resolveIcon(rightIconName)}
+    />
+  ),
 }
 
 // ── Variants ───────────────────────────────────────────────────────────────────
@@ -101,44 +130,14 @@ export const SizeXSmall: Story = {
 }
 
 // ── Icons ──────────────────────────────────────────────────────────────────────
-const PlusIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
-    <path d="M12 5v14M5 12h14" />
-  </svg>
-)
-
-const ArrowRightIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
-    <path d="M5 12h14M12 5l7 7-7 7" />
-  </svg>
-)
-
 export const WithLeftIcon: Story = {
   name: 'With left icon',
-  args: { children: 'Add item', variant: 'primary', leftIcon: <PlusIcon /> },
+  args: { children: 'Add item', variant: 'primary', leftIcon: <Icon icon={iconMap['Add01Icon']} /> },
 }
 
 export const WithRightIcon: Story = {
   name: 'With right icon',
-  args: { children: 'Continue', variant: 'primary', rightIcon: <ArrowRightIcon /> },
+  args: { children: 'Continue', variant: 'primary', rightIcon: <Icon icon={iconMap['ArrowRight01Icon']} /> },
 }
 
 export const WithBothIcons: Story = {
@@ -146,8 +145,8 @@ export const WithBothIcons: Story = {
   args: {
     children: 'Add and go',
     variant: 'primary',
-    leftIcon: <PlusIcon />,
-    rightIcon: <ArrowRightIcon />,
+    leftIcon:  <Icon icon={iconMap['Add01Icon']} />,
+    rightIcon: <Icon icon={iconMap['ArrowRight01Icon']} />,
   },
 }
 
@@ -185,7 +184,7 @@ export const AllVariantsAndStates: Story = {
           <Button key={`${variant}-default`} variant={variant}>Default</Button>
           <Button key={`${variant}-loading`} variant={variant} isLoading>Loading</Button>
           <Button key={`${variant}-disabled`} variant={variant} disabled>Disabled</Button>
-          <Button key={`${variant}-icon`} variant={variant} leftIcon={<PlusIcon />}>With icon</Button>
+          <Button key={`${variant}-icon`} variant={variant} leftIcon={<Icon icon={iconMap['Add01Icon']} />}>With icon</Button>
         </>
       ))}
     </div>

@@ -1,28 +1,7 @@
 import { forwardRef, useId, useState } from 'react'
+import { AlertCircleIcon } from '@hugeicons/core-free-icons'
+import { Icon } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
-
-// Alert-circle icon used in helper text
-function AlertCircleIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      width={16}
-      height={16}
-      className={className}
-    >
-      <circle cx="12" cy="12" r="10" />
-      <line x1="12" y1="8" x2="12" y2="12" />
-      <line x1="12" y1="16" x2="12.01" y2="16" />
-    </svg>
-  )
-}
 
 export interface TextFieldProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
@@ -231,7 +210,9 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
             id={`${id}-helper`}
             className="flex gap-[var(--spacing-space-4px)] items-center w-full px-[var(--inset-component-inset-component-md-x)]"
           >
-            <AlertCircleIcon
+            <Icon
+              icon={AlertCircleIcon}
+              size={16}
               className={cn(
                 'shrink-0',
                 disabled
