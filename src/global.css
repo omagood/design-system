@@ -83,6 +83,25 @@
     box-shadow: inset 0 0 0 var(--stroke-stroke-bold) var(--action-primary);
   }
 
+  /* ── Dropdown scrollbar ───────────────────────────────────────────────── */
+  .dropdown-scroll {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--action-disabled) transparent;
+  }
+  .dropdown-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+  .dropdown-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .dropdown-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--action-disabled);
+    border-radius: 3px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
   /* ── Checkbox box visual states ───────────────────────────────────────── */
   /*
    * Built as named utilities because the component chooses the class inside

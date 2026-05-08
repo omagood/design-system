@@ -24,6 +24,10 @@ Icons: @hugeicons/core-free-icons — import icon data and pass to <Icon icon={.
 - Every new component must follow the CVA pattern in llms.txt
 - Every new component must have a Storybook story
 - ALWAYS use icons from @hugeicons/core-free-icons via the <Icon> wrapper — never use inline SVGs or other icon libraries
+- Every component with a user-configurable icon prop MUST expose it in Storybook Controls:
+  • Hide the raw ReactNode prop: `icon: { control: false, table: { disable: true } }`
+  • Add a string-name arg: `iconName?: string` with `{ ...iconArgType }` from story-utils.tsx
+  • Convert in render: `icon={resolveIcon(iconName)}` — never pass ReactNode through Controls directly
 
 ## Decisions
 - 2026-05-07: font-weight uses [font-weight:var(--typography-weight-label)], not Tailwind font-semibold
@@ -38,3 +42,4 @@ Icons: @hugeicons/core-free-icons — import icon data and pass to <Icon icon={.
 - 2026-05-08: Checkbox visual state classes (cb-box-*) live in global.css @layer utilities because component builds class names in ternaries that Tailwind's scanner can't detect
 - 2026-05-08: Storybook icon controls use string-name args (leftIconName, rightIconName, iconName) + resolveIcon() helper in story-utils.tsx — ReactNode props can't be driven by select controls directly
 - 2026-05-08: src/tokens.generated.css is gitignored — run npm run tokens:build in every new worktree before starting Storybook
+- 2026-05-08: every component with a user-configurable icon prop hides the ReactNode prop from Controls and adds a string iconName arg + resolveIcon() conversion — same pattern as Button/FloatingButton/TextField/DropdownItem
