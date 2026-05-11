@@ -147,6 +147,15 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
               )}
             />
 
+            {/* Hover overlay for the label strip — keeps original surface colour
+                visible underneath, matching the border and field overlay behaviour */}
+            {labelFloated && !disabled && !focused && (
+              <span
+                aria-hidden="true"
+                className="absolute bottom-0 left-[-4px] right-[-4px] h-[8px] bg-[var(--state-hover-overlay)] opacity-0 group-hover:opacity-100 transition-opacity duration-150"
+              />
+            )}
+
             <span
               className={cn(
                 'relative z-10 block whitespace-nowrap',
