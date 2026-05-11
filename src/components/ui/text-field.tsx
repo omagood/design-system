@@ -111,7 +111,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
             'py-[var(--inset-component-md-y)]',
             bgClass,
             borderClass,
-            'transition-[border-width,border-color] duration-150',
+            'transition-[box-shadow] duration-150',
             disabled && 'cursor-not-allowed',
           )}
         >
