@@ -115,11 +115,11 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
             disabled && 'cursor-not-allowed',
           )}
         >
-          {/* Hover overlay — white 20% tint (matches Figma hover layer) */}
+          {/* Hover overlay — uses state-hover-overlay (Figma spec: overlay token for content tint) */}
           {!disabled && !focused && (
             <span
               aria-hidden="true"
-              className="absolute inset-0 rounded-[inherit] pointer-events-none bg-[var(--state-hover-fill)] opacity-0 group-hover:opacity-100 transition-opacity duration-150"
+              className="absolute inset-0 rounded-[inherit] pointer-events-none bg-[var(--state-hover-overlay)] opacity-0 group-hover:opacity-100 transition-opacity duration-150"
             />
           )}
 

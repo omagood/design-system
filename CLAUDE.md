@@ -57,3 +57,4 @@ Icons: @hugeicons/core-free-icons — import icon data and pass to <Icon icon={.
   • NEW: --corner-radius-full / --corner-radius-medium / --corner-radius-small
   • Full scale now available: none, xsmall, small, medium, large, xlarge, 2xlarge, full
   • stroke (--stroke-stroke-*) and focus (--focus-focus-*) names unchanged
+- 2026-05-11: TextField hover uses --state-hover-overlay for BOTH the content tint overlay and the border (field-border-default:hover / field-border-filled:hover in global.css) — overrides the general overlay/fill rule for this component
