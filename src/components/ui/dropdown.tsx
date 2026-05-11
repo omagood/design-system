@@ -65,9 +65,9 @@ function SelectAllRow({ allSelected, someSelected, onToggle }: SelectAllRowProps
       onClick={onToggle}
       className={cn(
         'w-full flex items-center',
-        'px-[var(--inset-component-inset-component-md-x)]',
-        'py-[var(--inset-component-inset-component-md-y)]',
-        'gap-[var(--gap-gap-related-default)]',
+        'px-[var(--inset-component-md-x)]',
+        'py-[var(--inset-component-md-y)]',
+        'gap-[var(--gap-related-default)]',
         'rounded-[var(--corner-radius-corner-small)]',
         '[font-family:var(--typography-font-family)]',
         'cursor-pointer hover:bg-[var(--state-hover-fill)] active:bg-[var(--state-pressed-fill)]',
@@ -168,7 +168,7 @@ export function Dropdown({
           'bg-[var(--surface-primary)]',
           'rounded-[var(--corner-radius-corner-medium)]',
           'shadow-elevation-medium',
-          'py-[var(--inset-inline-inset-inline-sm-y)]',
+          'py-[var(--inset-inline-sm-y)]',
           'w-full min-w-[200px]',
           'dropdown-scroll',
           className,
@@ -185,7 +185,7 @@ export function Dropdown({
             />
             <div
               aria-hidden="true"
-              className="h-px mx-[var(--inset-component-inset-component-md-x)] bg-[var(--border-divider)]"
+              className="h-px mx-[var(--inset-component-md-x)] bg-[var(--border-divider)]"
             />
           </>
         )}

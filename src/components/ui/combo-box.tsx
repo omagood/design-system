@@ -147,8 +147,8 @@ export function ComboBox({
         className={cn(
           'group relative flex items-center w-full text-left',
           'rounded-[var(--corner-radius-corner-medium)]',
-          'px-[var(--inset-component-inset-component-md-x)]',
-          'py-[var(--inset-component-inset-component-md-y)]',
+          'px-[var(--inset-component-md-x)]',
+          'py-[var(--inset-component-md-y)]',
           bgClass,
           borderClass,
           'transition-[box-shadow] duration-150',
@@ -171,7 +171,7 @@ export function ComboBox({
             'transition-all duration-150',
             labelFloated
               ? 'top-[-9px] left-[15px]'
-              : 'top-1/2 -translate-y-1/2 left-[var(--inset-component-inset-component-md-x)]',
+              : 'top-1/2 -translate-y-1/2 left-[var(--inset-component-md-x)]',
           )}
         >
           {/* Background strip that cuts through the border */}
@@ -263,7 +263,7 @@ export function ComboBox({
 
       {/* ── Helper text ───────────────────────────────────────────────────── */}
       {helperText && (
-        <div className="flex gap-[var(--spacing-space-4px)] items-center w-full px-[var(--inset-component-inset-component-md-x)]">
+        <div className="flex gap-[var(--spacing-space-4px)] items-center w-full px-[var(--inset-component-md-x)]">
           <Icon
             icon={AlertCircleIcon}
             size={16}

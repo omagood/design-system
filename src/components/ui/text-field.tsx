@@ -107,8 +107,8 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           className={cn(
             'group relative flex items-center w-full',
             'rounded-[var(--corner-radius-corner-medium)]',
-            'px-[var(--inset-component-inset-component-md-x)]',
-            'py-[var(--inset-component-inset-component-md-y)]',
+            'px-[var(--inset-component-md-x)]',
+            'py-[var(--inset-component-md-y)]',
             bgClass,
             borderClass,
             'transition-[border-width,border-color] duration-150',
@@ -131,7 +131,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
               'transition-all duration-150',
               labelFloated
                 ? labelFloatedPos
-                : 'top-1/2 -translate-y-1/2 left-[var(--inset-component-inset-component-md-x)]',
+                : 'top-1/2 -translate-y-1/2 left-[var(--inset-component-md-x)]',
             )}
           >
             {/*
@@ -208,7 +208,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
         {helperText && (
           <div
             id={`${id}-helper`}
-            className="flex gap-[var(--spacing-space-4px)] items-center w-full px-[var(--inset-component-inset-component-md-x)]"
+            className="flex gap-[var(--spacing-space-4px)] items-center w-full px-[var(--inset-component-md-x)]"
           >
             <Icon
               icon={AlertCircleIcon}

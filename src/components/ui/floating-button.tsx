@@ -28,16 +28,16 @@ const floatingButtonVariants = cva(
     variants: {
       size: {
         lg: [
-          'px-[var(--inset-component-inset-component-lg-x)]',
-          'py-[var(--inset-component-inset-component-lg-y)]',
+          'px-[var(--inset-component-lg-x)]',
+          'py-[var(--inset-component-lg-y)]',
           'text-[length:var(--typography-size-label-medium)]',
           'leading-[var(--typography-line-height-label-medium)]',
           'gap-[var(--spacing-space-8px)]',
           '[&_svg]:size-6',
         ],
         md: [
-          'px-[var(--inset-component-inset-component-md-x)]',
-          'py-[var(--inset-component-inset-component-md-y)]',
+          'px-[var(--inset-component-md-x)]',
+          'py-[var(--inset-component-md-y)]',
           'text-[length:var(--typography-size-label-medium)]',
           'leading-[var(--typography-line-height-label-medium)]',
           'gap-[var(--spacing-space-8px)]',
@@ -65,12 +65,12 @@ const floatingButtonVariants = cva(
       {
         size: 'lg',
         iconOnly: true,
-        className: ['!p-[var(--inset-component-inset-component-lg-y)]', 'aspect-square'],
+        className: ['!p-[var(--inset-component-lg-y)]', 'aspect-square'],
       },
       {
         size: 'md',
         iconOnly: true,
-        className: ['!p-[var(--inset-component-inset-component-md-y)]', 'aspect-square'],
+        className: ['!p-[var(--inset-component-md-y)]', 'aspect-square'],
       },
     ],
 

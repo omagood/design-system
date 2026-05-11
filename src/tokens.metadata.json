@@ -1,0 +1,826 @@
+{
+  "--background-screen": {
+    "cssVar": "--background-screen",
+    "description": "Main app background — lowest layer, always behind everything. Changing this shifts the overall mood of the product. ai-impact:high",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--background-elevated": {
+    "cssVar": "--background-elevated",
+    "description": "Elevated surface above screen — page content areas, sidebar backgrounds. Must always appear lighter than background/screen to communicate depth. ai-impact:high | ai-constraint:must be lighter than background/screen",
+    "aiGroup": "expressiveness",
+    "aiImpact": "high",
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--background-scrim": {
+    "cssVar": "--background-scrim",
+    "description": "Semi-transparent scrim behind modals, drawers, bottom sheets. Alpha 0.25–0.6: too low loses focus, too high feels oppressive. ai-impact:medium",
+    "aiGroup": "elevation",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--surface-primary": {
+    "cssVar": "--surface-primary",
+    "description": "Default surface for cards, panels, modal bodies, list containers. Most common surface in the system. ai-impact:high",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--surface-secondary": {
+    "cssVar": "--surface-secondary",
+    "description": "Slightly off-white surface for nested containers, table rows, secondary panels. Creates subtle depth within a primary surface. ai-impact:medium | ai-constraint:must be visually distinct from surface/primary",
+    "aiGroup": "expressiveness",
+    "aiImpact": "medium",
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--surface-tertiary": {
+    "cssVar": "--surface-tertiary",
+    "description": "Deeply nested surfaces — third-level containers, inline code blocks. ai-impact:low",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--surface-accent": {
+    "cssVar": "--surface-accent",
+    "description": "Brand-tinted surface for selected states, highlighted rows, active nav backgrounds. Always a very light tint of the accent color — never saturated. ai-impact:medium",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--surface-disabled": {
+    "cssVar": "--surface-disabled",
+    "description": "Background of disabled interactive surfaces. Communicates non-interactivity. Do not change. ai-locked:true",
+    "aiGroup": "locked",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--surface-floating": {
+    "cssVar": "--surface-floating",
+    "description": "Surface color of modals, bottom sheets, popovers — the element appearing above the background/overlay scrim. ai-impact:medium",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--action-primary": {
+    "cssVar": "--action-primary",
+    "description": "Fill color for primary buttons and secondary outline stroke. In light mode near-black, in dark mode near-white — always the opposite of the button foreground. ai-impact:high",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--action-primary-inverse": {
+    "cssVar": "--action-primary-inverse",
+    "description": "Fill for primary buttons inverse. In light mode near-white, in dark mode near-black — always the opposite of the button foreground. ai-impact:high",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--action-secondary": {
+    "cssVar": "--action-secondary",
+    "description": "Fill color for secondary, ghost, and outline buttons. Muted gray — communicates lower visual priority than action/primary. Also used for tertiary icon button fills. ai-impact:medium",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--action-disabled": {
+    "cssVar": "--action-disabled",
+    "description": "Fill color of disabled buttons and controls. Flat muted gray that signals non-interactivity.",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--action-distructive": {
+    "cssVar": "--action-distructive",
+    "description": "Fill color of destructive button surfaces (delete, remove, danger CTAs). Signals irreversibility and risk. Always red-family hue — never change the hue, only lightness allowed. Text on this background must use action/destructive-content. ai-locked:true | ai-constraint:always red-family hue, action/destructive-content must maintain 4.5:1 on this background",
+    "aiGroup": "locked",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--action-accent": {
+    "cssVar": "--action-accent",
+    "description": "Fill for accent-colored interactive elements — links, active tabs, selected chips. Draws attention without the weight of action/primary. ai-impact:medium",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--border-divider": {
+    "cssVar": "--border-divider",
+    "description": "Passive structural dividers — between list rows, table cells, section separators. Should be barely perceptible. If clearly visible at arm's length it is too strong. ai-impact:medium",
+    "aiGroup": "weight",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--border-outline": {
+    "cssVar": "--border-outline",
+    "description": "Border of interactive form elements at rest — inputs, selects, textareas. Must clearly define the clickable area. Always stronger than border/divider. ai-impact:medium | ai-constraint:must be stronger than border/divider",
+    "aiGroup": "weight",
+    "aiImpact": "medium",
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--border-action": {
+    "cssVar": "--border-action",
+    "description": "Border of outline-variant interactive elements — outline buttons, active input borders. Matches content/accent for consistency. ai-impact:medium",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--content-primary": {
+    "cssVar": "--content-primary",
+    "description": "Main body text, headings, primary labels. Highest-contrast text color in the system. ai-impact:high | ai-constraint:7:1 contrast vs background/elevated for AAA compliance",
+    "aiGroup": "expressiveness",
+    "aiImpact": "high",
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--content-secondary": {
+    "cssVar": "--content-secondary",
+    "description": "Supporting text — captions, metadata, helper text, timestamps. Clearly subordinate to content/primary. ai-impact:medium | ai-constraint:4.5:1 contrast vs surface/primary",
+    "aiGroup": "expressiveness",
+    "aiImpact": "medium",
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--content-disabled": {
+    "cssVar": "--content-disabled",
+    "description": "Placeholder text, ghost labels, very subtle hints. Lowest legibility tier — never use for critical information. ai-impact:low | ai-constraint:minimum 3:1 contrast",
+    "aiGroup": "expressiveness",
+    "aiImpact": "low",
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--content-primary-inverse": {
+    "cssVar": "--content-primary-inverse",
+    "description": "Primary text on dark surfaces — tooltips, dark cards, filled dark headers, primary buttons Inverse of content/primary. ai-impact:medium",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--content-accent": {
+    "cssVar": "--content-accent",
+    "description": "Accent-colored text — inline links, active labels, highlighted values. Always the brand color applied to text. ai-impact:medium | ai-constraint:4.5:1 contrast vs surface/primary",
+    "aiGroup": "expressiveness",
+    "aiImpact": "medium",
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--state-selected": {
+    "cssVar": "--state-selected",
+    "description": "Solid background for selected rows, active nav items, chosen list options. Indicates persistent selection rather than transient hover. ai-impact:medium",
+    "aiGroup": "interactivity",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--state-focus-ring": {
+    "cssVar": "--state-focus-ring",
+    "description": "Color of the keyboard focus indicator ring drawn around interactive elements. Must remain high-contrast and always visible — never suppress or hide. ai-impact:high | ai-locked:true",
+    "aiGroup": "accessibility",
+    "aiImpact": "high",
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--state-hover-overlay": {
+    "cssVar": "--state-hover-overlay",
+    "description": "Universal hover overlay — semi-transparent layer on top of any interactive surface on mouse enter. Apply to buttons, list items, nav items. Flips to white-opacity in dark mode. ai-impact:medium",
+    "aiGroup": "locked",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--state-hover-fill": {
+    "cssVar": "--state-hover-fill",
+    "description": "Solid hover state for list rows and table rows where an overlay layer is not possible. Changes the background directly. ai-impact:medium",
+    "aiGroup": "locked",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--state-pressed-overlay": {
+    "cssVar": "--state-pressed-overlay",
+    "description": "Universal pressed/active overlay — stronger than state/hover. Applied on mouse down for tactile feedback. Alpha always greater than state/hover. ai-constraint:alpha must be > state/hover alpha",
+    "aiGroup": "locked",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--state-pressed-fill": {
+    "cssVar": "--state-pressed-fill",
+    "description": "Solid pressed state for list rows where overlay is not possible. ai-impact:low",
+    "aiGroup": "locked",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-positive-background-strong": {
+    "cssVar": "--sentiment-positive-background-strong",
+    "description": "Saturated green surface — badge fill, status pill, prominent success indicator. Use when success needs high visibility against surrounding content. ai-impact:medium",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-positive-background-light": {
+    "cssVar": "--sentiment-positive-background-light",
+    "description": "Tinted green surface — success alert background, inline success message container. Softer than background-strong, used for larger areas of positive feedback. ai-impact:medium",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-positive-foreground": {
+    "cssVar": "--sentiment-positive-foreground",
+    "description": "Text and icon color for positive/success content. Use on background-light or white — never on background-strong. ai-impact:medium",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-positive-border": {
+    "cssVar": "--sentiment-positive-border",
+    "description": "Border of success-state containers, inputs, and alert boxes. Pairs with background-light to frame positive feedback areas. ai-impact:low",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-warning-background-strong": {
+    "cssVar": "--sentiment-warning-background-strong",
+    "description": "Saturated amber surface — warning badge, caution pill. Use sparingly — warns without blocking user action. ai-impact:medium",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-warning-background-light": {
+    "cssVar": "--sentiment-warning-background-light",
+    "description": "Tinted amber surface — warning alert background, caution message container. ai-impact:medium",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-warning-foreground": {
+    "cssVar": "--sentiment-warning-foreground",
+    "description": "Text and icon color for warning content.\nUse on background-light or white — never on background-strong. ai-impact:medium",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-warning-border": {
+    "cssVar": "--sentiment-warning-border",
+    "description": "Border of warning-state containers and alert boxes. ai-impact:low",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-negative-background-strong": {
+    "cssVar": "--sentiment-negative-background-strong",
+    "description": "Saturated red surface — error badge, destructive status pill.\nUse for explicit errors that require immediate attention. ai-impact:high",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-negative-background-light": {
+    "cssVar": "--sentiment-negative-background-light",
+    "description": "Tinted red surface — error alert background, inline error message container. ai-impact:high",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-negative-foreground": {
+    "cssVar": "--sentiment-negative-foreground",
+    "description": "Text and icon color for error and destructive content.\nUse on background-light or white — never on background-strong. ai-impact:high",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-negative-border": {
+    "cssVar": "--sentiment-negative-border",
+    "description": "Border of error-state inputs, containers, and alert boxes.\nSignals invalid input or system failure — pairs with background-light. ai-impact:high",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-neutral-background-strong": {
+    "cssVar": "--sentiment-neutral-background-strong",
+    "description": "Neutral gray surface — default badge, unclassified status pill.\nUse when status has no positive or negative connotation. ai-impact:low",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-neutral-background-light": {
+    "cssVar": "--sentiment-neutral-background-light",
+    "description": "Tinted neutral surface — informational alert background, generic tag container. ai-impact:low",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-neutral-foreground": {
+    "cssVar": "--sentiment-neutral-foreground",
+    "description": "Text and icon color for neutral informational content. ai-impact:low",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--sentiment-neutral-border": {
+    "cssVar": "--sentiment-neutral-border",
+    "description": "Border of neutral-state containers and informational alert boxes. ai-impact:low",
+    "aiGroup": "feedback",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--elevation-soft": {
+    "cssVar": "--elevation-soft",
+    "description": "Shadow color for lowest-elevation surfaces — subtle cards, resting panels.\nScales automatically between light and dark mode. ai-impact:low",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--elevation-medium": {
+    "cssVar": "--elevation-medium",
+    "description": "Shadow color for mid-elevation surfaces — dropdowns, popovers, floating menus. ai-impact:medium",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--elevation-strong": {
+    "cssVar": "--elevation-strong",
+    "description": "Shadow color for highest-elevation surfaces — modals, dialogs, command palettes. ai-impact:high",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-blue-background-strong": {
+    "cssVar": "--expression-blue-background-strong",
+    "description": "Saturated blue surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning. ai-impact:low",
+    "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-blue-background-light": {
+    "cssVar": "--expression-blue-background-light",
+    "description": "Tinted blue surface — larger categorical area, selected filter chip with blue identity. ai-impact:low",
+    "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-blue-foreground": {
+    "cssVar": "--expression-blue-foreground",
+    "description": "Text and icon on blue expression surfaces.\nAlways pair with background-light or background-strong from the same color. ai-impact:low",
+    "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-magenta-foreground": {
+    "cssVar": "--expression-magenta-foreground",
+    "description": "Text and icon on magenta expression surfaces.\nAlways pair with background-light or background-strong from the same color. ai-impact:low",
+    "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--corner-radius-none": {
+    "cssVar": "--corner-radius-none",
+    "description": "No rounding — full-bleed elements, edge-to-edge banners, explicitly sharp components. | ai-group:roundness",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--corner-radius-xsmall": {
+    "cssVar": "--corner-radius-xsmall",
+    "description": "Barely rounded — for very subtle softening, almost-sharp aesthetic. | ai-group:roundness",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--corner-radius-small": {
+    "cssVar": "--corner-radius-small",
+    "description": "Slight rounding — default for interactive controls (buttons, inputs) in the default personality. | ai-group:roundness",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--corner-radius-medium": {
+    "cssVar": "--corner-radius-medium",
+    "description": "Moderate rounding — default for cards and container surfaces. | ai-group:roundness",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--corner-radius-large": {
+    "cssVar": "--corner-radius-large",
+    "description": "Prominent rounding — modals, popovers, overlays in default personality. | ai-group:roundness",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--corner-radius-xlarge": {
+    "cssVar": "--corner-radius-xlarge",
+    "description": "Strong rounding — interactive controls in rounded personality, container surfaces in bubbly. | ai-group:roundness",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--corner-radius-2xlarge": {
+    "cssVar": "--corner-radius-2xlarge",
+    "description": "Very strong rounding — used in bubbly/expressive personality modes. | ai-group:roundness",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--corner-radius-full": {
+    "cssVar": "--corner-radius-full",
+    "description": "Fully circular/pill — chips, badges, avatar images, toggle switches. | ai-group:roundness",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--stroke-stroke-hairline": {
+    "cssVar": "--stroke-stroke-hairline",
+    "description": "Hairline border — structural dividers between list rows, table cells. Barely perceptible by design. | ai-group:weight",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--stroke-stroke-thin": {
+    "cssVar": "--stroke-stroke-thin",
+    "description": "Standard border width — interactive form elements at rest: inputs, selects, card outlines. Universal default. | ai-group:weight",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--stroke-stroke-medium": {
+    "cssVar": "--stroke-stroke-medium",
+    "description": "Medium border — slightly more prominent outlines, active states where extra visibility is needed. | ai-group:weight",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--stroke-stroke-bold": {
+    "cssVar": "--stroke-stroke-bold",
+    "description": "Bold border — focus rings, active input borders, strong emphasis outlines. | ai-group:weight",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--focus-focus-ring-width": {
+    "cssVar": "--focus-focus-ring-width",
+    "description": "Width of outer accessibility focus ring. Minimum 2px per WCAG 2.4.11. Never reduce below 2px. ai-locked:true | ai-constraint:minimum 2px WCAG requirement",
+    "aiGroup": "locked",
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--focus-focus-ring-offset": {
+    "cssVar": "--focus-focus-ring-offset",
+    "description": "Gap between focused element edge and focus ring. 2px creates clear visual separation. ai-locked:true",
+    "aiGroup": "locked",
+    "aiImpact": null,
+    "collection": "shapes",
+    "mode": "root"
+  },
+  "--inset-component-sm-x": {
+    "cssVar": "--inset-component-sm-x",
+    "description": "Horizontal (left/right) padding of small interactive controls — compact buttons, small inputs in dense tables. Always larger than inset-component-sm-y for optical balance. ai-impact:medium | ai-constraint:must be > inset-component-sm-y",
+    "aiGroup": "density",
+    "aiImpact": "medium",
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-component-sm-y": {
+    "cssVar": "--inset-component-sm-y",
+    "description": "Vertical (top/bottom) padding of small interactive controls. Ratio ~0.67 of inset-component-sm-x. Directly controls tap target height. ai-impact:medium | ai-constraint:must be < inset-component-sm-x",
+    "aiGroup": "density",
+    "aiImpact": "medium",
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-component-md-x": {
+    "cssVar": "--inset-component-md-x",
+    "description": "Horizontal padding of default/medium interactive controls — standard buttons and inputs. Most-used inset token. Increasing makes controls feel more generous and spacious. ai-impact:high | ai-constraint:must be > inset-component-md-y",
+    "aiGroup": "density",
+    "aiImpact": "high",
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-component-md-y": {
+    "cssVar": "--inset-component-md-y",
+    "description": "Vertical padding of medium interactive controls. Directly determines tap target height. Ratio ~0.75 of inset-component-md-x. Never set equal to or greater than x. ai-impact:high | ai-constraint:must be < inset-component-md-x, ratio ~0.75",
+    "aiGroup": "density",
+    "aiImpact": "high",
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-component-lg-x": {
+    "cssVar": "--inset-component-lg-x",
+    "description": "Horizontal padding of large interactive controls — prominent CTAs, hero inputs, full-width actions. ai-impact:medium | ai-constraint:must be > inset-component-lg-y",
+    "aiGroup": "density",
+    "aiImpact": "medium",
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-component-lg-y": {
+    "cssVar": "--inset-component-lg-y",
+    "description": "Vertical padding of large interactive controls. Ratio ~0.67 of inset-component-lg-x. ai-impact:medium | ai-constraint:must be < inset-component-lg-x",
+    "aiGroup": "density",
+    "aiImpact": "medium",
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-inline-sm-x": {
+    "cssVar": "--inset-inline-sm-x",
+    "description": "Horizontal padding of small inline elements — notification counts, dot badges, tiny status indicators. Always larger than inset-inline-sm-y. ai-impact:low",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-inline-sm-y": {
+    "cssVar": "--inset-inline-sm-y",
+    "description": "Vertical padding of small inline elements. Extremely tight — element sits flush with surrounding text line. ai-impact:low | ai-constraint:max 4px",
+    "aiGroup": "density",
+    "aiImpact": "low",
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-inline-md-x": {
+    "cssVar": "--inset-inline-md-x",
+    "description": "Horizontal padding of default chips, badges, filter tags. Standard pill padding. ai-impact:medium",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-inline-md-y": {
+    "cssVar": "--inset-inline-md-y",
+    "description": "Vertical padding of default chips and badges. Never exceed 8px or badges break text line rhythm. ai-impact:medium | ai-constraint:max 8px",
+    "aiGroup": "density",
+    "aiImpact": "medium",
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-inline-lg-x": {
+    "cssVar": "--inset-inline-lg-x",
+    "description": "Horizontal padding of large filter chips and prominent category tags. ai-impact:low",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-inline-lg-y": {
+    "cssVar": "--inset-inline-lg-y",
+    "description": "Vertical padding of large chips and tags. ai-impact:low | ai-constraint:max 8px",
+    "aiGroup": "density",
+    "aiImpact": "low",
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-container-sm": {
+    "cssVar": "--inset-container-sm",
+    "description": "Compact container padding — dense lists, compact cards, tight info boxes. Equal on all sides — do not split x/y for containers. ai-impact:medium",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-container-md": {
+    "cssVar": "--inset-container-md",
+    "description": "Default card and panel padding. The most common container inset. Equal on all sides. ai-impact:high",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-container-lg": {
+    "cssVar": "--inset-container-lg",
+    "description": "Comfortable padding for modals, bottom sheets, prominent panels. Equal on all sides. ai-impact:high",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-container-xl": {
+    "cssVar": "--inset-container-xl",
+    "description": "Generous padding for hero cards, onboarding panels, full-page sections. Equal on all sides. ai-impact:medium",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-section-sm": {
+    "cssVar": "--inset-section-sm",
+    "description": "Compact page section padding — mobile default and dense content pages. Controls macro breathing room of the full page layout. ai-impact:high",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-section-md": {
+    "cssVar": "--inset-section-md",
+    "description": "Standard page section padding — tablet and desktop default. Main lever for overall page airiness. Increasing alone makes the page feel editorial and open. ai-impact:high",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--inset-section-lg": {
+    "cssVar": "--inset-section-lg",
+    "description": "Spacious page section padding — hero sections, feature showcases, marketing pages. ai-impact:high",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-items-tight": {
+    "cssVar": "--gap-items-tight",
+    "description": "Gap between closely grouped controls — button groups, radio clusters, segmented controls. Decreasing fuses elements together; increasing separates them into individual items. ai-impact:medium",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-items-default": {
+    "cssVar": "--gap-items-default",
+    "description": "Standard gap between sibling UI elements — form field rows, list items, menu options. The most-used gap token. Changing this has broad impact on perceived density across the entire UI. ai-impact:high",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-items-comfortable": {
+    "cssVar": "--gap-items-comfortable",
+    "description": "Gap for grid items and navigation — card grid cells, nav rail items. Larger than default to give breathing room between cards. ai-impact:medium",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-stack-tight": {
+    "cssVar": "--gap-stack-tight",
+    "description": "Vertical gap between visually grouped text elements — heading + subheading, stat value + label. Controls whether these pairs read as a single unit. Never exceed 12px or the grouping breaks. ai-impact:medium | ai-constraint:max 12px to preserve visual grouping",
+    "aiGroup": "density",
+    "aiImpact": "medium",
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-stack-default": {
+    "cssVar": "--gap-stack-default",
+    "description": "Vertical gap between distinct but related content groups — between a form group and the next, between a heading and body text. The primary lever for vertical page rhythm. ai-impact:high",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-stack-loose": {
+    "cssVar": "--gap-stack-loose",
+    "description": "Vertical gap between loosely related content areas — rows of cards, sidebar sections. Creates visual separation without the weight of a full section break. ai-impact:medium",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-stack-section": {
+    "cssVar": "--gap-stack-section",
+    "description": "Vertical gap between major page sections. Largest gap token in the system. Reducing makes the page feel like a continuous scroll; increasing creates distinct visual chapters. ai-impact:high",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-inline-tight": {
+    "cssVar": "--gap-inline-tight",
+    "description": "Horizontal gap between tightly packed inline elements — stacked avatars, inline chip groups, tag clouds. ai-impact:low",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-inline-default": {
+    "cssVar": "--gap-inline-default",
+    "description": "Standard horizontal gap — toolbar actions, breadcrumb segments, nav items. Increasing makes navigation feel more open and touch-friendly. ai-impact:medium",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-inline-loose": {
+    "cssVar": "--gap-inline-loose",
+    "description": "Generous horizontal gap for top-level navigation and primary tab bars. Larger gaps signal these are the primary navigational choices. ai-impact:medium",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--layout-grid-margin": {
+    "cssVar": "--layout-grid-margin",
+    "description": "Distance from the viewport edge to the content area. Controls the breathing room between UI and screen edge. Scales across breakpoints — larger on desktop, tighter on mobile. Increase for a more premium, spacious feel. ai-impact:high",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "layout",
+    "mode": "root"
+  },
+  "--layout-grid-gutter": {
+    "cssVar": "--layout-grid-gutter",
+    "description": "Space between columns in the layout grid. Controls visual separation between major content areas. Consistent across all content inside the grid. Increase to create more distinct column separation. ai-impact:medium",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "layout",
+    "mode": "root"
+  },
+  "--layout-grid-columns": {
+    "cssVar": "--layout-grid-columns",
+    "description": "Number of columns in the layout grid. Defines the structural skeleton of every screen. Typically 12 on desktop, 8 on tablet, 4 on mobile. Changing this affects how components snap to the grid. ai-impact:high",
+    "aiGroup": "structure",
+    "aiImpact": null,
+    "collection": "layout",
+    "mode": "root"
+  },
+  "--layout-workspace-width": {
+    "cssVar": "--layout-workspace-width",
+    "description": "The active working area width for app interfaces. Used in dashboard and tool layouts where content needs a defined working zone. ai-impact:medium",
+    "aiGroup": "structure",
+    "aiImpact": null,
+    "collection": "layout",
+    "mode": "root"
+  },
+  "--layout-workspace-min-width": {
+    "cssVar": "--layout-workspace-min-width",
+    "description": "Minimum width before the workspace starts to break. Below this value horizontal scrolling begins. Do not set lower than the smallest supported viewport. ai-impact:low",
+    "aiGroup": "structure",
+    "aiImpact": null,
+    "collection": "layout",
+    "mode": "root"
+  },
+  "--layout-workspace-max-width": {
+    "cssVar": "--layout-workspace-max-width",
+    "description": "Maximum width the workspace expands to on large screens. Prevents content from becoming too wide on ultra-wide displays. ai-impact:medium",
+    "aiGroup": "structure",
+    "aiImpact": null,
+    "collection": "layout",
+    "mode": "root"
+  },
+  "--layout-canvas-min-width": {
+    "cssVar": "--layout-canvas-min-width",
+    "description": "Minimum supported content width. Below this the layout is not guaranteed to work correctly. ai-impact:low",
+    "aiGroup": "structure",
+    "aiImpact": null,
+    "collection": "layout",
+    "mode": "root"
+  },
+  "--layout-canvas-max-width": {
+    "cssVar": "--layout-canvas-max-width",
+    "description": "Maximum width for reading and content-focused layouts. Used for article pages, forms, onboarding flows. Keeps line lengths comfortable for reading. Narrower than workspace — used when focus matters more than space. ai-impact:medium",
+    "aiGroup": "structure",
+    "aiImpact": null,
+    "collection": "layout",
+    "mode": "root"
+  }
+}

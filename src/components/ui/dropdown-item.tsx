@@ -94,9 +94,9 @@ export function DropdownItem({
       onClick={handleClick}
       className={cn(
         'w-full flex items-center',
-        'px-[var(--inset-component-inset-component-md-x)]',
-        'py-[var(--inset-component-inset-component-md-y)]',
-        'gap-[var(--gap-gap-related-default)]',
+        'px-[var(--inset-component-md-x)]',
+        'py-[var(--inset-component-md-y)]',
+        'gap-[var(--gap-related-default)]',
         'rounded-[var(--corner-radius-corner-small)]',
         '[font-family:var(--typography-font-family)]',
         disabled

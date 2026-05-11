@@ -51,24 +51,24 @@ const buttonVariants = cva(
         // All sizes use label-medium typography (16px/24px) — Figma spec.
         // Size differences are padding-only, not font-size.
         lg: [
-          'px-[var(--inset-component-inset-component-lg-x)]',
-          'py-[var(--inset-component-inset-component-lg-y)]',
+          'px-[var(--inset-component-lg-x)]',
+          'py-[var(--inset-component-lg-y)]',
           'text-[length:var(--typography-size-label-medium)]',
           'leading-[var(--typography-line-height-label-medium)]',
           'gap-[var(--spacing-space-8px)]',
           '[&_svg]:size-5',
         ],
         md: [
-          'px-[var(--inset-component-inset-component-md-x)]',
-          'py-[var(--inset-component-inset-component-md-y)]',
+          'px-[var(--inset-component-md-x)]',
+          'py-[var(--inset-component-md-y)]',
           'text-[length:var(--typography-size-label-medium)]',
           'leading-[var(--typography-line-height-label-medium)]',
           'gap-[var(--spacing-space-8px)]',
           '[&_svg]:size-4',
         ],
         sm: [
-          'px-[var(--inset-component-inset-component-sm-x)]',
-          'py-[var(--inset-component-inset-component-sm-y)]',
+          'px-[var(--inset-component-sm-x)]',
+          'py-[var(--inset-component-sm-y)]',
           'text-[length:var(--typography-size-label-medium)]',
           'leading-[var(--typography-line-height-label-medium)]',
           'gap-[var(--spacing-space-4px)]',
