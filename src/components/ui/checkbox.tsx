@@ -151,9 +151,9 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
               // Colours + border — named utility covers bg, border-color, border-width, border-style
               boxClass,
               // Focus ring (driven by the hidden peer input)
-              'peer-focus-visible:ring-[length:var(--focus-focus-ring-width)]',
+              'peer-focus-visible:ring-[length:var(--focus-ring-width)]',
               'peer-focus-visible:ring-[color:var(--state-focus-ring)]',
-              'peer-focus-visible:ring-offset-[var(--focus-focus-ring-offset)]',
+              'peer-focus-visible:ring-offset-[var(--focus-ring-offset)]',
             )}
           >
             {/* Hover / pressed overlay — only for filled + enabled */}

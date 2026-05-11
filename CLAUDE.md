@@ -56,8 +56,12 @@ Icons: @hugeicons/core-free-icons — import icon data and pass to <Icon icon={.
   • OLD: --corner-radius-corner-full / --corner-radius-corner-medium / --corner-radius-corner-small
   • NEW: --corner-radius-full / --corner-radius-medium / --corner-radius-small
   • Full scale now available: none, xsmall, small, medium, large, xlarge, 2xlarge, full
-  • stroke (--stroke-stroke-*) and focus (--focus-focus-*) names unchanged
+  • stroke and focus also flattened (see 2026-05-11 entry below)
 - 2026-05-11: TextField hover uses --state-hover-overlay for BOTH the content tint overlay and the border (field-border-default:hover / field-border-filled:hover in global.css) — overrides the general overlay/fill rule for this component
+- 2026-05-11: shapes/stroke + shapes/focus flattened — doubled prefix removed:
+  • --stroke-stroke-hairline/thin/medium/bold → --stroke-hairline/thin/medium/bold
+  • --focus-focus-ring-width/offset → --focus-ring-width/offset
+  • Affects: button, checkbox, floating-button, global.css (field-border-* + cb-box-*)
 - 2026-05-11: elevation token rename — shadow collection → elevation collection:
   • Color tokens: --shadow-shadow-soft/medium/strong → --elevation-soft/medium/strong
   • Dimension tokens: --shadow-small-shadow-small-* / --shadow-medium-shadow-medium-* → --elevation-sm-* / --elevation-md-* / --elevation-lg-*

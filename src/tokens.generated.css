@@ -235,12 +235,12 @@
   --corner-radius-xlarge: 16px;
   --corner-radius-2xlarge: 24px;
   --corner-radius-full: 9999px;
-  --stroke-stroke-hairline: 0.5px;
-  --stroke-stroke-thin: 1px;
-  --stroke-stroke-medium: 1.5px;
-  --stroke-stroke-bold: 2px;
-  --focus-focus-ring-width: 2px;
-  --focus-focus-ring-offset: 2px;
+  --stroke-hairline: 0.5px;
+  --stroke-thin: 1px;
+  --stroke-medium: 1.5px;
+  --stroke-bold: 2px;
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
   --inset-component-sm-x: 12px;
   --inset-component-sm-y: 8px;
   --inset-component-md-x: 16px;

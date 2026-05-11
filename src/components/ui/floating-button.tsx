@@ -20,8 +20,8 @@ const floatingButtonVariants = cva(
     'shadow-elevation-medium',
     'transition-shadow duration-150',
     'focus-visible:outline-none',
-    'focus-visible:ring-[length:var(--focus-focus-ring-width)] focus-visible:ring-[var(--state-focus-ring)]',
-    'focus-visible:ring-offset-[var(--focus-focus-ring-offset)]',
+    'focus-visible:ring-[length:var(--focus-ring-width)] focus-visible:ring-[var(--state-focus-ring)]',
+    'focus-visible:ring-offset-[var(--focus-ring-offset)]',
     'disabled:pointer-events-none disabled:cursor-not-allowed',
   ],
   {

@@ -15,8 +15,8 @@ const buttonVariants = cva(
     '[font-weight:var(--typography-weight-label)]',
     'transition-colors duration-100',
     'focus-visible:outline-none',
-    'focus-visible:ring-[length:var(--focus-focus-ring-width)] focus-visible:ring-[var(--state-focus-ring)]',
-    'focus-visible:ring-offset-[var(--focus-focus-ring-offset)]',
+    'focus-visible:ring-[length:var(--focus-ring-width)] focus-visible:ring-[var(--state-focus-ring)]',
+    'focus-visible:ring-offset-[var(--focus-ring-offset)]',
     'disabled:pointer-events-none disabled:cursor-not-allowed',
   ],
   {
@@ -29,7 +29,7 @@ const buttonVariants = cva(
         secondary: [
           'bg-transparent',
           // Figma: 1.5px border (stroke-medium), colour = action-primary
-          'border-[length:var(--stroke-stroke-medium)] border-solid border-[color:var(--action-primary)]',
+          'border-[length:var(--stroke-medium)] border-solid border-[color:var(--action-primary)]',
           'text-[var(--content-primary)]',
           'hover:bg-[var(--state-hover-fill)]',
           'active:bg-[var(--state-pressed-fill)]',

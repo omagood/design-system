@@ -479,48 +479,48 @@
     "collection": "shapes",
     "mode": "root"
   },
-  "--stroke-stroke-hairline": {
-    "cssVar": "--stroke-stroke-hairline",
+  "--stroke-hairline": {
+    "cssVar": "--stroke-hairline",
     "description": "Hairline border — structural dividers between list rows, table cells. Barely perceptible by design. | ai-group:weight",
     "aiGroup": null,
     "aiImpact": null,
     "collection": "shapes",
     "mode": "root"
   },
-  "--stroke-stroke-thin": {
-    "cssVar": "--stroke-stroke-thin",
+  "--stroke-thin": {
+    "cssVar": "--stroke-thin",
     "description": "Standard border width — interactive form elements at rest: inputs, selects, card outlines. Universal default. | ai-group:weight",
     "aiGroup": null,
     "aiImpact": null,
     "collection": "shapes",
     "mode": "root"
   },
-  "--stroke-stroke-medium": {
-    "cssVar": "--stroke-stroke-medium",
+  "--stroke-medium": {
+    "cssVar": "--stroke-medium",
     "description": "Medium border — slightly more prominent outlines, active states where extra visibility is needed. | ai-group:weight",
     "aiGroup": null,
     "aiImpact": null,
     "collection": "shapes",
     "mode": "root"
   },
-  "--stroke-stroke-bold": {
-    "cssVar": "--stroke-stroke-bold",
+  "--stroke-bold": {
+    "cssVar": "--stroke-bold",
     "description": "Bold border — focus rings, active input borders, strong emphasis outlines. | ai-group:weight",
     "aiGroup": null,
     "aiImpact": null,
     "collection": "shapes",
     "mode": "root"
   },
-  "--focus-focus-ring-width": {
-    "cssVar": "--focus-focus-ring-width",
+  "--focus-ring-width": {
+    "cssVar": "--focus-ring-width",
     "description": "Width of outer accessibility focus ring. Minimum 2px per WCAG 2.4.11. Never reduce below 2px. ai-locked:true | ai-constraint:minimum 2px WCAG requirement",
     "aiGroup": "locked",
     "aiImpact": null,
     "collection": "shapes",
     "mode": "root"
   },
-  "--focus-focus-ring-offset": {
-    "cssVar": "--focus-focus-ring-offset",
+  "--focus-ring-offset": {
+    "cssVar": "--focus-ring-offset",
     "description": "Gap between focused element edge and focus ring. 2px creates clear visual separation. ai-locked:true",
     "aiGroup": "locked",
     "aiImpact": null,

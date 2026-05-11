@@ -64,33 +64,33 @@
    * border-radius automatically, so no CSS border is needed.
    *
    * Stroke widths use Figma stroke tokens:
-   *   --stroke-stroke-thin   = 1px   (default / filled / disabled)
-   *   --stroke-stroke-bold   = 2px   (focus / error)
+   *   --stroke-thin   = 1px   (default / filled / disabled)
+   *   --stroke-bold   = 2px   (focus / error)
    */
   .field-border-default {
-    box-shadow: inset 0 0 0 var(--stroke-stroke-thin) var(--border-outline);
+    box-shadow: inset 0 0 0 var(--stroke-thin) var(--border-outline);
   }
   .field-border-default:hover {
     box-shadow:
-      inset 0 0 0 var(--stroke-stroke-thin) var(--state-hover-overlay),
-      inset 0 0 0 var(--stroke-stroke-thin) var(--border-outline);
+      inset 0 0 0 var(--stroke-thin) var(--state-hover-overlay),
+      inset 0 0 0 var(--stroke-thin) var(--border-outline);
   }
   .field-border-filled {
-    box-shadow: inset 0 0 0 var(--stroke-stroke-thin) var(--border-outline);
+    box-shadow: inset 0 0 0 var(--stroke-thin) var(--border-outline);
   }
   .field-border-filled:hover {
     box-shadow:
-      inset 0 0 0 var(--stroke-stroke-thin) var(--state-hover-overlay),
-      inset 0 0 0 var(--stroke-stroke-thin) var(--border-outline);
+      inset 0 0 0 var(--stroke-thin) var(--state-hover-overlay),
+      inset 0 0 0 var(--stroke-thin) var(--border-outline);
   }
   .field-border-disabled {
-    box-shadow: inset 0 0 0 var(--stroke-stroke-thin) var(--border-outline);
+    box-shadow: inset 0 0 0 var(--stroke-thin) var(--border-outline);
   }
   .field-border-error {
-    box-shadow: inset 0 0 0 var(--stroke-stroke-bold) var(--sentiment-negative-border);
+    box-shadow: inset 0 0 0 var(--stroke-bold) var(--sentiment-negative-border);
   }
   .field-border-focus {
-    box-shadow: inset 0 0 0 var(--stroke-stroke-bold) var(--action-primary);
+    box-shadow: inset 0 0 0 var(--stroke-bold) var(--action-primary);
   }
 
   /* ── Dropdown scrollbar ───────────────────────────────────────────────── */
@@ -121,7 +121,7 @@
   .cb-box-unchecked {
     background-color: var(--surface-primary);
     border-color: var(--action-secondary);
-    border-width: var(--stroke-stroke-medium);
+    border-width: var(--stroke-medium);
     border-style: solid;
     transition: background-color 150ms, border-color 150ms;
   }
@@ -135,21 +135,21 @@
   .cb-box-filled {
     background-color: var(--action-primary);
     border-color: var(--action-primary);
-    border-width: var(--stroke-stroke-medium);
+    border-width: var(--stroke-medium);
     border-style: solid;
   }
 
   .cb-box-unchecked-disabled {
     background-color: var(--surface-tertiary);
     border-color: var(--action-disabled);
-    border-width: var(--stroke-stroke-medium);
+    border-width: var(--stroke-medium);
     border-style: solid;
   }
 
   .cb-box-filled-disabled {
     background-color: var(--action-disabled);
     border-color: var(--action-disabled);
-    border-width: var(--stroke-stroke-medium);
+    border-width: var(--stroke-medium);
     border-style: solid;
   }
 }
