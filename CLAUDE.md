@@ -52,3 +52,8 @@ Icons: @hugeicons/core-free-icons — import icon data and pass to <Icon icon={.
 - 2026-05-11: typography line-height group — was "line height" (space) → now "line-height" (hyphen) in Figma; toKebab() in build.js already normalised spaces to dashes so CSS output --typography-line-height-* was always correct
 - 2026-05-11: tokens/build.js now also generates src/tokens.metadata.json — flat JSON keyed by CSS var name, includes description, aiGroup, aiImpact, collection for every token with a $description
 - 2026-05-11: gap/items tokens (--gap-items-tight/default/comfortable) still present in spacing JSON despite Figma spec saying they were merged into gap/inline — flagged as discrepancy, not yet removed from source
+- 2026-05-11: shapes token restructure — corner-radius group flattened; doubled prefix removed:
+  • OLD: --corner-radius-corner-full / --corner-radius-corner-medium / --corner-radius-corner-small
+  • NEW: --corner-radius-full / --corner-radius-medium / --corner-radius-small
+  • Full scale now available: none, xsmall, small, medium, large, xlarge, 2xlarge, full
+  • stroke (--stroke-stroke-*) and focus (--focus-focus-*) names unchanged

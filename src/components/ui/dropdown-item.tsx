@@ -37,7 +37,7 @@ function RadioIndicator({ checked }: { checked: boolean }) {
       className={cn(
         // 20×20 outer circle
         'relative shrink-0',
-        'size-5 rounded-[var(--corner-radius-corner-full)]',
+        'size-5 rounded-[var(--corner-radius-full)]',
         'border-[1.25px] border-solid border-[color:var(--action-secondary)]',
         'bg-[var(--surface-primary)]',
         'flex items-center justify-center',
@@ -48,7 +48,7 @@ function RadioIndicator({ checked }: { checked: boolean }) {
         // Figma spec says 2.75px offset so inner size = 20 - 2*2.75 ≈ 14.5px.
         // We use 12px as specified for the inner circle.
         <div
-          className="size-3 rounded-[var(--corner-radius-corner-full)] bg-[var(--action-primary)]"
+          className="size-3 rounded-[var(--corner-radius-full)] bg-[var(--action-primary)]"
         />
       )}
     </div>
@@ -97,7 +97,7 @@ export function DropdownItem({
         'px-[var(--inset-component-md-x)]',
         'py-[var(--inset-component-md-y)]',
         'gap-[var(--gap-related-default)]',
-        'rounded-[var(--corner-radius-corner-small)]',
+        'rounded-[var(--corner-radius-small)]',
         '[font-family:var(--typography-font-family)]',
         disabled
           ? 'cursor-not-allowed opacity-40'

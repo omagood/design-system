@@ -146,7 +146,7 @@ export function ComboBox({
         onClick={() => !disabled && setOpen((prev) => !prev)}
         className={cn(
           'group relative flex items-center w-full text-left',
-          'rounded-[var(--corner-radius-corner-medium)]',
+          'rounded-[var(--corner-radius-medium)]',
           'px-[var(--inset-component-md-x)]',
           'py-[var(--inset-component-md-y)]',
           bgClass,

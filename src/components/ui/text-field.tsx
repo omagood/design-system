@@ -106,7 +106,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
         <div
           className={cn(
             'group relative flex items-center w-full',
-            'rounded-[var(--corner-radius-corner-medium)]',
+            'rounded-[var(--corner-radius-medium)]',
             'px-[var(--inset-component-md-x)]',
             'py-[var(--inset-component-md-y)]',
             bgClass,

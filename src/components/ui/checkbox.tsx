@@ -147,7 +147,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
               'pointer-events-none absolute inset-[2px]',
               'flex items-center justify-center overflow-hidden',
               // Shape
-              'rounded-[var(--corner-radius-corner-small)]',
+              'rounded-[var(--corner-radius-small)]',
               // Colours + border — named utility covers bg, border-color, border-width, border-style
               boxClass,
               // Focus ring (driven by the hidden peer input)

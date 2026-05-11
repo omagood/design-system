@@ -12,7 +12,7 @@ const floatingButtonVariants = cva(
   [
     'inline-flex items-center justify-center',
     'select-none whitespace-nowrap',
-    'rounded-[var(--corner-radius-corner-full)]',
+    'rounded-[var(--corner-radius-full)]',
     'bg-[var(--action-primary)] text-[var(--action-primary-inverse)]',
     '[font-family:var(--typography-font-family)]',
     '[font-weight:var(--typography-weight-label)]',

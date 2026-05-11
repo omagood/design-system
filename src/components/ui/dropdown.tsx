@@ -68,7 +68,7 @@ function SelectAllRow({ allSelected, someSelected, onToggle }: SelectAllRowProps
         'px-[var(--inset-component-md-x)]',
         'py-[var(--inset-component-md-y)]',
         'gap-[var(--gap-related-default)]',
-        'rounded-[var(--corner-radius-corner-small)]',
+        'rounded-[var(--corner-radius-small)]',
         '[font-family:var(--typography-font-family)]',
         'cursor-pointer hover:bg-[var(--state-hover-fill)] active:bg-[var(--state-pressed-fill)]',
         'transition-colors duration-100',
@@ -166,7 +166,7 @@ export function Dropdown({
         data-testid={testId ?? 'dropdown'}
         className={cn(
           'bg-[var(--surface-primary)]',
-          'rounded-[var(--corner-radius-corner-medium)]',
+          'rounded-[var(--corner-radius-medium)]',
           'shadow-elevation-medium',
           'py-[var(--inset-inline-sm-y)]',
           'w-full min-w-[200px]',

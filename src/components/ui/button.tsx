@@ -8,7 +8,7 @@ const buttonVariants = cva(
   [
     'inline-flex items-center justify-center',
     'select-none whitespace-nowrap',
-    'rounded-[var(--corner-radius-corner-medium)]',
+    'rounded-[var(--corner-radius-medium)]',
     '[font-family:var(--typography-font-family)]',
     // Explicit property syntax — font-[var(...)] is ambiguous in Tailwind v4
     // and may be interpreted as font-family. [font-weight:...] is unambiguous.
