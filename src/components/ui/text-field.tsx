@@ -176,6 +176,15 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
               )}
             >
               {label}
+              {/* Hover colour overlay on label text — rendered after the text node
+                  so it composites on top of the text pixels while keeping
+                  --content-secondary as the base colour underneath */}
+              {!disabled && !focused && (
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-[var(--state-hover-overlay)] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none"
+                />
+              )}
             </span>
           </label>
 
