@@ -47,14 +47,14 @@
   /* ── Elevation shadows (FloatingButton) ───────────────────────────────── */
   .shadow-elevation-medium {
     box-shadow:
-      0px var(--shadow-medium-shadow-medium-y-1)  var(--shadow-medium-shadow-medium-blur-1) 0px var(--shadow-shadow-soft),
-      0px var(--shadow-medium-shadow-y-l2-2)       var(--shadow-medium-shadow-medium-blur-2) 0px var(--shadow-shadow-strong);
+      0px var(--elevation-md-y-1) var(--elevation-md-blur-1) 0px var(--elevation-soft),
+      0px var(--elevation-md-y-2) var(--elevation-md-blur-2) 0px var(--elevation-strong);
   }
 
   .shadow-elevation-small {
     box-shadow:
-      0px var(--shadow-small-shadow-small-y-1)   var(--shadow-small-shadow-small-blur-1) 0px var(--shadow-shadow-soft),
-      0px var(--shadow-small-shadow-small-y-2)   var(--shadow-small-shadow-small-blur-2) 0px var(--shadow-shadow-strong);
+      0px var(--elevation-sm-y-1) var(--elevation-sm-blur-1) 0px var(--elevation-soft),
+      0px var(--elevation-sm-y-2) var(--elevation-sm-blur-2) 0px var(--elevation-strong);
   }
 
   /* ── TextField border states ──────────────────────────────────────────── */

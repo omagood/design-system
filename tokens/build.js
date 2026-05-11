@@ -108,7 +108,7 @@ function loadTokens(relPath, prefix = '') {
 const rootTokens = [
   ...loadTokens('primitives.json'),
   ...loadTokens('colors/light.json'),
-  ...loadTokens('elevation/light.json'),
+  ...loadTokens('elevation/light.json', 'elevation'),
   ...loadTokens('shapes/shapes.json'),
   ...loadTokens('spacing/desktop.json'),
   // layout/* was formerly grid/* — prefix 'layout' so vars are --layout-grid-*
@@ -121,7 +121,7 @@ const rootTokens = [
 // [data-theme="dark"] — only the tokens that differ in dark mode
 const darkTokens = [
   ...loadTokens('colors/dark.json'),
-  ...loadTokens('elevation/dark.json'),
+  ...loadTokens('elevation/dark.json', 'elevation'),
 ]
 
 // Tablet breakpoint — spacing + layout differ
@@ -209,14 +209,14 @@ const allSources = [
   // ── :root ───────────────────────────────────────────────────
   { rel: 'primitives.json',         prefix: '',          mode: 'root'    },
   { rel: 'colors/light.json',       prefix: '',          mode: 'root'    },
-  { rel: 'elevation/light.json',    prefix: '',          mode: 'root'    },
+  { rel: 'elevation/light.json',    prefix: 'elevation', mode: 'root'    },
   { rel: 'shapes/shapes.json',      prefix: '',          mode: 'root'    },
   { rel: 'spacing/desktop.json',    prefix: '',          mode: 'root'    },
   { rel: 'layout/desktop.json',     prefix: 'layout',    mode: 'root'    },
   { rel: 'typography/desktop.json', prefix: 'typography',mode: 'root'    },
   // ── dark ────────────────────────────────────────────────────
   { rel: 'colors/dark.json',        prefix: '',          mode: 'dark'    },
-  { rel: 'elevation/dark.json',     prefix: '',          mode: 'dark'    },
+  { rel: 'elevation/dark.json',     prefix: 'elevation', mode: 'dark'    },
   // ── tablet ──────────────────────────────────────────────────
   { rel: 'spacing/tablet.json',     prefix: '',          mode: 'tablet'  },
   { rel: 'layout/tablet.json',      prefix: 'layout',    mode: 'tablet'  },

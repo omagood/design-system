@@ -58,3 +58,8 @@ Icons: @hugeicons/core-free-icons — import icon data and pass to <Icon icon={.
   • Full scale now available: none, xsmall, small, medium, large, xlarge, 2xlarge, full
   • stroke (--stroke-stroke-*) and focus (--focus-focus-*) names unchanged
 - 2026-05-11: TextField hover uses --state-hover-overlay for BOTH the content tint overlay and the border (field-border-default:hover / field-border-filled:hover in global.css) — overrides the general overlay/fill rule for this component
+- 2026-05-11: elevation token rename — shadow collection → elevation collection:
+  • Color tokens: --shadow-shadow-soft/medium/strong → --elevation-soft/medium/strong
+  • Dimension tokens: --shadow-small-shadow-small-* / --shadow-medium-shadow-medium-* → --elevation-sm-* / --elevation-md-* / --elevation-lg-*
+  • build.js: loadTokens('elevation/*.json', 'elevation') — prefix required so keys become --elevation-sm-blur-2 etc.
+  • Only global.css shadow-elevation-* utilities use these; no component .tsx files reference them directly
