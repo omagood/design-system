@@ -10,7 +10,7 @@ Name: Ambient DS
 Stack: React, TypeScript, Tailwind CSS v4, Vite, Storybook.
 Components: src/components/ui/
 Tokens source: tokens/figma/
-Tokens output: src/tokens.generated.css
+Tokens output: src/tokens.generated.css + src/tokens.metadata.json
 Build tokens: npm run tokens:build  ← run this first in any new worktree (tokens.generated.css is gitignored)
 Full AI reference: llms.txt
 Icons: @hugeicons/core-free-icons — import icon data and pass to <Icon icon={...} />
@@ -38,8 +38,17 @@ Icons: @hugeicons/core-free-icons — import icon data and pass to <Icon icon={.
 - 2026-05-07: secondary button border is 1.5px stroke-medium + action-primary color per Figma spec
 - 2026-05-07: named @layer utilities in global.css for any class Tailwind's scanner can't detect statically (conditional ternaries, dynamic strings)
 - 2026-05-08: icons use @hugeicons/react + @hugeicons/core-free-icons; always wrap with <Icon icon={...} /> from src/components/ui/icon.tsx — never inline SVGs
-- 2026-05-08: Checkbox hover/pressed on unchecked uses bg color swap (--state-hover-surface / --state-pressed-secondary); filled uses white opacity overlay span — white overlay on white bg is invisible
+- 2026-05-08: Checkbox hover/pressed on unchecked uses bg color swap (--state-hover-fill / --state-pressed-fill); filled uses white opacity overlay span (--state-hover-overlay / --state-pressed-overlay) — white overlay on white bg is invisible
 - 2026-05-08: Checkbox visual state classes (cb-box-*) live in global.css @layer utilities because component builds class names in ternaries that Tailwind's scanner can't detect
 - 2026-05-08: Storybook icon controls use string-name args (leftIconName, rightIconName, iconName) + resolveIcon() helper in story-utils.tsx — ReactNode props can't be driven by select controls directly
 - 2026-05-08: src/tokens.generated.css is gitignored — run npm run tokens:build in every new worktree before starting Storybook
 - 2026-05-08: every component with a user-configurable icon prop hides the ReactNode prop from Controls and adds a string iconName arg + resolveIcon() conversion — same pattern as Button/FloatingButton/TextField/DropdownItem
+- 2026-05-11: state token rename — overlay vs fill split:
+  • --state-hover-overlay / --state-pressed-overlay → for dark/filled/colored backgrounds (FAB, filled checkbox, chips)
+  • --state-hover-fill / --state-pressed-fill → for light/empty backgrounds (list rows, secondary/ghost buttons, text fields, dropdown items)
+  • OLD NAMES DELETED: --state-hover, --state-hover-surface, --state-pressed, --state-pressed-secondary
+- 2026-05-11: expression token typo fixed — --exrpession-* deleted, correct name is --expression-* (blue, magenta, teal, purple, lime)
+- 2026-05-11: layout token rename — grid collection → layout collection; --grid-* → --layout-grid-*; new extras: --layout-workspace-*, --layout-canvas-*, --layout-show-sidebar
+- 2026-05-11: typography line-height group — was "line height" (space) → now "line-height" (hyphen) in Figma; toKebab() in build.js already normalised spaces to dashes so CSS output --typography-line-height-* was always correct
+- 2026-05-11: tokens/build.js now also generates src/tokens.metadata.json — flat JSON keyed by CSS var name, includes description, aiGroup, aiImpact, collection for every token with a $description
+- 2026-05-11: gap/items tokens (--gap-items-tight/default/comfortable) still present in spacing JSON despite Figma spec saying they were merged into gap/inline — flagged as discrepancy, not yet removed from source

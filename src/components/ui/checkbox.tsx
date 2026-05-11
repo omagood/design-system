@@ -160,7 +160,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             {!disabled && isFilled && (
               <span
                 aria-hidden="true"
-                className="absolute inset-0 rounded-[inherit] pointer-events-none bg-[var(--state-hover)] opacity-0 group-hover:opacity-100 group-active:bg-[var(--state-pressed)] transition-opacity duration-150"
+                className="absolute inset-0 rounded-[inherit] pointer-events-none bg-[var(--state-hover-overlay)] opacity-0 group-hover:opacity-100 group-active:bg-[var(--state-pressed-overlay)] transition-opacity duration-150"
               />
             )}
 

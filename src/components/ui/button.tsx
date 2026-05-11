@@ -31,15 +31,15 @@ const buttonVariants = cva(
           // Figma: 1.5px border (stroke-medium), colour = action-primary
           'border-[length:var(--stroke-stroke-medium)] border-solid border-[color:var(--action-primary)]',
           'text-[var(--content-primary)]',
-          'hover:bg-[var(--state-hover-surface)]',
-          'active:bg-[var(--state-pressed-secondary)]',
+          'hover:bg-[var(--state-hover-fill)]',
+          'active:bg-[var(--state-pressed-fill)]',
         ],
         ghost: [
           'bg-transparent',
           'text-[var(--content-primary)]',
           'underline underline-offset-2',
-          'hover:bg-[var(--state-hover-surface)]',
-          'active:bg-[var(--state-pressed-secondary)]',
+          'hover:bg-[var(--state-hover-fill)]',
+          'active:bg-[var(--state-pressed-fill)]',
         ],
         negative: [
           'bg-[var(--action-distructive)] text-[var(--action-primary-inverse)]',

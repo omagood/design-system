@@ -116,10 +116,10 @@
     transition: background-color 150ms, border-color 150ms;
   }
   .group:hover .cb-box-unchecked {
-    background-color: var(--state-hover-surface);
+    background-color: var(--state-hover-fill);
   }
   .group:active .cb-box-unchecked {
-    background-color: var(--state-pressed-secondary);
+    background-color: var(--state-pressed-fill);
   }
 
   .cb-box-filled {

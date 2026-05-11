@@ -76,16 +76,24 @@ Examples:
 --border-outline             input borders, card outlines
 --border-action              active / focused border
 
---state-hover                white 20% overlay (apply on top of bg for hover)
---state-pressed              white 32% overlay (apply on top of bg for pressed)
---state-hover-surface        solid hover background for ghost/secondary buttons
---state-pressed-secondary    solid pressed background
+--state-hover-overlay        white/black 20% overlay — use on dark/filled/colored backgrounds (FAB, filled checkbox, chips)
+--state-pressed-overlay      white/black 32% overlay — use on dark/filled/colored backgrounds
+--state-hover-fill           solid hover bg — use on light/empty backgrounds (list rows, secondary/ghost buttons, text fields, dropdown items)
+--state-pressed-fill         solid pressed bg — use on light/empty backgrounds
 --state-focus-ring           focus ring color (#068BEE)
+--state-selected             selected row/item background
+
 
 --sentiment-positive-background-strong / -light / -foreground / -border
 --sentiment-warning-background-strong  / -light / -foreground / -border
 --sentiment-negative-background-strong / -light / -foreground / -border
 --sentiment-neutral-background-strong  / -light / -foreground / -border
+
+--expression-blue-background-strong / -background-light / -foreground
+--expression-magenta-background-strong / -background-light / -foreground
+--expression-teal-background-strong / -background-light / -foreground
+--expression-purple-background-strong / -background-light / -foreground
+--expression-lime-background-strong / -background-light / -foreground
 ```
 
 #### Colors — Primitive (use only in token definitions, not in components)
@@ -153,16 +161,17 @@ Examples:
 
 #### Gap
 ```
---gap-gap-items-tight        8px    items in a tight cluster
---gap-gap-items-default      12px   standard item gap
---gap-gap-items-comfortable  16px   comfortable item gap
+--gap-gap-related-tight      8px    tightly related siblings (icon + label, avatar + name)
+--gap-gap-related-default    16px   standard related-element gap
+
 --gap-gap-stack-tight        8px    vertical stack tight
 --gap-gap-stack-default      16px   vertical stack default
 --gap-gap-stack-loose        24px   vertical stack loose
 --gap-gap-stack-section      64px   between page sections
---gap-gap-inline-tight       8px
---gap-gap-inline-default     12px
---gap-gap-inline-loose       16px
+
+--gap-gap-inline-tight       8px    tightly packed inline elements (tags, avatars)
+--gap-gap-inline-default     12px   standard toolbar/nav gap
+--gap-gap-inline-loose       16px   generous top-level nav gap
 ```
 
 #### Shapes
@@ -519,7 +528,9 @@ Token collections in Figma:
 - `spacing` → space scale + component insets + gaps
 - `shapes` → corner radius + stroke widths + focus ring
 - `elevation` → shadow values (light + dark)
-- `grid` → margin, gutter, columns per breakpoint
+- `layout` → grid (margin, gutter, columns), workspace, canvas dimensions per breakpoint
+  CSS vars: --layout-grid-margin, --layout-grid-gutter, --layout-grid-columns
+            --layout-workspace-width, --layout-canvas-max-width, --layout-show-sidebar
 
 ---
 
@@ -533,9 +544,10 @@ src/
   lib/utils.ts       ← cn() = clsx + tailwind-merge
   global.css         ← Tailwind entry, @font-face, token import, named utilities
   tokens.generated.css ← AUTO-GENERATED — do not edit manually
+  tokens.metadata.json ← AUTO-GENERATED — token descriptions, aiGroup, aiImpact per CSS var
 
 tokens/
-  build.js           ← converts tokens/figma/**/*.json → src/tokens.generated.css
+  build.js           ← converts tokens/figma/**/*.json → tokens.generated.css + tokens.metadata.json
   figma/             ← Figma export source files (never edit manually)
     primitives.json
     colors/light.json + dark.json
@@ -543,7 +555,7 @@ tokens/
     shapes/shapes.json
     typography/desktop.json + tablet.json + mobile.json
     spacing/desktop.json + tablet.json + mobile.json
-    grid/desktop.json + tablet.json + mobile.json
+    layout/desktop.json + tablet.json + mobile.json
 
 .storybook/
   main.ts            ← Storybook config with Tailwind v4 plugin

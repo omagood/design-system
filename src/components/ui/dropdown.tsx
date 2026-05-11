@@ -70,7 +70,7 @@ function SelectAllRow({ allSelected, someSelected, onToggle }: SelectAllRowProps
         'gap-[var(--gap-gap-related-default)]',
         'rounded-[var(--corner-radius-corner-small)]',
         '[font-family:var(--typography-font-family)]',
-        'cursor-pointer hover:bg-[var(--state-hover-surface)] active:bg-[var(--state-pressed-secondary)]',
+        'cursor-pointer hover:bg-[var(--state-hover-fill)] active:bg-[var(--state-pressed-fill)]',
         'transition-colors duration-100',
         'select-none',
       )}

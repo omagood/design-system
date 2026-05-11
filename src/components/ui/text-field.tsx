@@ -119,7 +119,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           {!disabled && !focused && (
             <span
               aria-hidden="true"
-              className="absolute inset-0 rounded-[inherit] pointer-events-none bg-[var(--state-hover)] opacity-0 group-hover:opacity-100 transition-opacity duration-150"
+              className="absolute inset-0 rounded-[inherit] pointer-events-none bg-[var(--state-hover-fill)] opacity-0 group-hover:opacity-100 transition-opacity duration-150"
             />
           )}
 

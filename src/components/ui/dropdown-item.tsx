@@ -101,7 +101,7 @@ export function DropdownItem({
         '[font-family:var(--typography-font-family)]',
         disabled
           ? 'cursor-not-allowed opacity-40'
-          : 'cursor-pointer hover:bg-[var(--state-hover-surface)] active:bg-[var(--state-pressed-secondary)]',
+          : 'cursor-pointer hover:bg-[var(--state-hover-fill)] active:bg-[var(--state-pressed-fill)]',
         'transition-colors duration-100',
         'select-none',
         className,
