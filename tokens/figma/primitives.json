@@ -1,6 +1,6 @@
 {
   "spacing": {
-    "space-2px": {
+    "space-2": {
       "$type": "number",
       "$value": 2,
       "$extensions": {
@@ -10,35 +10,35 @@
         ]
       }
     },
-    "space-4px": {
+    "space-4": {
       "$type": "number",
       "$value": 4,
       "$extensions": {
         "com.figma.variableId": "VariableID:91:4218"
       }
     },
-    "space-8px": {
+    "space-8": {
       "$type": "number",
       "$value": 8,
       "$extensions": {
         "com.figma.variableId": "VariableID:95:9205"
       }
     },
-    "space-12px": {
+    "space-12": {
       "$type": "number",
       "$value": 12,
       "$extensions": {
         "com.figma.variableId": "VariableID:95:9206"
       }
     },
-    "space-16px": {
+    "space-16": {
       "$type": "number",
       "$value": 16,
       "$extensions": {
         "com.figma.variableId": "VariableID:95:9207"
       }
     },
-    "space-20px": {
+    "space-20": {
       "$type": "number",
       "$value": 20,
       "$extensions": {
@@ -48,51 +48,51 @@
         ]
       }
     },
-    "space-24px": {
+    "space-24": {
       "$type": "number",
       "$value": 24,
       "$extensions": {
         "com.figma.variableId": "VariableID:95:9208"
       }
     },
-    "space-28px": {
+    "space-28": {
       "$type": "number",
       "$value": 28,
       "$extensions": {
         "com.figma.variableId": "VariableID:300:7915"
       }
     },
-    "space-32px": {
+    "space-32": {
       "$type": "number",
       "$value": 32,
       "$extensions": {
         "com.figma.variableId": "VariableID:95:9209"
       }
     },
-    "space-40px": {
+    "space-40": {
       "$type": "number",
       "$value": 40,
       "$extensions": {
         "com.figma.variableId": "VariableID:300:7916"
       }
     },
-    "space-48px": {
+    "space-48": {
       "$type": "number",
       "$value": 48,
       "$extensions": {
         "com.figma.variableId": "VariableID:95:9210"
       }
     },
-    "space-64px": {
+    "space-64": {
       "$type": "number",
       "$value": 64,
       "$extensions": {
         "com.figma.variableId": "VariableID:95:9211"
       }
     },
-    "space-80px": {
+    "space-80": {
       "$type": "number",
-      "$value": 0,
+      "$value": 80,
       "$extensions": {
         "com.figma.variableId": "VariableID:300:7913",
         "com.figma.scopes": [
@@ -2262,8 +2262,5 @@
         "com.figma.variableId": "VariableID:213:8372"
       }
     }
-  },
-  "$extensions": {
-    "com.figma.modeName": "Desktop"
   }
 }

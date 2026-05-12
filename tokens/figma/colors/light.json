@@ -1,4 +1,25 @@
 {
+  "core": {
+    "white": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "alpha": 1,
+        "hex": "#FFFFFF"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:90:11926",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ]
+      }
+    }
+  },
   "background": {
     "screen": {
       "$type": "color",
@@ -19,9 +40,9 @@
           "FRAME_FILL"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:a5da27de56c407087e8d26995e4fc6d60ee616e5/-1:-1",
+          "targetVariableId": "VariableID:91:2177",
           "targetVariableName": "colors/cool-gray100",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -46,14 +67,14 @@
           "SHAPE_FILL"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:13009634bb9159e14f2c8d2a1242f1ae8ca980cf/-1:-1",
+          "targetVariableId": "VariableID:91:2134",
           "targetVariableName": "colors/white",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
     },
-    "overlay": {
+    "scrim": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -65,7 +86,7 @@
         "alpha": 0.30000001192092896,
         "hex": "#000000"
       },
-      "$description": "Semi-transparent scrim behind modals, drawers, bottom sheets. Alpha 0.25–0.6: too low loses focus, too high feels oppressive. | ai-group:elevation | ai-impact:medium",
+      "$description": "Semi-transparent scrim behind modals, drawers, bottom sheets. Alpha 0.25–0.6: too low loses focus, too high feels oppressive. | ai-group:depth | ai-impact:medium | ai-behavior:appears-with-modal",
       "$extensions": {
         "com.figma.variableId": "VariableID:150:1944",
         "com.figma.scopes": [
@@ -87,16 +108,16 @@
         "alpha": 1,
         "hex": "#FFFFFF"
       },
-      "$description": "Default surface for cards, panels, modal bodies, list containers. Most common surface in the system. | ai-group:expressiveness | ai-impact:high",
+      "$description": "Default surface for cards, panels, modal bodies, list containers. Most common surface in the system. | ai-group:expressiveness | ai-impact:high | ai-behavior:use-on-background-screen",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2409",
         "com.figma.scopes": [
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:13009634bb9159e14f2c8d2a1242f1ae8ca980cf/-1:-1",
+          "targetVariableId": "VariableID:91:2134",
           "targetVariableName": "colors/white",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -113,16 +134,16 @@
         "alpha": 1,
         "hex": "#F9F9FC"
       },
-      "$description": "Slightly off-white surface for nested containers, table rows, secondary panels. Creates subtle depth within a primary surface. | ai-group:expressiveness | ai-impact:medium | ai-constraint:must be visually distinct from surface/primary",
+      "$description": "Slightly off-white surface for nested containers, table rows, secondary panels. Creates subtle depth within a primary surface. | ai-group:expressiveness | ai-impact:medium | ai-constraint:must be visually distinct from surface/primary | ai-behavior: use-on-surface-primary",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2410",
         "com.figma.scopes": [
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:7b1b385e9c697ef46fb0f600906bd04b6b6c4179/-1:-1",
+          "targetVariableId": "VariableID:91:2171",
           "targetVariableName": "colors/cool-gray50",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -146,9 +167,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:a5da27de56c407087e8d26995e4fc6d60ee616e5/-1:-1",
+          "targetVariableId": "VariableID:91:2177",
           "targetVariableName": "colors/cool-gray100",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -172,9 +193,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:d4035c2faa046c3a4dd2a2fe552a40cfe7e4e723/-1:-1",
+          "targetVariableId": "VariableID:91:2236",
           "targetVariableName": "colors/blue50",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -198,14 +219,14 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:8dfcfb0d85cd3684e8f9756996d50df67775d4cd/-1:-1",
+          "targetVariableId": "VariableID:91:2135",
           "targetVariableName": "colors/cool-gray200",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
     },
-    "overlay": {
+    "floating": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -217,16 +238,16 @@
         "alpha": 1,
         "hex": "#FFFFFF"
       },
-      "$description": "Surface color of modals, bottom sheets, popovers — the element appearing above the background/overlay scrim. | ai-group:expressiveness | ai-impact:medium",
+      "$description": "Surface color of modals, bottom sheets, popovers — the element appearing above the background/overlay scrim. | ai-group:expressiveness | ai-impact:medium | ai-behavior: use-above-background-scrim",
       "$extensions": {
         "com.figma.variableId": "VariableID:316:7001",
         "com.figma.scopes": [
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:13009634bb9159e14f2c8d2a1242f1ae8ca980cf/-1:-1",
+          "targetVariableId": "VariableID:91:2134",
           "targetVariableName": "colors/white",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -252,9 +273,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:7ac794c794d3a7692789b5c2c3c88d0cce52d79a/-1:-1",
+          "targetVariableId": "VariableID:91:2298",
           "targetVariableName": "colors/gray950",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -278,9 +299,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:7b1b385e9c697ef46fb0f600906bd04b6b6c4179/-1:-1",
+          "targetVariableId": "VariableID:91:2171",
           "targetVariableName": "colors/cool-gray50",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -304,9 +325,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:a1b5522bc0b0f69a05d2f898956fbfa667ff28be/-1:-1",
+          "targetVariableId": "VariableID:91:2291",
           "targetVariableName": "colors/cool-gray500",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -323,16 +344,16 @@
         "alpha": 1,
         "hex": "#D4D9E2"
       },
-      "$description": "Fill color of disabled buttons and controls. Flat muted gray that signals non-interactivity. ",
+      "$description": "Fill color of disabled buttons and controls. Flat muted gray that signals non-interactivity. | ai-group:locked | ai-impact:low | ai-locked:true",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:2413",
         "com.figma.scopes": [
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:34d64c8e7b945929c916f16264a598bbb08f1381/-1:-1",
+          "targetVariableId": "VariableID:91:2136",
           "targetVariableName": "colors/cool-gray300",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -356,9 +377,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:868d5bcb9059d110353562619901e57311f46606/-1:-1",
+          "targetVariableId": "VariableID:91:2146",
           "targetVariableName": "colors/red600",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -375,15 +396,16 @@
         "alpha": 1,
         "hex": "#266EF1"
       },
+      "$description": "Fill for accent-colored interactive elements — links, active tabs, \nselected chips. Draws attention without the weight of action/primary.\n| ai-group:expressiveness | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:90:10991",
         "com.figma.scopes": [
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:fbb33a51d057e629b982c86be64a0e3ec2fed1e8/-1:-1",
+          "targetVariableId": "VariableID:91:2194",
           "targetVariableName": "colors/blue600",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -409,9 +431,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:28a88c5f8cfba8049575b607b64ed33089870fcb/-1:-1",
+          "targetVariableId": "VariableID:91:2199",
           "targetVariableName": "colors/cool-gray900",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -435,9 +457,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:a1b5522bc0b0f69a05d2f898956fbfa667ff28be/-1:-1",
+          "targetVariableId": "VariableID:91:2291",
           "targetVariableName": "colors/cool-gray500",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -461,9 +483,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:26d658f96c683386987802ccd6fb0f81de4b0b6e/-1:-1",
+          "targetVariableId": "VariableID:91:2211",
           "targetVariableName": "colors/cool-gray400",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -487,9 +509,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:7b1b385e9c697ef46fb0f600906bd04b6b6c4179/-1:-1",
+          "targetVariableId": "VariableID:91:2171",
           "targetVariableName": "colors/cool-gray50",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -513,9 +535,9 @@
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:b73bfa733dee7f8456b140c2aebc3c8e628c758a/-1:-1",
+          "targetVariableId": "VariableID:91:2219",
           "targetVariableName": "colors/blue700",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -534,18 +556,18 @@
         "alpha": 1,
         "hex": "#D4D9E2"
       },
-      "$description": "Passive structural dividers — between list rows, table cells, section separators. Should be barely perceptible. If clearly visible at arm's length it is too strong. | ai-group:weight | ai-impact:medium",
+      "$description": "Passive structural dividers — between list rows, table cells, section separators. Should be barely perceptible. If clearly visible at arm&#39;s length it is too strong. | ai-group:weight | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:71:13294",
         "com.figma.scopes": [
           "FRAME_FILL",
           "SHAPE_FILL",
-          "STROKE"
+          "STROKE_COLOR"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:34d64c8e7b945929c916f16264a598bbb08f1381/-1:-1",
+          "targetVariableId": "VariableID:91:2136",
           "targetVariableName": "colors/cool-gray300",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -568,12 +590,12 @@
         "com.figma.scopes": [
           "FRAME_FILL",
           "SHAPE_FILL",
-          "STROKE"
+          "STROKE_COLOR"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:26d658f96c683386987802ccd6fb0f81de4b0b6e/-1:-1",
+          "targetVariableId": "VariableID:91:2211",
           "targetVariableName": "colors/cool-gray400",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -596,12 +618,12 @@
         "com.figma.scopes": [
           "FRAME_FILL",
           "SHAPE_FILL",
-          "STROKE"
+          "STROKE_COLOR"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:b73bfa733dee7f8456b140c2aebc3c8e628c758a/-1:-1",
+          "targetVariableId": "VariableID:91:2219",
           "targetVariableName": "colors/blue700",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -609,54 +631,56 @@
   },
   "state": {
     "hover": {
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          1,
-          1
-        ],
-        "alpha": 0.20000000298023224,
-        "hex": "#FFFFFF"
-      },
-      "$description": "Universal hover overlay — semi-transparent layer on top of any interactive surface on mouse enter. Apply to buttons, list items, nav items. Flips to white-opacity in dark mode. | ai-group:locked | ai-impact:medium",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:150:2144",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.aliasData": {
-          "targetVariableId": "VariableID:3e115a5fda6ed2ad00e161382acd72e66d4ab15a/-1:-1",
-          "targetVariableName": "colors/light-opacity-400",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "primitives"
+      "overlay": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ],
+          "alpha": 0.20000000298023224,
+          "hex": "#FFFFFF"
+        },
+        "$description": "Universal hover overlay — semi-transparent layer on top of any interactive surface on mouse enter. Apply to buttons, list items, nav items. Flips to white-opacity in dark mode. | ai-group:locked | ai-impact:medium | ai-behavior: on-filled-elements-only",
+        "$extensions": {
+          "com.figma.variableId": "VariableID:150:2144",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:150:1982",
+            "targetVariableName": "colors/light-opacity-400",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
+            "targetVariableSetName": "primitives"
+          }
         }
-      }
-    },
-    "hover-surface": {
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9764705896377563,
-          0.9764705896377563,
-          0.9882352948188782
-        ],
-        "alpha": 1,
-        "hex": "#F9F9FC"
       },
-      "$description": "Solid hover state for list rows and table rows where an overlay layer is not possible. Changes the background directly. | ai-group:locked | ai-impact:medium",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:171:9049",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.aliasData": {
-          "targetVariableId": "VariableID:7b1b385e9c697ef46fb0f600906bd04b6b6c4179/-1:-1",
-          "targetVariableName": "colors/cool-gray50",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "primitives"
+      "fill": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.9764705896377563,
+            0.9764705896377563,
+            0.9882352948188782
+          ],
+          "alpha": 1,
+          "hex": "#F9F9FC"
+        },
+        "$description": "Solid hover state for list rows and table rows where an overlay layer is not possible. Changes the background directly. | ai-group:locked | ai-impact:medium",
+        "$extensions": {
+          "com.figma.variableId": "VariableID:171:9049",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:91:2171",
+            "targetVariableName": "colors/cool-gray50",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
@@ -672,68 +696,71 @@
         "alpha": 1,
         "hex": "#F3F5F9"
       },
+      "$description": "Solid background for selected rows, active nav items, chosen list options. \nIndicates persistent selection rather than transient hover.\n| ai-group:interactivity | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:178:10196",
         "com.figma.scopes": [
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:a5da27de56c407087e8d26995e4fc6d60ee616e5/-1:-1",
+          "targetVariableId": "VariableID:91:2177",
           "targetVariableName": "colors/cool-gray100",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
     },
     "pressed": {
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          1,
-          1
-        ],
-        "alpha": 0.3199999928474426,
-        "hex": "#FFFFFF"
-      },
-      "$description": "Universal pressed/active overlay — stronger than state/hover. Applied on mouse down for tactile feedback. Alpha always greater than state/hover. | ai-group:locked | ai-constraint:alpha must be > state/hover alpha",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:150:2145",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.aliasData": {
-          "targetVariableId": "VariableID:f96dea117ae46a7f05ee792df9295c8c888eb3be/-1:-1",
-          "targetVariableName": "colors/light-opacity-600",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "primitives"
+      "overlay": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ],
+          "alpha": 0.3199999928474426,
+          "hex": "#FFFFFF"
+        },
+        "$description": "Universal pressed/active overlay — stronger than state/hover. Applied on mouse down for tactile feedback. Alpha always greater than state/hover. | ai-group:locked | ai-constraint:alpha must be &gt; state/hover alpha",
+        "$extensions": {
+          "com.figma.variableId": "VariableID:150:2145",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:213:8372",
+            "targetVariableName": "colors/light-opacity-600",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
+            "targetVariableSetName": "primitives"
+          }
         }
-      }
-    },
-    "pressed-secondary": {
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.9529411792755127,
-          0.9607843160629272,
-          0.9764705896377563
-        ],
-        "alpha": 1,
-        "hex": "#F3F5F9"
       },
-      "$description": "Solid pressed state for list rows where overlay is not possible. | ai-group:locked | ai-impact:low",
-      "$extensions": {
-        "com.figma.variableId": "VariableID:213:8545",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.aliasData": {
-          "targetVariableId": "VariableID:a5da27de56c407087e8d26995e4fc6d60ee616e5/-1:-1",
-          "targetVariableName": "colors/cool-gray100",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "primitives"
+      "fill": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.9529411792755127,
+            0.9607843160629272,
+            0.9764705896377563
+          ],
+          "alpha": 1,
+          "hex": "#F3F5F9"
+        },
+        "$description": "Solid pressed state for list rows where overlay is not possible. | ai-group:locked | ai-impact:low",
+        "$extensions": {
+          "com.figma.variableId": "VariableID:213:8545",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:91:2177",
+            "targetVariableName": "colors/cool-gray100",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
+            "targetVariableSetName": "primitives"
+          }
         }
       }
     },
@@ -749,15 +776,16 @@
         "alpha": 1,
         "hex": "#068BEE"
       },
+      "$description": "Color of the keyboard focus indicator ring drawn around interactive elements. \nMust remain high-contrast and always visible — never suppress or hide.\n| ai-group:accessibility | ai-impact:high | ai-locked:true",
       "$extensions": {
         "com.figma.variableId": "VariableID:150:2146",
         "com.figma.scopes": [
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:5cd08d23422f763a7b92095fbb434d3666985db6/-1:-1",
+          "targetVariableId": "VariableID:91:2315",
           "targetVariableName": "colors/blue500",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
@@ -777,15 +805,16 @@
           "alpha": 1,
           "hex": "#009A51"
         },
+        "$description": "Saturated green surface — badge fill, status pill, prominent success indicator. \nUse when success needs high visibility against surrounding content.\n| ai-group:feedback | ai-impact:medium",
         "$extensions": {
           "com.figma.variableId": "VariableID:80:7644",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:4212a0212a3036d832f6fc613afa41b1be0699eb/-1:-1",
+            "targetVariableId": "VariableID:91:2192",
             "targetVariableName": "colors/green500",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -802,15 +831,16 @@
           "alpha": 1,
           "hex": "#D3EFDA"
         },
+        "$description": "Tinted green surface — success alert background, inline success message container. \nSofter than background-strong, used for larger areas of positive feedback.\n| ai-group:feedback | ai-impact:medium",
         "$extensions": {
           "com.figma.variableId": "VariableID:137:8344",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:1764b5435e4aa1329193d967ac7aeeb26710e864/-1:-1",
+            "targetVariableId": "VariableID:91:2179",
             "targetVariableName": "colors/green100",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -827,15 +857,16 @@
           "alpha": 1,
           "hex": "#166C3B"
         },
+        "$description": "Text and icon color for positive/success content. \n| ai-group:feedback | ai-impact:medium | ai-behavior:use-above-background-scrim",
         "$extensions": {
           "com.figma.variableId": "VariableID:137:8345",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:6874aad1728850ff69e03cac37a78ebfab703829/-1:-1",
+            "targetVariableId": "VariableID:91:2184",
             "targetVariableName": "colors/green700",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -852,15 +883,16 @@
           "alpha": 1,
           "hex": "#009A51"
         },
+        "$description": "Border of success-state containers, inputs, and alert boxes. \nPairs with background-light to frame positive feedback areas.\n| ai-group:feedback | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:137:8346",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:4212a0212a3036d832f6fc613afa41b1be0699eb/-1:-1",
+            "targetVariableId": "VariableID:91:2192",
             "targetVariableName": "colors/green500",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -879,15 +911,16 @@
           "alpha": 1,
           "hex": "#FC823A"
         },
+        "$description": "Saturated amber surface — warning badge, caution pill. \nUse sparingly — warns without blocking user action.\n| ai-group:feedback | ai-impact:medium",
         "$extensions": {
           "com.figma.variableId": "VariableID:80:7645",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:a8e03fd669db903b0053686a86599f12c6ea36ea/-1:-1",
+            "targetVariableId": "VariableID:91:2152",
             "targetVariableName": "colors/orange400",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -904,15 +937,16 @@
           "alpha": 1,
           "hex": "#FEE2D4"
         },
+        "$description": "Tinted amber surface — warning alert background, caution message container.\n| ai-group:feedback | ai-impact:medium",
         "$extensions": {
           "com.figma.variableId": "VariableID:137:8341",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:d992600bd4f5baeb92302b561d74e82e9d06114d/-1:-1",
+            "targetVariableId": "VariableID:91:2148",
             "targetVariableName": "colors/orange100",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -929,15 +963,16 @@
           "alpha": 1,
           "hex": "#C54600"
         },
+        "$description": "Text and icon color for warning content.\nUse on background-light or white — never on background-strong.\n| ai-group:feedback | ai-impact:medium",
         "$extensions": {
           "com.figma.variableId": "VariableID:137:8342",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:6bc92b4bd0dc7d46f30dc0a10bd2117307b3049c/-1:-1",
+            "targetVariableId": "VariableID:91:2156",
             "targetVariableName": "colors/orange600",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -954,15 +989,16 @@
           "alpha": 1,
           "hex": "#FC823A"
         },
+        "$description": "Border of warning-state containers and alert boxes.\n| ai-group:feedback | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:137:8343",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:a8e03fd669db903b0053686a86599f12c6ea36ea/-1:-1",
+            "targetVariableId": "VariableID:91:2152",
             "targetVariableName": "colors/orange400",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -981,15 +1017,16 @@
           "alpha": 1,
           "hex": "#F83446"
         },
+        "$description": "Saturated red surface — error badge, destructive status pill.\nUse for explicit errors that require immediate attention.\n| ai-group:feedback | ai-impact:high",
         "$extensions": {
           "com.figma.variableId": "VariableID:80:7646",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:f84d8b9ea88e72f342ee1ccead1d961d9b9a4f1b/-1:-1",
+            "targetVariableId": "VariableID:91:2145",
             "targetVariableName": "colors/red500",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -1006,15 +1043,16 @@
           "alpha": 1,
           "hex": "#FFE1DE"
         },
+        "$description": "Tinted red surface — error alert background, inline error message container.\n| ai-group:feedback | ai-impact:high",
         "$extensions": {
           "com.figma.variableId": "VariableID:137:8336",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:21b6ac009ecf053ed737f30ac613edd8f8ae1b00/-1:-1",
+            "targetVariableId": "VariableID:91:2286",
             "targetVariableName": "colors/red100",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -1031,15 +1069,16 @@
           "alpha": 1,
           "hex": "#DE1135"
         },
+        "$description": "Text and icon color for error and destructive content.\nUse on background-light or white — never on background-strong.\n| ai-group:feedback | ai-impact:high",
         "$extensions": {
           "com.figma.variableId": "VariableID:137:8339",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:868d5bcb9059d110353562619901e57311f46606/-1:-1",
+            "targetVariableId": "VariableID:91:2146",
             "targetVariableName": "colors/red600",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -1056,15 +1095,16 @@
           "alpha": 1,
           "hex": "#F83446"
         },
+        "$description": "Border of error-state inputs, containers, and alert boxes.\nSignals invalid input or system failure — pairs with background-light.\n| ai-group:feedback | ai-impact:high",
         "$extensions": {
           "com.figma.variableId": "VariableID:137:8340",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:f84d8b9ea88e72f342ee1ccead1d961d9b9a4f1b/-1:-1",
+            "targetVariableId": "VariableID:91:2145",
             "targetVariableName": "colors/red500",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -1083,15 +1123,16 @@
           "alpha": 1,
           "hex": "#636B7F"
         },
+        "$description": "Neutral gray surface — default badge, unclassified status pill.\nUse when status has no positive or negative connotation.\n| ai-group:feedback | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:150:1975",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:a1b5522bc0b0f69a05d2f898956fbfa667ff28be/-1:-1",
+            "targetVariableId": "VariableID:91:2291",
             "targetVariableName": "colors/cool-gray500",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -1108,15 +1149,16 @@
           "alpha": 1,
           "hex": "#EAEDF3"
         },
+        "$description": "Tinted neutral surface — informational alert background, generic tag container.\n| ai-group:feedback | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:150:1976",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:8dfcfb0d85cd3684e8f9756996d50df67775d4cd/-1:-1",
+            "targetVariableId": "VariableID:91:2135",
             "targetVariableName": "colors/cool-gray200",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -1133,15 +1175,16 @@
           "alpha": 1,
           "hex": "#464D60"
         },
+        "$description": "Text and icon color for neutral informational content.\n| ai-group:feedback | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:150:1977",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:299f59f04bbe1bf781113b6ad6e8664cbd7f385d/-1:-1",
+            "targetVariableId": "VariableID:91:2207",
             "targetVariableName": "colors/cool-gray600",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
@@ -1158,23 +1201,24 @@
           "alpha": 1,
           "hex": "#A1A9BA"
         },
+        "$description": "Border of neutral-state containers and informational alert boxes.\n| ai-group:feedback | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:150:1978",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:26d658f96c683386987802ccd6fb0f81de4b0b6e/-1:-1",
+            "targetVariableId": "VariableID:91:2211",
             "targetVariableName": "colors/cool-gray400",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       }
     }
   },
-  "shadow": {
-    "shadow-soft": {
+  "elevation": {
+    "soft": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -1186,45 +1230,21 @@
         "alpha": 0.07999999821186066,
         "hex": "#000000"
       },
+      "$description": "Shadow color for lowest-elevation surfaces — subtle cards, resting panels.\nScales automatically between light and dark mode.\n| ai-group:depth | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:153:7817",
         "com.figma.scopes": [
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:e08abab9b6ca5d2f29499c3e8f97b6097fc4dbdd/-1:-1",
+          "targetVariableId": "VariableID:138:8348",
           "targetVariableName": "colors/dark-opacity-100",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
     },
-    "shadow-strong": {
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0,
-          0,
-          0
-        ],
-        "alpha": 0.1599999964237213,
-        "hex": "#000000"
-      },
-      "$extensions": {
-        "com.figma.variableId": "VariableID:153:7818",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.aliasData": {
-          "targetVariableId": "VariableID:ac898f225b5362b153d73ba5f970bb47dc1f7eb5/-1:-1",
-          "targetVariableName": "colors/dark-opacity-300",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
-          "targetVariableSetName": "primitives"
-        }
-      }
-    },
-    "shadow-medium": {
+    "medium": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -1236,23 +1256,50 @@
         "alpha": 0.11999999731779099,
         "hex": "#000000"
       },
+      "$description": "Shadow color for mid-elevation surfaces — dropdowns, popovers, floating menus.\n| ai-group:depth | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:258:8303",
         "com.figma.scopes": [
           "ALL_SCOPES"
         ],
         "com.figma.aliasData": {
-          "targetVariableId": "VariableID:a9e3c0aa06d90eced29a9d8d6d714bc9693431c5/-1:-1",
+          "targetVariableId": "VariableID:138:8349",
           "targetVariableName": "colors/dark-opacity-200",
-          "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
+          "targetVariableSetName": "primitives"
+        }
+      }
+    },
+    "strong": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "alpha": 0.1599999964237213,
+        "hex": "#000000"
+      },
+      "$description": "Shadow color for highest-elevation surfaces — modals, dialogs, command palettes.\n| ai-group:depth | ai-impact:high",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:153:7818",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:138:8350",
+          "targetVariableName": "colors/dark-opacity-300",
+          "targetVariableSetId": "VariableCollectionId:91:1758",
           "targetVariableSetName": "primitives"
         }
       }
     }
   },
-  "exrpession": {
+  "expression": {
     "blue": {
-      "blue-background-strong": {
+      "background-strong": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1264,20 +1311,21 @@
           "alpha": 1,
           "hex": "#266EF1"
         },
+        "$description": "Saturated blue surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning.\n| ai-group:expression | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11073",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:fbb33a51d057e629b982c86be64a0e3ec2fed1e8/-1:-1",
+            "targetVariableId": "VariableID:91:2194",
             "targetVariableName": "colors/blue600",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       },
-      "blue-background-light": {
+      "background-light": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1289,20 +1337,21 @@
           "alpha": 1,
           "hex": "#DEE9FE"
         },
+        "$description": "Tinted blue surface — larger categorical area, selected filter chip with blue identity.\n| ai-group:expression | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11074",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:b00628e43dde32a99bc4abcc89bf4c0da0473032/-1:-1",
+            "targetVariableId": "VariableID:91:2262",
             "targetVariableName": "colors/blue100",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       },
-      "blue-foreground": {
+      "foreground": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1314,22 +1363,23 @@
           "alpha": 1,
           "hex": "#1153C0"
         },
+        "$description": "Text and icon color for blue categorical content. Use on neutral surfaces (surface/primary, surface/secondary) for colored labels, tags, and status text. When used on expression surfaces, always match the same color family.",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11075",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:b73bfa733dee7f8456b140c2aebc3c8e628c758a/-1:-1",
+            "targetVariableId": "VariableID:91:2219",
             "targetVariableName": "colors/blue700",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       }
     },
     "magenta": {
-      "magenta-background-strong": {
+      "background-strong": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1341,20 +1391,21 @@
           "alpha": 1,
           "hex": "#CA26A5"
         },
+        "$description": "Saturated magenta surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning.\n| ai-group:expression | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11080",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:d56cf78b854a3e93866b8faf1cd5d61aa6cc9e83/-1:-1",
+            "targetVariableId": "VariableID:91:2270",
             "targetVariableName": "colors/magenta600",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       },
-      "magenta-background-light": {
+      "background-light": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1366,20 +1417,21 @@
           "alpha": 1,
           "hex": "#FEDFF3"
         },
+        "$description": "Saturated magenta surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning.\n| ai-group:expression | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11081",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:44ca93a32e1b4f8f06e7112b1d23c6535173eea7/-1:-1",
+            "targetVariableId": "VariableID:91:2212",
             "targetVariableName": "colors/magenta100",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       },
-      "magenta-foreground": {
+      "foreground": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1391,22 +1443,23 @@
           "alpha": 1,
           "hex": "#A91A90"
         },
+        "$description": "Text and icon color for magenta categorical content. Use on neutral surfaces (surface/primary, surface/secondary) for colored labels, tags, and status text. When used on expression surfaces, always match the same color family.",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11082",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:92e02167a59edeb1c5f538e42e26f35987dbed5e/-1:-1",
+            "targetVariableId": "VariableID:91:2282",
             "targetVariableName": "colors/magenta700",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       }
     },
     "teal": {
-      "teal-background-strong": {
+      "background-strong": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1418,20 +1471,21 @@
           "alpha": 1,
           "hex": "#007F8C"
         },
+        "$description": "Saturated teal surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning.\n| ai-group:expression | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11083",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:c819afba4774a8e30dc41e240e11d3d3f80166cd/-1:-1",
+            "targetVariableId": "VariableID:91:2190",
             "targetVariableName": "colors/teal600",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       },
-      "teal-background-light": {
+      "background-light": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1443,20 +1497,21 @@
           "alpha": 1,
           "hex": "#CDEEF3"
         },
+        "$description": "Saturated teal surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning.\n| ai-group:expression | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11084",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:6f4d690b97da0f313fc54c8d267079d6089fc436/-1:-1",
+            "targetVariableId": "VariableID:91:2316",
             "targetVariableName": "colors/teal100",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       },
-      "teal-foreground": {
+      "foreground": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1468,22 +1523,23 @@
           "alpha": 1,
           "hex": "#016974"
         },
+        "$description": "Text and icon color for teal categorical content. Use on neutral surfaces (surface/primary, surface/secondary) for colored labels, tags, and status text. When used on expression surfaces, always match the same color family.",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11085",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:d181b118ddca0319f6c405b04c3f1e4e82ab00f1/-1:-1",
+            "targetVariableId": "VariableID:91:2252",
             "targetVariableName": "colors/teal700",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       }
     },
     "purple": {
-      "purple-background-strong": {
+      "background-strong": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1495,20 +1551,21 @@
           "alpha": 1,
           "hex": "#944DE7"
         },
+        "$description": "Saturated purple surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning.\n| ai-group:expression | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11062",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:cb3ead2fd905ef0c6d0be14eb6c4d8305f2e8bdb/-1:-1",
+            "targetVariableId": "VariableID:91:2202",
             "targetVariableName": "colors/purple600",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       },
-      "purple-background-light": {
+      "background-light": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1520,20 +1577,21 @@
           "alpha": 1,
           "hex": "#F2E3FF"
         },
+        "$description": "Saturated purple surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning.\n| ai-group:expression | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11063",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:ef4692632f9e046e268c5ecbc3d555e6ce4a6eed/-1:-1",
+            "targetVariableId": "VariableID:91:2198",
             "targetVariableName": "colors/purple100",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       },
-      "purple-foreground": {
+      "foreground": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1545,22 +1603,23 @@
           "alpha": 1,
           "hex": "#7C3EC3"
         },
+        "$description": "Text and icon color for purple categorical content. Use on neutral surfaces (surface/primary, surface/secondary) for colored labels, tags, and status text. When used on expression surfaces, always match the same color family.",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11064",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:8a76ab1c627d9d80ebde8032c82b944b36c16746/-1:-1",
+            "targetVariableId": "VariableID:91:2205",
             "targetVariableName": "colors/purple700",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       }
     },
     "lime": {
-      "lime-background-strong": {
+      "background-strong": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1572,20 +1631,21 @@
           "alpha": 1,
           "hex": "#4F7F06"
         },
+        "$description": "Saturated lime surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning.\n| ai-group:expression | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11088",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:c3e7215f55adbb8c14daf50a54f3fa295562d0c0/-1:-1",
+            "targetVariableId": "VariableID:91:2174",
             "targetVariableName": "colors/lime600",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       },
-      "lime-background-light": {
+      "background-light": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1597,20 +1657,21 @@
           "alpha": 1,
           "hex": "#DEEEC6"
         },
+        "$description": "Saturated lime surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning.\n| ai-group:expression | ai-impact:low",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11086",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:a05d3ec8f1654dafc58e4c9d25adee6b27b90923/-1:-1",
+            "targetVariableId": "VariableID:91:2170",
             "targetVariableName": "colors/lime100",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
       },
-      "lime-foreground": {
+      "foreground": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1622,18 +1683,61 @@
           "alpha": 1,
           "hex": "#3F6900"
         },
+        "$description": "Text and icon color for lime categorical content. Use on neutral surfaces (surface/primary, surface/secondary) for colored labels, tags, and status text. When used on expression surfaces, always match the same color family.",
         "$extensions": {
           "com.figma.variableId": "VariableID:280:11087",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:b1abcba4fff43fb07cf65e664179f0bcbf4e6c0c/-1:-1",
+            "targetVariableId": "VariableID:91:2176",
             "targetVariableName": "colors/lime700",
-            "targetVariableSetId": "VariableCollectionId:48188cb0df9b2bb8c1462aa3c757cb5b201e64ef/-1:-1",
+            "targetVariableSetId": "VariableCollectionId:91:1758",
             "targetVariableSetName": "primitives"
           }
         }
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6666666865348816,
+          0.7960784435272217,
+          0.25882354378700256
+        ],
+        "alpha": 1,
+        "hex": "#AACB42"
+      },
+      "$description": "Primary brand accent. Not for general UI chrome — use action/primary for buttons.\nUse for logo marks, brand-moment highlights, key visual identity elements.\n| ai-group:brand | ai-impact:high",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:281:14138",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ]
+      }
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.47843137383461,
+          0.47843137383461,
+          0.48627451062202454
+        ],
+        "alpha": 1,
+        "hex": "#7A7A7C"
+      },
+      "$description": "Secondary brand accent for supporting visual elements and illustrations.\n| ai-group:brand | ai-impact:medium",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:281:14139",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ]
       }
     }
   },
@@ -1658,47 +1762,7 @@
       }
     }
   },
-  "brand": {
-    "brand-primary": {
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.6666666865348816,
-          0.7960784435272217,
-          0.25882354378700256
-        ],
-        "alpha": 1,
-        "hex": "#AACB42"
-      },
-      "$extensions": {
-        "com.figma.variableId": "VariableID:281:14138",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ]
-      }
-    },
-    "brand-secondary": {
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.47843137383461,
-          0.47843137383461,
-          0.48627451062202454
-        ],
-        "alpha": 1,
-        "hex": "#7A7A7C"
-      },
-      "$extensions": {
-        "com.figma.variableId": "VariableID:281:14139",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ]
-      }
-    }
-  },
   "$extensions": {
-    "com.figma.modeName": "Light"
+    "com.figma.modeName": "light"
   }
 }

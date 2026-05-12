@@ -115,7 +115,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     return (
       <label
         className={cn(
-          'inline-flex items-center gap-[var(--spacing-space-8px)]',
+          'inline-flex items-center gap-[var(--gap-inline-default)]',
           '[font-family:var(--typography-font-family)]',
           disabled ? 'cursor-not-allowed' : 'cursor-pointer',
           className,

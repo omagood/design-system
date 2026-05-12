@@ -17,23 +17,23 @@
   },
   "--background-scrim": {
     "cssVar": "--background-scrim",
-    "description": "Semi-transparent scrim behind modals, drawers, bottom sheets. Alpha 0.25–0.6: too low loses focus, too high feels oppressive. ai-impact:medium",
-    "aiGroup": "elevation",
-    "aiImpact": null,
+    "description": "Semi-transparent scrim behind modals, drawers, bottom sheets. Alpha 0.25–0.6: too low loses focus, too high feels oppressive. ai-impact:medium | ai-behavior:appears-with-modal",
+    "aiGroup": "depth",
+    "aiImpact": "medium",
     "collection": "colors",
     "mode": "root"
   },
   "--surface-primary": {
     "cssVar": "--surface-primary",
-    "description": "Default surface for cards, panels, modal bodies, list containers. Most common surface in the system. ai-impact:high",
+    "description": "Default surface for cards, panels, modal bodies, list containers. Most common surface in the system. ai-impact:high | ai-behavior:use-on-background-screen",
     "aiGroup": "expressiveness",
-    "aiImpact": null,
+    "aiImpact": "high",
     "collection": "colors",
     "mode": "root"
   },
   "--surface-secondary": {
     "cssVar": "--surface-secondary",
-    "description": "Slightly off-white surface for nested containers, table rows, secondary panels. Creates subtle depth within a primary surface. ai-impact:medium | ai-constraint:must be visually distinct from surface/primary",
+    "description": "Slightly off-white surface for nested containers, table rows, secondary panels. Creates subtle depth within a primary surface. ai-impact:medium ai-behavior: use-on-surface-primary",
     "aiGroup": "expressiveness",
     "aiImpact": "medium",
     "collection": "colors",
@@ -65,9 +65,9 @@
   },
   "--surface-floating": {
     "cssVar": "--surface-floating",
-    "description": "Surface color of modals, bottom sheets, popovers — the element appearing above the background/overlay scrim. ai-impact:medium",
+    "description": "Surface color of modals, bottom sheets, popovers — the element appearing above the background/overlay scrim. ai-impact:medium | ai-behavior: use-above-background-scrim",
     "aiGroup": "expressiveness",
-    "aiImpact": null,
+    "aiImpact": "medium",
     "collection": "colors",
     "mode": "root"
   },
@@ -97,9 +97,9 @@
   },
   "--action-disabled": {
     "cssVar": "--action-disabled",
-    "description": "Fill color of disabled buttons and controls. Flat muted gray that signals non-interactivity.",
-    "aiGroup": null,
-    "aiImpact": null,
+    "description": "Fill color of disabled buttons and controls. Flat muted gray that signals non-interactivity. ai-impact:low | ai-locked:true",
+    "aiGroup": "locked",
+    "aiImpact": "low",
     "collection": "colors",
     "mode": "root"
   },
@@ -114,30 +114,6 @@
   "--action-accent": {
     "cssVar": "--action-accent",
     "description": "Fill for accent-colored interactive elements — links, active tabs, selected chips. Draws attention without the weight of action/primary. ai-impact:medium",
-    "aiGroup": "expressiveness",
-    "aiImpact": null,
-    "collection": "colors",
-    "mode": "root"
-  },
-  "--border-divider": {
-    "cssVar": "--border-divider",
-    "description": "Passive structural dividers — between list rows, table cells, section separators. Should be barely perceptible. If clearly visible at arm's length it is too strong. ai-impact:medium",
-    "aiGroup": "weight",
-    "aiImpact": null,
-    "collection": "colors",
-    "mode": "root"
-  },
-  "--border-outline": {
-    "cssVar": "--border-outline",
-    "description": "Border of interactive form elements at rest — inputs, selects, textareas. Must clearly define the clickable area. Always stronger than border/divider. ai-impact:medium | ai-constraint:must be stronger than border/divider",
-    "aiGroup": "weight",
-    "aiImpact": "medium",
-    "collection": "colors",
-    "mode": "root"
-  },
-  "--border-action": {
-    "cssVar": "--border-action",
-    "description": "Border of outline-variant interactive elements — outline buttons, active input borders. Matches content/accent for consistency. ai-impact:medium",
     "aiGroup": "expressiveness",
     "aiImpact": null,
     "collection": "colors",
@@ -183,27 +159,35 @@
     "collection": "colors",
     "mode": "root"
   },
-  "--state-selected": {
-    "cssVar": "--state-selected",
-    "description": "Solid background for selected rows, active nav items, chosen list options. Indicates persistent selection rather than transient hover. ai-impact:medium",
-    "aiGroup": "interactivity",
+  "--border-divider": {
+    "cssVar": "--border-divider",
+    "description": "Passive structural dividers — between list rows, table cells, section separators. Should be barely perceptible. If clearly visible at arm&#39;s length it is too strong. ai-impact:medium",
+    "aiGroup": "weight",
     "aiImpact": null,
     "collection": "colors",
     "mode": "root"
   },
-  "--state-focus-ring": {
-    "cssVar": "--state-focus-ring",
-    "description": "Color of the keyboard focus indicator ring drawn around interactive elements. Must remain high-contrast and always visible — never suppress or hide. ai-impact:high | ai-locked:true",
-    "aiGroup": "accessibility",
-    "aiImpact": "high",
+  "--border-outline": {
+    "cssVar": "--border-outline",
+    "description": "Border of interactive form elements at rest — inputs, selects, textareas. Must clearly define the clickable area. Always stronger than border/divider. ai-impact:medium | ai-constraint:must be stronger than border/divider",
+    "aiGroup": "weight",
+    "aiImpact": "medium",
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--border-action": {
+    "cssVar": "--border-action",
+    "description": "Border of outline-variant interactive elements — outline buttons, active input borders. Matches content/accent for consistency. ai-impact:medium",
+    "aiGroup": "expressiveness",
+    "aiImpact": null,
     "collection": "colors",
     "mode": "root"
   },
   "--state-hover-overlay": {
     "cssVar": "--state-hover-overlay",
-    "description": "Universal hover overlay — semi-transparent layer on top of any interactive surface on mouse enter. Apply to buttons, list items, nav items. Flips to white-opacity in dark mode. ai-impact:medium",
+    "description": "Universal hover overlay — semi-transparent layer on top of any interactive surface on mouse enter. Apply to buttons, list items, nav items. Flips to white-opacity in dark mode. ai-impact:medium | ai-behavior: on-filled-elements-only",
     "aiGroup": "locked",
-    "aiImpact": null,
+    "aiImpact": "medium",
     "collection": "colors",
     "mode": "root"
   },
@@ -215,9 +199,17 @@
     "collection": "colors",
     "mode": "root"
   },
+  "--state-selected": {
+    "cssVar": "--state-selected",
+    "description": "Solid background for selected rows, active nav items, chosen list options. Indicates persistent selection rather than transient hover. ai-impact:medium",
+    "aiGroup": "interactivity",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
   "--state-pressed-overlay": {
     "cssVar": "--state-pressed-overlay",
-    "description": "Universal pressed/active overlay — stronger than state/hover. Applied on mouse down for tactile feedback. Alpha always greater than state/hover. ai-constraint:alpha must be > state/hover alpha",
+    "description": "Universal pressed/active overlay — stronger than state/hover. Applied on mouse down for tactile feedback. Alpha always greater than state/hover. ai-constraint:alpha must be &gt; state/hover alpha",
     "aiGroup": "locked",
     "aiImpact": null,
     "collection": "colors",
@@ -228,6 +220,14 @@
     "description": "Solid pressed state for list rows where overlay is not possible. ai-impact:low",
     "aiGroup": "locked",
     "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--state-focus-ring": {
+    "cssVar": "--state-focus-ring",
+    "description": "Color of the keyboard focus indicator ring drawn around interactive elements. Must remain high-contrast and always visible — never suppress or hide. ai-impact:high | ai-locked:true",
+    "aiGroup": "accessibility",
+    "aiImpact": "high",
     "collection": "colors",
     "mode": "root"
   },
@@ -249,9 +249,9 @@
   },
   "--sentiment-positive-foreground": {
     "cssVar": "--sentiment-positive-foreground",
-    "description": "Text and icon color for positive/success content. Use on background-light or white — never on background-strong. ai-impact:medium",
+    "description": "Text and icon color for positive/success content. ai-impact:medium | ai-behavior:use-above-background-scrim",
     "aiGroup": "feedback",
-    "aiImpact": null,
+    "aiImpact": "medium",
     "collection": "colors",
     "mode": "root"
   },
@@ -401,7 +401,23 @@
   },
   "--expression-blue-foreground": {
     "cssVar": "--expression-blue-foreground",
-    "description": "Text and icon on blue expression surfaces.\nAlways pair with background-light or background-strong from the same color. ai-impact:low",
+    "description": "Text and icon color for blue categorical content. Use on neutral surfaces (surface/primary, surface/secondary) for colored labels, tags, and status text. When used on expression surfaces, always match the same color family.",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-magenta-background-strong": {
+    "cssVar": "--expression-magenta-background-strong",
+    "description": "Saturated magenta surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning. ai-impact:low",
+    "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-magenta-background-light": {
+    "cssVar": "--expression-magenta-background-light",
+    "description": "Saturated magenta surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning. ai-impact:low",
     "aiGroup": "expression",
     "aiImpact": null,
     "collection": "colors",
@@ -409,8 +425,96 @@
   },
   "--expression-magenta-foreground": {
     "cssVar": "--expression-magenta-foreground",
-    "description": "Text and icon on magenta expression surfaces.\nAlways pair with background-light or background-strong from the same color. ai-impact:low",
+    "description": "Text and icon color for magenta categorical content. Use on neutral surfaces (surface/primary, surface/secondary) for colored labels, tags, and status text. When used on expression surfaces, always match the same color family.",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-teal-background-strong": {
+    "cssVar": "--expression-teal-background-strong",
+    "description": "Saturated teal surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning. ai-impact:low",
     "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-teal-background-light": {
+    "cssVar": "--expression-teal-background-light",
+    "description": "Saturated teal surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning. ai-impact:low",
+    "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-teal-foreground": {
+    "cssVar": "--expression-teal-foreground",
+    "description": "Text and icon color for teal categorical content. Use on neutral surfaces (surface/primary, surface/secondary) for colored labels, tags, and status text. When used on expression surfaces, always match the same color family.",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-purple-background-strong": {
+    "cssVar": "--expression-purple-background-strong",
+    "description": "Saturated purple surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning. ai-impact:low",
+    "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-purple-background-light": {
+    "cssVar": "--expression-purple-background-light",
+    "description": "Saturated purple surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning. ai-impact:low",
+    "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-purple-foreground": {
+    "cssVar": "--expression-purple-foreground",
+    "description": "Text and icon color for purple categorical content. Use on neutral surfaces (surface/primary, surface/secondary) for colored labels, tags, and status text. When used on expression surfaces, always match the same color family.",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-lime-background-strong": {
+    "cssVar": "--expression-lime-background-strong",
+    "description": "Saturated lime surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning. ai-impact:low",
+    "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-lime-background-light": {
+    "cssVar": "--expression-lime-background-light",
+    "description": "Saturated lime surface — categorical label, tag, or data point requiring blue identity.\nUse for data-driven color coding only, not for UI feedback meaning. ai-impact:low",
+    "aiGroup": "expression",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--expression-lime-foreground": {
+    "cssVar": "--expression-lime-foreground",
+    "description": "Text and icon color for lime categorical content. Use on neutral surfaces (surface/primary, surface/secondary) for colored labels, tags, and status text. When used on expression surfaces, always match the same color family.",
+    "aiGroup": null,
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--brand-primary": {
+    "cssVar": "--brand-primary",
+    "description": "Primary brand accent. Not for general UI chrome — use action/primary for buttons.\nUse for logo marks, brand-moment highlights, key visual identity elements. ai-impact:high",
+    "aiGroup": "brand",
+    "aiImpact": null,
+    "collection": "colors",
+    "mode": "root"
+  },
+  "--brand-secondary": {
+    "cssVar": "--brand-secondary",
+    "description": "Secondary brand accent for supporting visual elements and illustrations. ai-impact:medium",
+    "aiGroup": "brand",
     "aiImpact": null,
     "collection": "colors",
     "mode": "root"
@@ -609,15 +713,15 @@
   },
   "--focus-ring-width": {
     "cssVar": "--focus-ring-width",
-    "description": "Width of outer accessibility focus ring. Minimum 2px per WCAG 2.4.11. Never reduce below 2px. ai-locked:true | ai-constraint:minimum 2px WCAG requirement",
-    "aiGroup": "locked",
+    "description": "Minimum width per WCAG 2.4.11 accessibility requirement. Never reduce below this value.",
+    "aiGroup": null,
     "aiImpact": null,
     "collection": "shapes",
     "mode": "root"
   },
   "--focus-ring-offset": {
     "cssVar": "--focus-ring-offset",
-    "description": "Gap between focused element edge and focus ring. 2px creates clear visual separation. ai-locked:true",
+    "description": "Gap between focused element edge and focus ring. Creates clear visual separation between focused element and its ring. ai-locked:true",
     "aiGroup": "locked",
     "aiImpact": null,
     "collection": "shapes",
@@ -625,7 +729,7 @@
   },
   "--inset-component-sm-x": {
     "cssVar": "--inset-component-sm-x",
-    "description": "Horizontal (left/right) padding of small interactive controls — compact buttons, small inputs in dense tables. Always larger than inset-component-sm-y for optical balance. ai-impact:medium | ai-constraint:must be > inset-component-sm-y",
+    "description": "Horizontal (left/right) padding of small interactive controls — compact buttons, small inputs in dense tables. Always larger than inset-component-sm-y for optical balance. ai-impact:medium | ai-constraint:must be &gt; inset-component-sm-y",
     "aiGroup": "density",
     "aiImpact": "medium",
     "collection": "spacing",
@@ -633,7 +737,7 @@
   },
   "--inset-component-sm-y": {
     "cssVar": "--inset-component-sm-y",
-    "description": "Vertical (top/bottom) padding of small interactive controls. Ratio ~0.67 of inset-component-sm-x. Directly controls tap target height. ai-impact:medium | ai-constraint:must be < inset-component-sm-x",
+    "description": "Vertical (top/bottom) padding of small interactive controls. Ratio ~0.67 of inset-component-sm-x. Directly controls tap target height. ai-impact:medium | ai-constraint:must be &lt; inset-component-sm-x",
     "aiGroup": "density",
     "aiImpact": "medium",
     "collection": "spacing",
@@ -641,7 +745,7 @@
   },
   "--inset-component-md-x": {
     "cssVar": "--inset-component-md-x",
-    "description": "Horizontal padding of default/medium interactive controls — standard buttons and inputs. Most-used inset token. Increasing makes controls feel more generous and spacious. ai-impact:high | ai-constraint:must be > inset-component-md-y",
+    "description": "Horizontal padding of default/medium interactive controls — standard buttons and inputs. Most-used inset token. Increasing makes controls feel more generous and spacious. ai-impact:high | ai-constraint:must be &gt; inset-component-md-y",
     "aiGroup": "density",
     "aiImpact": "high",
     "collection": "spacing",
@@ -649,7 +753,7 @@
   },
   "--inset-component-md-y": {
     "cssVar": "--inset-component-md-y",
-    "description": "Vertical padding of medium interactive controls. Directly determines tap target height. Ratio ~0.75 of inset-component-md-x. Never set equal to or greater than x. ai-impact:high | ai-constraint:must be < inset-component-md-x, ratio ~0.75",
+    "description": "Vertical padding of medium interactive controls. Directly determines tap target height. Ratio ~0.75 of inset-component-md-x. Never set equal to or greater than x. ai-impact:high | ai-constraint:must be &lt; inset-component-md-x, ratio ~0.75",
     "aiGroup": "density",
     "aiImpact": "high",
     "collection": "spacing",
@@ -657,7 +761,7 @@
   },
   "--inset-component-lg-x": {
     "cssVar": "--inset-component-lg-x",
-    "description": "Horizontal padding of large interactive controls — prominent CTAs, hero inputs, full-width actions. ai-impact:medium | ai-constraint:must be > inset-component-lg-y",
+    "description": "Horizontal padding of large interactive controls — prominent CTAs, hero inputs, full-width actions. ai-impact:medium | ai-constraint:must be &gt; inset-component-lg-y",
     "aiGroup": "density",
     "aiImpact": "medium",
     "collection": "spacing",
@@ -665,7 +769,7 @@
   },
   "--inset-component-lg-y": {
     "cssVar": "--inset-component-lg-y",
-    "description": "Vertical padding of large interactive controls. Ratio ~0.67 of inset-component-lg-x. ai-impact:medium | ai-constraint:must be < inset-component-lg-x",
+    "description": "Vertical padding of large interactive controls. Ratio ~0.67 of inset-component-lg-x. ai-impact:medium | ai-constraint:must be &lt; inset-component-lg-x",
     "aiGroup": "density",
     "aiImpact": "medium",
     "collection": "spacing",
@@ -681,9 +785,9 @@
   },
   "--inset-inline-sm-y": {
     "cssVar": "--inset-inline-sm-y",
-    "description": "Vertical padding of small inline elements. Extremely tight — element sits flush with surrounding text line. ai-impact:low | ai-constraint:max 4px",
+    "description": "Vertical padding for inline elements at small size — compact chips, tags, badges.\nKeeps inline elements slim without feeling cramped. ai-impact:medium",
     "aiGroup": "density",
-    "aiImpact": "low",
+    "aiImpact": null,
     "collection": "spacing",
     "mode": "root"
   },
@@ -697,9 +801,9 @@
   },
   "--inset-inline-md-y": {
     "cssVar": "--inset-inline-md-y",
-    "description": "Vertical padding of default chips and badges. Never exceed 8px or badges break text line rhythm. ai-impact:medium | ai-constraint:max 8px",
+    "description": "Vertical padding for inline elements at medium size — standard chips, badges, labels. ai-impact:medium",
     "aiGroup": "density",
-    "aiImpact": "medium",
+    "aiImpact": null,
     "collection": "spacing",
     "mode": "root"
   },
@@ -713,9 +817,9 @@
   },
   "--inset-inline-lg-y": {
     "cssVar": "--inset-inline-lg-y",
-    "description": "Vertical padding of large chips and tags. ai-impact:low | ai-constraint:max 8px",
+    "description": "Vertical padding for inline elements at large size — prominent chips, large badges. ai-impact:medium",
     "aiGroup": "density",
-    "aiImpact": "low",
+    "aiImpact": null,
     "collection": "spacing",
     "mode": "root"
   },
@@ -775,35 +879,11 @@
     "collection": "spacing",
     "mode": "root"
   },
-  "--gap-items-tight": {
-    "cssVar": "--gap-items-tight",
-    "description": "Gap between closely grouped controls — button groups, radio clusters, segmented controls. Decreasing fuses elements together; increasing separates them into individual items. ai-impact:medium",
-    "aiGroup": "density",
-    "aiImpact": null,
-    "collection": "spacing",
-    "mode": "root"
-  },
-  "--gap-items-default": {
-    "cssVar": "--gap-items-default",
-    "description": "Standard gap between sibling UI elements — form field rows, list items, menu options. The most-used gap token. Changing this has broad impact on perceived density across the entire UI. ai-impact:high",
-    "aiGroup": "density",
-    "aiImpact": null,
-    "collection": "spacing",
-    "mode": "root"
-  },
-  "--gap-items-comfortable": {
-    "cssVar": "--gap-items-comfortable",
-    "description": "Gap for grid items and navigation — card grid cells, nav rail items. Larger than default to give breathing room between cards. ai-impact:medium",
-    "aiGroup": "density",
-    "aiImpact": null,
-    "collection": "spacing",
-    "mode": "root"
-  },
   "--gap-stack-tight": {
     "cssVar": "--gap-stack-tight",
-    "description": "Vertical gap between visually grouped text elements — heading + subheading, stat value + label. Controls whether these pairs read as a single unit. Never exceed 12px or the grouping breaks. ai-impact:medium | ai-constraint:max 12px to preserve visual grouping",
+    "description": "Tightest gap between stacked items — densely packed lists, compact notification stacks.\nUse when information density is the priority over breathing room. ai-impact:medium",
     "aiGroup": "density",
-    "aiImpact": "medium",
+    "aiImpact": null,
     "collection": "spacing",
     "mode": "root"
   },
@@ -847,9 +927,25 @@
     "collection": "spacing",
     "mode": "root"
   },
-  "--gap-inline-loose": {
-    "cssVar": "--gap-inline-loose",
+  "--gap-inline-comfortable": {
+    "cssVar": "--gap-inline-comfortable",
     "description": "Generous horizontal gap for top-level navigation and primary tab bars. Larger gaps signal these are the primary navigational choices. ai-impact:medium",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-related-tight": {
+    "cssVar": "--gap-related-tight",
+    "description": "Gap between closely related elements that belong to the same logical unit.\nTighter than gap/stack — implies stronger conceptual connection. ai-impact:low",
+    "aiGroup": "density",
+    "aiImpact": null,
+    "collection": "spacing",
+    "mode": "root"
+  },
+  "--gap-related-default": {
+    "cssVar": "--gap-related-default",
+    "description": "Default gap between related elements in the same logical group. ai-impact:low",
     "aiGroup": "density",
     "aiImpact": null,
     "collection": "spacing",
@@ -917,14 +1013,6 @@
     "aiGroup": "structure",
     "aiImpact": null,
     "collection": "layout",
-    "mode": "root"
-  },
-  "--typography-font-family": {
-    "cssVar": "--typography-font-family",
-    "description": "Primary typeface for all text in the system. Changing this shifts the entire personality — from neutral to expressive or editorial. ai-impact:high",
-    "aiGroup": "brand",
-    "aiImpact": null,
-    "collection": "typography",
     "mode": "root"
   },
   "--typography-weight-display": {
@@ -1091,6 +1179,14 @@
     "cssVar": "--typography-size-paragraph-xsmall",
     "description": "Micro body text — legal fine print, metadata, very compact information density. ai-impact:low",
     "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-font-family": {
+    "cssVar": "--typography-font-family",
+    "description": "Primary typeface for all text in the system. Changing this shifts the entire personality — from neutral to expressive or editorial. ai-impact:high",
+    "aiGroup": "brand",
     "aiImpact": null,
     "collection": "typography",
     "mode": "root"
