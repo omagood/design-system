@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "tokens:build": "node tokens/build.js",
+    "tokens:import": "node tokens/figma-import.js",
     "dev": "vite",
     "build": "vite build",
     "typecheck": "tsc --noEmit",

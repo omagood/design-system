@@ -96,7 +96,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
       : 'top-[-9px] left-[15px]'
 
     return (
-      <div className={cn('flex flex-col gap-[var(--spacing-space-4px)] w-full [font-family:var(--typography-font-family)]', className)}>
+      <div className={cn('flex flex-col gap-[var(--gap-stack-tight)] w-full [font-family:var(--typography-font-family)]', className)}>
         {/* ── Input box ───────────────────────────────────────────────────── */}
         {/*
          * IMPORTANT: padding is FIXED at md-y (12px) for all states.
@@ -216,7 +216,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
 
           {/* ── Right icon slot ─────────────────────────────────────────── */}
           {rightIcon && (
-            <div className="flex items-center shrink-0 ml-[var(--spacing-space-8px)] [&_svg]:size-6 text-[color:var(--content-secondary)]">
+            <div className="flex items-center shrink-0 ml-[var(--gap-inline-default)] [&_svg]:size-6 text-[color:var(--content-secondary)]">
               {rightIcon}
             </div>
           )}
@@ -226,7 +226,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
         {helperText && (
           <div
             id={`${id}-helper`}
-            className="flex gap-[var(--spacing-space-4px)] items-center w-full px-[var(--inset-component-md-x)]"
+            className="flex gap-[var(--gap-stack-tight)] items-center w-full px-[var(--inset-component-md-x)]"
           >
             <Icon
               icon={AlertCircleIcon}

@@ -1,0 +1,99 @@
+{
+  "grid": {
+    "margin": {
+      "$type": "number",
+      "$value": 24,
+      "$description": "Distance from the viewport edge to the content area. \nControls the breathing room between UI and screen edge. \nScales across breakpoints — larger on desktop, tighter on mobile. \nIncrease for a more premium, spacious feel. \n| ai-group:density | ai-impact:high",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:105:1009",
+        "com.figma.scopes": [
+          "GAP"
+        ]
+      }
+    },
+    "gutter": {
+      "$type": "number",
+      "$value": 20,
+      "$description": "Space between columns in the layout grid. \nControls visual separation between major content areas. \nConsistent across all content inside the grid. \nIncrease to create more distinct column separation. \n| ai-group:density | ai-impact:medium",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:105:1010",
+        "com.figma.scopes": [
+          "GAP"
+        ]
+      }
+    },
+    "columns": {
+      "$type": "number",
+      "$value": 8,
+      "$description": "Number of columns in the layout grid. \nDefines the structural skeleton of every screen. \nTypically 12 on desktop, 8 on tablet, 4 on mobile. \nChanging this affects how components snap to the grid. \n| ai-group:structure | ai-impact:high",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:105:1011",
+        "com.figma.scopes": [
+          "GAP"
+        ]
+      }
+    }
+  },
+  "workspace": {
+    "width": {
+      "$type": "number",
+      "$value": 768,
+      "$description": "The active working area width for app interfaces. \nUsed in dashboard and tool layouts where content \nneeds a defined working zone. \n| ai-group:structure | ai-impact:medium",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:143:16069",
+        "com.figma.scopes": [
+          "WIDTH_HEIGHT"
+        ]
+      }
+    },
+    "min-width": {
+      "$type": "number",
+      "$value": 640,
+      "$description": "Minimum width before the workspace starts to break. \nBelow this value horizontal scrolling begins. \nDo not set lower than the smallest supported viewport. \n| ai-group:structure | ai-impact:low",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:144:16147",
+        "com.figma.scopes": [
+          "WIDTH_HEIGHT"
+        ]
+      }
+    },
+    "max-width": {
+      "$type": "number",
+      "$value": 1024,
+      "$description": "Maximum width the workspace expands to on large screens. \nPrevents content from becoming too wide on ultra-wide displays. \n| ai-group:structure | ai-impact:medium",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:144:16148",
+        "com.figma.scopes": [
+          "WIDTH_HEIGHT"
+        ]
+      }
+    }
+  },
+  "canvas": {
+    "min-width": {
+      "$type": "number",
+      "$value": 696,
+      "$description": "Minimum supported content width. \nBelow this the layout is not guaranteed to work correctly. \n| ai-group:structure | ai-impact:low",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:144:16151",
+        "com.figma.scopes": [
+          "WIDTH_HEIGHT"
+        ]
+      }
+    },
+    "max-width": {
+      "$type": "number",
+      "$value": 1080,
+      "$description": "Maximum width for reading and content-focused layouts. \nUsed for article pages, forms, onboarding flows. \nKeeps line lengths comfortable for reading. \nNarrower than workspace — used when focus matters more than space. \n| ai-group:structure | ai-impact:medium",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:144:16150",
+        "com.figma.scopes": [
+          "WIDTH_HEIGHT"
+        ]
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "tablet"
+  }
+}

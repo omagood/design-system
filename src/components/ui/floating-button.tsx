@@ -32,7 +32,7 @@ const floatingButtonVariants = cva(
           'py-[var(--inset-component-lg-y)]',
           'text-[length:var(--typography-size-label-medium)]',
           'leading-[var(--typography-line-height-label-medium)]',
-          'gap-[var(--spacing-space-8px)]',
+          'gap-[var(--gap-inline-default)]',
           '[&_svg]:size-6',
         ],
         md: [
@@ -40,7 +40,7 @@ const floatingButtonVariants = cva(
           'py-[var(--inset-component-md-y)]',
           'text-[length:var(--typography-size-label-medium)]',
           'leading-[var(--typography-line-height-label-medium)]',
-          'gap-[var(--spacing-space-8px)]',
+          'gap-[var(--gap-inline-default)]',
           '[&_svg]:size-5',
         ],
       },

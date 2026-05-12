@@ -6,7 +6,7 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "storybook", "--", "--no-open"],
       "port": 6006,
-      "cwd": "/Users/art/Documents/Claude/Projects/Design system"
+      "cwd": "."
     }
   ]
 }

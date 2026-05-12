@@ -1,19 +1,9 @@
 {
-  "font-family": {
-    "$type": "string",
-    "$value": "Plus Jakarta Sans",
-    "$extensions": {
-      "com.figma.variableId": "VariableID:394:6575",
-      "com.figma.scopes": [
-        "ALL_SCOPES"
-      ],
-      "com.figma.type": "string"
-    }
-  },
   "weight": {
     "display": {
       "$type": "number",
       "$value": 700,
+      "$description": "Font weight for display-scale text. Heavy weight commands maximum visual authority.\n| ai-group:typography | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17090",
         "com.figma.scopes": [
@@ -24,6 +14,7 @@
     "heading": {
       "$type": "number",
       "$value": 700,
+      "$description": "Font weight for all heading levels. Creates clear hierarchy above body text.\n| ai-group:typography | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17076",
         "com.figma.scopes": [
@@ -34,6 +25,7 @@
     "label": {
       "$type": "number",
       "$value": 600,
+      "$description": "Font weight for UI labels, button text, form labels, navigation items.\nSlightly lighter than heading — readable at small sizes.\n| ai-group:typography | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17080",
         "com.figma.scopes": [
@@ -44,6 +36,7 @@
     "paragraph": {
       "$type": "number",
       "$value": 400,
+      "$description": "Font weight for body copy and long-form reading content. Regular weight maximizes legibility.\n| ai-group:typography | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17083",
         "com.figma.scopes": [
@@ -56,6 +49,7 @@
     "display-large": {
       "$type": "number",
       "$value": 96,
+      "$description": "Largest typographic scale — hero headlines on marketing and landing pages only.\nCreates maximum visual impact. Use sparingly — one per screen maximum.\n| ai-group:typography | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17098",
         "com.figma.scopes": [
@@ -66,6 +60,7 @@
     "display-medium": {
       "$type": "number",
       "$value": 64,
+      "$description": "Large hero text — section heroes, feature announcements, splash screens.\n| ai-group:typography | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17097",
         "com.figma.scopes": [
@@ -76,6 +71,7 @@
     "display-small": {
       "$type": "number",
       "$value": 48,
+      "$description": "Smallest display scale — prominent page titles in editorial or marketing context.\n| ai-group:typography | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17088",
         "com.figma.scopes": [
@@ -86,6 +82,7 @@
     "heading-xxlarge": {
       "$type": "number",
       "$value": 40,
+      "$description": "Top-level page heading — the H1 of product interfaces.\nOne per page maximum.\n| ai-group:typography | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17091",
         "com.figma.scopes": [
@@ -96,6 +93,7 @@
     "heading-xlarge": {
       "$type": "number",
       "$value": 36,
+      "$description": "Major section heading — primary content block titles.\n| ai-group:typography | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17094",
         "com.figma.scopes": [
@@ -106,6 +104,7 @@
     "heading-large": {
       "$type": "number",
       "$value": 32,
+      "$description": "Section heading — secondary content blocks, dashboard panel titles.\n| ai-group:typography | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17096",
         "com.figma.scopes": [
@@ -116,6 +115,7 @@
     "heading-medium": {
       "$type": "number",
       "$value": 28,
+      "$description": "Sub-section heading — card titles, modal headers, drawer titles.\n| ai-group:typography | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17093",
         "com.figma.scopes": [
@@ -126,6 +126,7 @@
     "heading-small": {
       "$type": "number",
       "$value": 24,
+      "$description": "Small section header — sidebar sections, grouped form labels, list headers.\n| ai-group:typography | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17040",
         "com.figma.scopes": [
@@ -136,6 +137,7 @@
     "heading-xsmall": {
       "$type": "number",
       "$value": 20,
+      "$description": "Micro heading — compact UI labels that need heading weight, table column headers.\n| ai-group:typography | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17092",
         "com.figma.scopes": [
@@ -146,6 +148,7 @@
     "label-large": {
       "$type": "number",
       "$value": 18,
+      "$description": "Large UI label — prominent button text, tab labels, large form labels.\n| ai-group:typography | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17085",
         "com.figma.scopes": [
@@ -156,6 +159,7 @@
     "label-medium": {
       "$type": "number",
       "$value": 16,
+      "$description": "Default UI label — standard button text, input labels, navigation items.\nMost common label size in the system.\n| ai-group:typography | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17073",
         "com.figma.scopes": [
@@ -166,6 +170,7 @@
     "label-small": {
       "$type": "number",
       "$value": 14,
+      "$description": "Small UI label — secondary button text, badge text, small tag labels.\n| ai-group:typography | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17095",
         "com.figma.scopes": [
@@ -176,6 +181,7 @@
     "label-xsmall": {
       "$type": "number",
       "$value": 12,
+      "$description": "Micro label — status indicators, timestamps in compact views, annotation text.\n| ai-group:typography | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17082",
         "com.figma.scopes": [
@@ -186,6 +192,7 @@
     "paragraph-large": {
       "$type": "number",
       "$value": 18,
+      "$description": "Large body text — introductory paragraphs, feature descriptions, lead copy.\n| ai-group:typography | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17062",
         "com.figma.scopes": [
@@ -196,6 +203,7 @@
     "paragraph-medium": {
       "$type": "number",
       "$value": 16,
+      "$description": "Default body text — standard reading content, descriptions, help text.\nMost common paragraph size in the system.\n| ai-group:typography | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17078",
         "com.figma.scopes": [
@@ -206,6 +214,7 @@
     "paragraph-small": {
       "$type": "number",
       "$value": 14,
+      "$description": "Small body text — secondary descriptions, helper text below inputs, footnotes.\n| ai-group:typography | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17069",
         "com.figma.scopes": [
@@ -216,6 +225,7 @@
     "paragraph-xsmall": {
       "$type": "number",
       "$value": 12,
+      "$description": "Micro body text — legal fine print, metadata, very compact information density.\n| ai-group:typography | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:144:17084",
         "com.figma.scopes": [
@@ -224,7 +234,7 @@
       }
     }
   },
-  "line height": {
+  "line-height": {
     "display-large": {
       "$type": "number",
       "$value": 112,
@@ -396,7 +406,18 @@
       }
     }
   },
+  "font-family": {
+    "$type": "string",
+    "$value": "Plus Jakarta Sans",
+    "$description": "Primary typeface for all text in the system. \nChanging this shifts the entire personality — from neutral to expressive or editorial.\n| ai-group:brand | ai-impact:high",
+    "$extensions": {
+      "com.figma.variableId": "VariableID:394:6575",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ]
+    }
+  },
   "$extensions": {
-    "com.figma.modeName": "Tablet"
+    "com.figma.modeName": "tablet"
   }
 }

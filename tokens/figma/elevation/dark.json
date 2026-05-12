@@ -1,8 +1,9 @@
 {
-  "shadow-small": {
-    "shadow-small-blur-1": {
+  "sm": {
+    "blur-1": {
       "$type": "number",
-      "$value": 0,
+      "$value": 3,
+      "$description": "Component values of soft elevation shadow — used by cards and resting panels.\nDo not use directly — compose via elevation alias tokens.\n| ai-group:depth | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8190",
         "com.figma.scopes": [
@@ -10,9 +11,10 @@
         ]
       }
     },
-    "shadow-small-blur-2": {
+    "blur-2": {
       "$type": "number",
-      "$value": 0,
+      "$value": 6,
+      "$description": "Component values of soft elevation shadow — used by cards and resting panels.\nDo not use directly — compose via elevation alias tokens.\n| ai-group:depth | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8191",
         "com.figma.scopes": [
@@ -20,9 +22,10 @@
         ]
       }
     },
-    "shadow-small-y-1": {
+    "y-1": {
       "$type": "number",
-      "$value": 0,
+      "$value": 1,
+      "$description": "Component values of soft elevation shadow — used by cards and resting panels.\nDo not use directly — compose via elevation alias tokens.\n| ai-group:depth | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8192",
         "com.figma.scopes": [
@@ -30,9 +33,10 @@
         ]
       }
     },
-    "shadow-small-y-2": {
+    "y-2": {
       "$type": "number",
-      "$value": 0,
+      "$value": 3,
+      "$description": "Component values of soft elevation shadow — used by cards and resting panels.\nDo not use directly — compose via elevation alias tokens.\n| ai-group:depth | ai-impact:low",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8193",
         "com.figma.scopes": [
@@ -41,10 +45,61 @@
       }
     }
   },
+  "shadow-soft": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        1,
+        1,
+        1
+      ],
+      "alpha": 0.20000000298023224,
+      "hex": "#FFFFFF"
+    },
+    "$extensions": {
+      "com.figma.variableId": "VariableID:138:8347",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.aliasData": {
+        "targetVariableId": "VariableID:150:1982",
+        "targetVariableName": "colors/light-opacity-400",
+        "targetVariableSetId": "VariableCollectionId:91:1758",
+        "targetVariableSetName": "primitives"
+      }
+    }
+  },
   "shadow-medium": {
-    "shadow-medium-blur-1": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        1,
+        1,
+        1
+      ],
+      "alpha": 0.23999999463558197,
+      "hex": "#FFFFFF"
+    },
+    "$extensions": {
+      "com.figma.variableId": "VariableID:138:8351",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.aliasData": {
+        "targetVariableId": "VariableID:150:1983",
+        "targetVariableName": "colors/light-opacity-500",
+        "targetVariableSetId": "VariableCollectionId:91:1758",
+        "targetVariableSetName": "primitives"
+      }
+    }
+  },
+  "md": {
+    "blur-1": {
       "$type": "number",
-      "$value": 0,
+      "$value": 8,
+      "$description": "Component values of medium elevation shadow — dropdowns, popovers, tooltips.\n| ai-group:depth | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8195",
         "com.figma.scopes": [
@@ -52,9 +107,10 @@
         ]
       }
     },
-    "shadow-medium-blur-2": {
+    "blur-2": {
       "$type": "number",
-      "$value": 0,
+      "$value": 10,
+      "$description": "Component values of medium elevation shadow — dropdowns, popovers, tooltips.\n| ai-group:depth | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8196",
         "com.figma.scopes": [
@@ -62,9 +118,10 @@
         ]
       }
     },
-    "shadow-medium-y-1": {
+    "y-1": {
       "$type": "number",
-      "$value": 0,
+      "$value": 1,
+      "$description": "Component values of medium elevation shadow — dropdowns, popovers, tooltips.\n| ai-group:depth | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8197",
         "com.figma.scopes": [
@@ -72,9 +129,10 @@
         ]
       }
     },
-    "shadow-y-l2-2": {
+    "y-2": {
       "$type": "number",
-      "$value": 0,
+      "$value": 4,
+      "$description": "Component values of medium elevation shadow — dropdowns, popovers, tooltips.\n| ai-group:depth | ai-impact:medium",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8198",
         "com.figma.scopes": [
@@ -83,10 +141,11 @@
       }
     }
   },
-  "shadow-large": {
-    "shadow-large-blur-2": {
+  "lg": {
+    "blur-2": {
       "$type": "number",
-      "$value": 0,
+      "$value": 24,
+      "$description": "Component values of strong elevation shadow — modals, dialogs, command palettes.\n| ai-group:depth | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8201",
         "com.figma.scopes": [
@@ -94,9 +153,10 @@
         ]
       }
     },
-    "shadow-large-blur-1": {
+    "blur-1": {
       "$type": "number",
-      "$value": 0,
+      "$value": 16,
+      "$description": "Component values of strong elevation shadow — modals, dialogs, command palettes.\n| ai-group:depth | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8202",
         "com.figma.scopes": [
@@ -104,9 +164,10 @@
         ]
       }
     },
-    "shadow-large-y-1": {
+    "y-1": {
       "$type": "number",
-      "$value": 0,
+      "$value": 2,
+      "$description": "Component values of strong elevation shadow — modals, dialogs, command palettes.\n| ai-group:depth | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8203",
         "com.figma.scopes": [
@@ -114,9 +175,10 @@
         ]
       }
     },
-    "shadow-large-y-2": {
+    "y-2": {
       "$type": "number",
-      "$value": 0,
+      "$value": 16,
+      "$description": "Component values of strong elevation shadow — modals, dialogs, command palettes.\n| ai-group:depth | ai-impact:high",
       "$extensions": {
         "com.figma.variableId": "VariableID:136:8204",
         "com.figma.scopes": [
@@ -126,6 +188,6 @@
     }
   },
   "$extensions": {
-    "com.figma.modeName": "Dark"
+    "com.figma.modeName": "dark"
   }
 }

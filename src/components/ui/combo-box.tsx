@@ -129,7 +129,7 @@ export function ComboBox({
     <div
       ref={containerRef}
       className={cn(
-        'relative flex flex-col gap-[var(--spacing-space-4px)] w-full',
+        'relative flex flex-col gap-[var(--gap-stack-tight)] w-full',
         '[font-family:var(--typography-font-family)]',
         className,
       )}
@@ -225,7 +225,7 @@ export function ComboBox({
         <span
           aria-hidden="true"
           className={cn(
-            'shrink-0 ml-[var(--spacing-space-8px)]',
+            'shrink-0 ml-[var(--gap-inline-default)]',
             disabled
               ? 'text-[color:var(--content-disabled)]'
               : 'text-[color:var(--content-secondary)]',
@@ -239,7 +239,7 @@ export function ComboBox({
       {open && (
         <div
           role="presentation"
-          className="absolute top-full left-0 right-0 z-50 mt-[var(--spacing-space-4px)]"
+          className="absolute top-full left-0 right-0 z-50 mt-[var(--gap-stack-tight)]"
         >
           <Dropdown
             variant="multi-select"
@@ -263,7 +263,7 @@ export function ComboBox({
 
       {/* ── Helper text ───────────────────────────────────────────────────── */}
       {helperText && (
-        <div className="flex gap-[var(--spacing-space-4px)] items-center w-full px-[var(--inset-component-md-x)]">
+        <div className="flex gap-[var(--gap-stack-tight)] items-center w-full px-[var(--inset-component-md-x)]">
           <Icon
             icon={AlertCircleIcon}
             size={16}
