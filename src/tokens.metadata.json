@@ -415,6 +415,102 @@
     "collection": "colors",
     "mode": "root"
   },
+  "--elevation-sm-blur-1": {
+    "cssVar": "--elevation-sm-blur-1",
+    "description": "Component values of soft elevation shadow — used by cards and resting panels.\nDo not use directly — compose via elevation alias tokens. ai-impact:low",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-sm-blur-2": {
+    "cssVar": "--elevation-sm-blur-2",
+    "description": "Component values of soft elevation shadow — used by cards and resting panels.\nDo not use directly — compose via elevation alias tokens. ai-impact:low",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-sm-y-1": {
+    "cssVar": "--elevation-sm-y-1",
+    "description": "Component values of soft elevation shadow — used by cards and resting panels.\nDo not use directly — compose via elevation alias tokens. ai-impact:low",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-sm-y-2": {
+    "cssVar": "--elevation-sm-y-2",
+    "description": "Component values of soft elevation shadow — used by cards and resting panels.\nDo not use directly — compose via elevation alias tokens. ai-impact:low",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-md-blur-1": {
+    "cssVar": "--elevation-md-blur-1",
+    "description": "Component values of medium elevation shadow — dropdowns, popovers, tooltips. ai-impact:medium",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-md-blur-2": {
+    "cssVar": "--elevation-md-blur-2",
+    "description": "Component values of medium elevation shadow — dropdowns, popovers, tooltips. ai-impact:medium",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-md-y-1": {
+    "cssVar": "--elevation-md-y-1",
+    "description": "Component values of medium elevation shadow — dropdowns, popovers, tooltips. ai-impact:medium",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-md-y-2": {
+    "cssVar": "--elevation-md-y-2",
+    "description": "Component values of medium elevation shadow — dropdowns, popovers, tooltips. ai-impact:medium",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-lg-blur-2": {
+    "cssVar": "--elevation-lg-blur-2",
+    "description": "Component values of strong elevation shadow — modals, dialogs, command palettes. ai-impact:high",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-lg-blur-1": {
+    "cssVar": "--elevation-lg-blur-1",
+    "description": "Component values of strong elevation shadow — modals, dialogs, command palettes. ai-impact:high",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-lg-y-1": {
+    "cssVar": "--elevation-lg-y-1",
+    "description": "Component values of strong elevation shadow — modals, dialogs, command palettes. ai-impact:high",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
+  "--elevation-lg-y-2": {
+    "cssVar": "--elevation-lg-y-2",
+    "description": "Component values of strong elevation shadow — modals, dialogs, command palettes. ai-impact:high",
+    "aiGroup": "depth",
+    "aiImpact": null,
+    "collection": "elevation",
+    "mode": "root"
+  },
   "--corner-radius-none": {
     "cssVar": "--corner-radius-none",
     "description": "No rounding — full-bleed elements, edge-to-edge banners, explicitly sharp components. | ai-group:roundness",
@@ -821,6 +917,182 @@
     "aiGroup": "structure",
     "aiImpact": null,
     "collection": "layout",
+    "mode": "root"
+  },
+  "--typography-font-family": {
+    "cssVar": "--typography-font-family",
+    "description": "Primary typeface for all text in the system. Changing this shifts the entire personality — from neutral to expressive or editorial. ai-impact:high",
+    "aiGroup": "brand",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-weight-display": {
+    "cssVar": "--typography-weight-display",
+    "description": "Font weight for display-scale text. Heavy weight commands maximum visual authority. ai-impact:medium",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-weight-heading": {
+    "cssVar": "--typography-weight-heading",
+    "description": "Font weight for all heading levels. Creates clear hierarchy above body text. ai-impact:medium",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-weight-label": {
+    "cssVar": "--typography-weight-label",
+    "description": "Font weight for UI labels, button text, form labels, navigation items.\nSlightly lighter than heading — readable at small sizes. ai-impact:medium",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-weight-paragraph": {
+    "cssVar": "--typography-weight-paragraph",
+    "description": "Font weight for body copy and long-form reading content. Regular weight maximizes legibility. ai-impact:low",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-display-large": {
+    "cssVar": "--typography-size-display-large",
+    "description": "Largest typographic scale — hero headlines on marketing and landing pages only.\nCreates maximum visual impact. Use sparingly — one per screen maximum. ai-impact:high",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-display-medium": {
+    "cssVar": "--typography-size-display-medium",
+    "description": "Large hero text — section heroes, feature announcements, splash screens. ai-impact:high",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-display-small": {
+    "cssVar": "--typography-size-display-small",
+    "description": "Smallest display scale — prominent page titles in editorial or marketing context. ai-impact:high",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-heading-xxlarge": {
+    "cssVar": "--typography-size-heading-xxlarge",
+    "description": "Top-level page heading — the H1 of product interfaces.\nOne per page maximum. ai-impact:high",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-heading-xlarge": {
+    "cssVar": "--typography-size-heading-xlarge",
+    "description": "Major section heading — primary content block titles. ai-impact:high",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-heading-large": {
+    "cssVar": "--typography-size-heading-large",
+    "description": "Section heading — secondary content blocks, dashboard panel titles. ai-impact:medium",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-heading-medium": {
+    "cssVar": "--typography-size-heading-medium",
+    "description": "Sub-section heading — card titles, modal headers, drawer titles. ai-impact:medium",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-heading-small": {
+    "cssVar": "--typography-size-heading-small",
+    "description": "Small section header — sidebar sections, grouped form labels, list headers. ai-impact:medium",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-heading-xsmall": {
+    "cssVar": "--typography-size-heading-xsmall",
+    "description": "Micro heading — compact UI labels that need heading weight, table column headers. ai-impact:medium",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-label-large": {
+    "cssVar": "--typography-size-label-large",
+    "description": "Large UI label — prominent button text, tab labels, large form labels. ai-impact:low",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-label-medium": {
+    "cssVar": "--typography-size-label-medium",
+    "description": "Default UI label — standard button text, input labels, navigation items.\nMost common label size in the system. ai-impact:low",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-label-small": {
+    "cssVar": "--typography-size-label-small",
+    "description": "Small UI label — secondary button text, badge text, small tag labels. ai-impact:low",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-label-xsmall": {
+    "cssVar": "--typography-size-label-xsmall",
+    "description": "Micro label — status indicators, timestamps in compact views, annotation text. ai-impact:low",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-paragraph-large": {
+    "cssVar": "--typography-size-paragraph-large",
+    "description": "Large body text — introductory paragraphs, feature descriptions, lead copy. ai-impact:low",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-paragraph-medium": {
+    "cssVar": "--typography-size-paragraph-medium",
+    "description": "Default body text — standard reading content, descriptions, help text.\nMost common paragraph size in the system. ai-impact:low",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-paragraph-small": {
+    "cssVar": "--typography-size-paragraph-small",
+    "description": "Small body text — secondary descriptions, helper text below inputs, footnotes. ai-impact:low",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
+    "mode": "root"
+  },
+  "--typography-size-paragraph-xsmall": {
+    "cssVar": "--typography-size-paragraph-xsmall",
+    "description": "Micro body text — legal fine print, metadata, very compact information density. ai-impact:low",
+    "aiGroup": "typography",
+    "aiImpact": null,
+    "collection": "typography",
     "mode": "root"
   }
 }

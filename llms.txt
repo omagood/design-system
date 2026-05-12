@@ -41,9 +41,9 @@ They are available globally after importing `src/global.css`.
 
 Examples:
 - `--typography-size-label-medium`   → typography collection, size group, label-medium variant
-- `--corner-radius-corner-full`      → shapes collection, corner-radius group, full variant
+- `--corner-radius-full`             → shapes collection, corner-radius group, full variant
 - `--spacing-space-16px`             → spacing collection, space group, 16px step
-- `--inset-component-inset-component-md-x` → spacing collection, component inset, md size, x axis
+- `--inset-component-md-x`          → spacing collection, component inset, md size, x axis
 
 ### Token Collections
 
@@ -51,13 +51,14 @@ Examples:
 ```
 --background-screen          page background
 --background-elevated        card / modal background
---background-overlay         scrim behind modals (rgba)
+--background-scrim           semi-transparent scrim behind modals (rgba)
 
 --surface-primary            white surface
 --surface-secondary          slightly tinted surface
 --surface-tertiary           input / field background
 --surface-disabled           disabled element background
 --surface-accent             accent-tinted surface
+--surface-floating           floating panel / popover background
 
 --action-primary             primary button fill (black in light, white in dark)
 --action-primary-inverse     text on primary button (white in light, black in dark)
@@ -76,9 +77,9 @@ Examples:
 --border-outline             input borders, card outlines
 --border-action              active / focused border
 
---state-hover-overlay        white/black 20% overlay — use on dark/filled/colored backgrounds (FAB, filled checkbox, chips)
---state-pressed-overlay      white/black 32% overlay — use on dark/filled/colored backgrounds
---state-hover-fill           solid hover bg — use on light/empty backgrounds (list rows, secondary/ghost buttons, text fields, dropdown items)
+--state-hover-overlay        semi-transparent overlay — use on dark/filled/colored backgrounds (FAB, filled checkbox, chips)
+--state-pressed-overlay      semi-transparent overlay — use on dark/filled/colored backgrounds
+--state-hover-fill           solid hover bg — use on light/empty backgrounds (list rows, secondary/ghost buttons, dropdown items)
 --state-pressed-fill         solid pressed bg — use on light/empty backgrounds
 --state-focus-ring           focus ring color (#068BEE)
 --state-selected             selected row/item background
@@ -147,58 +148,75 @@ Examples:
 --spacing-space-40px   40px
 --spacing-space-48px   48px
 --spacing-space-64px   64px
+--spacing-space-80px   80px
 ```
 
 #### Component Insets (padding inside interactive components)
 ```
---inset-component-inset-component-sm-x   12px   (responsive: 8px tablet/mobile)
---inset-component-inset-component-sm-y    8px   (responsive: 4px tablet/mobile)
---inset-component-inset-component-md-x   16px   (responsive: 12px tablet/mobile)
---inset-component-inset-component-md-y   12px   (responsive: 8px tablet/mobile)
---inset-component-inset-component-lg-x   24px   (responsive: 16px tablet/mobile)
---inset-component-inset-component-lg-y   16px   (responsive: 12px tablet/mobile)
+--inset-component-sm-x   12px   (responsive: 8px tablet/mobile)
+--inset-component-sm-y    8px   (responsive: 4px tablet/mobile)
+--inset-component-md-x   16px   (responsive: 12px tablet/mobile)
+--inset-component-md-y   12px   (responsive: 8px tablet/mobile)
+--inset-component-lg-x   24px   (responsive: 16px tablet/mobile)
+--inset-component-lg-y   16px   (responsive: 12px tablet/mobile)
+
+--inset-inline-sm-x / -sm-y     inline element insets (small)
+--inset-inline-md-x / -md-y     inline element insets (medium)
+--inset-inline-lg-x / -lg-y     inline element insets (large)
+
+--inset-container-sm / -md / -lg / -xl   page container padding
+--inset-section-sm / -md / -lg           section vertical spacing
 ```
 
 #### Gap
 ```
---gap-gap-related-tight      8px    tightly related siblings (icon + label, avatar + name)
---gap-gap-related-default    16px   standard related-element gap
+--gap-related-tight      8px    tightly related siblings (icon + label, avatar + name)
+--gap-related-default    16px   standard related-element gap
 
---gap-gap-stack-tight        8px    vertical stack tight
---gap-gap-stack-default      16px   vertical stack default
---gap-gap-stack-loose        24px   vertical stack loose
---gap-gap-stack-section      64px   between page sections
+--gap-stack-tight        8px    vertical stack tight
+--gap-stack-default      16px   vertical stack default
+--gap-stack-loose        24px   vertical stack loose
+--gap-stack-section      64px   between page sections
 
---gap-gap-inline-tight       8px    tightly packed inline elements (tags, avatars)
---gap-gap-inline-default     12px   standard toolbar/nav gap
---gap-gap-inline-loose       16px   generous top-level nav gap
+--gap-inline-tight       8px    tightly packed inline elements (tags, avatars)
+--gap-inline-default     12px   standard toolbar/nav gap
+--gap-inline-loose       16px   generous top-level nav gap
+
+--gap-items-tight        8px    items within a group (tight)
+--gap-items-default      12px   items within a group (default)
+--gap-items-comfortable  16px   items within a group (comfortable)
 ```
 
 #### Shapes
 ```
---corner-radius-corner-none      0px
---corner-radius-corner-xsmall    2px
---corner-radius-corner-small     4px
---corner-radius-corner-medium    8px    ← default cards, inputs, buttons
---corner-radius-corner-large     12px
---corner-radius-corner-xlarge    16px
---corner-radius-corner-2xlarge   24px
---corner-radius-corner-full      999px  ← pills, FAB
+--corner-radius-none      0px
+--corner-radius-xsmall    2px
+--corner-radius-small     4px
+--corner-radius-medium    8px    ← default cards, inputs, buttons
+--corner-radius-large     12px
+--corner-radius-xlarge    16px
+--corner-radius-2xlarge   24px
+--corner-radius-full      9999px ← pills, FAB
 
---stroke-stroke-hairline         0.5px
---stroke-stroke-thin             1px
---stroke-stroke-medium           1.5px  ← secondary button border
---stroke-stroke-bold             2px    ← focus / error borders
+--stroke-hairline         0.5px
+--stroke-thin             1px
+--stroke-medium           1.5px  ← secondary button border
+--stroke-bold             2px    ← focus / error borders
 
---focus-focus-ring-width         2px
---focus-focus-ring-offset        2px
+--focus-ring-width        2px
+--focus-ring-offset       2px
 ```
 
 #### Elevation / Shadows
 ```
---shadow-shadow-soft     rgba(0,0,0,0.08)   shadow color, soft layer
---shadow-shadow-medium   rgba(0,0,0,0.12)   shadow color, medium layer
---shadow-shadow-strong   rgba(0,0,0,0.16)   shadow color, strong layer
+--elevation-soft     rgba(0,0,0,0.08)   shadow color, soft layer
+--elevation-medium   rgba(0,0,0,0.12)   shadow color, medium layer
+--elevation-strong   rgba(0,0,0,0.16)   shadow color, strong layer
+
+Dimension tokens (compose into box-shadow, do not use directly):
+  --elevation-sm-y-1 / -sm-y-2 / -sm-blur-1 / -sm-blur-2   soft shadow geometry
+  --elevation-md-y-1 / -md-y-2 / -md-blur-1 / -md-blur-2   medium shadow geometry
+  --elevation-lg-y-1 / -lg-y-2 / -lg-blur-1 / -lg-blur-2   strong shadow geometry
 
 Shadow utilities (defined in global.css, use as Tailwind class):
   shadow-elevation-small    subtle shadow (disabled state)
@@ -207,8 +225,8 @@ Shadow utilities (defined in global.css, use as Tailwind class):
 
 #### Brand
 ```
---brand-brand-primary    #AACB42   brand green
---brand-brand-secondary  #7A7A7C   brand grey
+--brand-primary    #AACB42   brand green
+--brand-secondary  #7A7A7C   brand grey
 ```
 
 ---
@@ -355,7 +373,7 @@ Border states (inset box-shadow, layout-stable):
    ```tsx
    // ✅ correct
    className="px-[var(--spacing-space-16px)] text-[color:var(--content-primary)]"
-   className="rounded-[var(--corner-radius-corner-medium)]"
+   className="rounded-[var(--corner-radius-medium)]"
 
    // ❌ wrong
    className="px-4 text-gray-900 rounded-md"
@@ -389,7 +407,7 @@ Border states (inset box-shadow, layout-stable):
 5. Use inset box-shadow for borders on components whose height must stay stable:
    ```css
    /* ✅ inset shadow — doesn't affect layout */
-   box-shadow: inset 0 0 0 var(--stroke-stroke-thin) var(--border-outline);
+   box-shadow: inset 0 0 0 var(--stroke-thin) var(--border-outline);
 
    /* ❌ border-width pushes siblings when it changes */
    border: 1px solid var(--border-outline);
@@ -400,7 +418,7 @@ Border states (inset box-shadow, layout-stable):
    ```css
    @layer utilities {
      .my-border-active {
-       box-shadow: inset 0 0 0 var(--stroke-stroke-bold) var(--action-primary);
+       box-shadow: inset 0 0 0 var(--stroke-bold) var(--action-primary);
      }
    }
    ```
@@ -438,13 +456,13 @@ const myComponentVariants = cva(
     // Base classes — all token-based
     '[font-family:var(--typography-font-family)]',
     '[font-weight:var(--typography-weight-label)]',
-    'rounded-[var(--corner-radius-corner-medium)]',
-    'transition-colors duration-150',   // duration-150: no token yet, flag it
+    'rounded-[var(--corner-radius-medium)]',
+    'transition-[box-shadow] duration-150',   // duration-150: no token yet, flag it
     // Focus ring — always include for accessibility
     'focus-visible:outline-none',
-    'focus-visible:ring-[length:var(--focus-focus-ring-width)]',
+    'focus-visible:ring-[length:var(--focus-ring-width)]',
     'focus-visible:ring-[var(--state-focus-ring)]',
-    'focus-visible:ring-offset-[var(--focus-focus-ring-offset)]',
+    'focus-visible:ring-offset-[var(--focus-ring-offset)]',
   ],
   {
     variants: {
@@ -453,8 +471,8 @@ const myComponentVariants = cva(
       },
       size: {
         md: [
-          'px-[var(--inset-component-inset-component-md-x)]',
-          'py-[var(--inset-component-inset-component-md-y)]',
+          'px-[var(--inset-component-md-x)]',
+          'py-[var(--inset-component-md-y)]',
           'text-[length:var(--typography-size-label-medium)]',
           'leading-[var(--typography-line-height-label-medium)]',
         ],
@@ -531,6 +549,110 @@ Token collections in Figma:
 - `layout` → grid (margin, gutter, columns), workspace, canvas dimensions per breakpoint
   CSS vars: --layout-grid-margin, --layout-grid-gutter, --layout-grid-columns
             --layout-workspace-width, --layout-canvas-max-width, --layout-show-sidebar
+
+---
+
+## AI-Driven Customization
+
+> Only perform this workflow when explicitly asked to customize or theme the design system.
+
+Ambient DS can be tailored to a brand, style direction, or visual inspiration by an AI
+agent that changes token values — without touching any component code. The agent's
+instruction manual is `src/tokens.metadata.json`.
+
+### What tokens.metadata.json contains
+
+Auto-generated alongside `tokens.generated.css`. One entry per token that has a
+`$description` in the Figma source. Structure:
+
+```json
+"--surface-primary": {
+  "cssVar": "--surface-primary",
+  "description": "Default surface for cards, panels, modal bodies.",
+  "aiGroup": "expressiveness",
+  "aiImpact": "high",
+  "collection": "colors",
+  "mode": "root"
+}
+```
+
+### Token tags
+
+Each token description can carry structured tags that the agent must respect:
+
+| Tag | Meaning |
+|---|---|
+| `ai-group:xxx` | Thematic group — tells the agent which tokens to change together |
+| `ai-impact:low\|medium\|high` | How much visual change this token drives |
+| `ai-constraint:rule` | Hard rule that must not be violated (e.g. contrast ratio, size relationship) |
+| `ai-locked:true` | Never change this token under any circumstance |
+| `ai-behavior:instruction` | Specific guidance on how to derive this token's value |
+
+### ai-group reference
+
+| Group | What it controls | Typical changes |
+|---|---|---|
+| `expressiveness` | Surface and background colors — the overall mood | Brand colors, light/dark tone |
+| `brand` | Font family | Typeface swap |
+| `typography` | Font weights and sizes | Type scale, weight hierarchy |
+| `density` | Component insets, gaps, spacing scale | Compact vs spacious feel |
+| `depth` | Shadow geometry and color | Flat vs elevated visual style |
+| `feedback` | Sentiment colors (positive, warning, negative, neutral) | Status color palette |
+| `expression` | Categorical accent colors (blue, magenta, teal, purple, lime) | Tag and badge palette |
+| `weight` | Border colors (divider, outline) | Subtle vs strong borders |
+| `accessibility` | Focus ring color | Brand-tinted focus rings |
+| `interactivity` | Selected state background | Row/item selection color |
+| `structure` | Layout grid dimensions | Canvas and workspace sizing |
+| `locked` | System-defined states that must never change | — never change these |
+
+### ai-impact priority order
+
+When a prompt is vague, change high-impact tokens first and stop when the goal is met:
+
+1. **high** — `--background-screen`, `--action-primary`, `--surface-primary`, `--typography-font-family` — immediately visible everywhere
+2. **medium** — `--border-outline`, `--content-secondary`, sentiment colors — visible in context
+3. **low** — shadow geometry, gap values, fine-grained spacing — subtle refinement only
+
+### Protected tokens — never change
+
+These tokens are system-defined and functionally required. Changing them breaks
+accessibility or component behavior:
+
+| Token | Reason |
+|---|---|
+| `--surface-disabled` | Must communicate non-interactivity unambiguously |
+| `--action-distructive` | Always red-family; accessibility constraint |
+| `--state-hover-overlay` | Interaction feedback — system-defined opacity |
+| `--state-hover-fill` | Interaction feedback — system-defined |
+| `--state-pressed-overlay` | Interaction feedback — system-defined opacity |
+| `--state-pressed-fill` | Interaction feedback — system-defined |
+| `--state-focus-ring` | WCAG focus visibility — minimum 3:1 contrast required |
+| `--focus-ring-width` | WCAG minimum 2px |
+| `--focus-ring-offset` | WCAG minimum 2px |
+
+### Theming workflow
+
+1. Read `src/tokens.metadata.json` — understand every token's purpose and constraints
+2. Identify which `ai-group` tokens are relevant to the brand/style brief
+3. Start with `ai-impact:high` tokens in `expressiveness` and `brand` groups
+4. For each token you change, verify all `ai-constraint` rules are satisfied
+5. Never touch tokens with `ai-locked:true` or `ai-group:locked`
+6. Output a diff of changed token values in the Figma JSON format so the user can apply them
+
+### Example prompt
+
+> "Tailor Ambient DS to a fintech brand called Vault. Primary color is deep navy #1B2A4A,
+> accent is gold #C9A84C. Tone should be trustworthy and precise — tight spacing,
+> conservative radius, strong borders."
+
+Expected agent behavior:
+- Sets `--action-primary` → `#1B2A4A`, `--action-accent` → `#C9A84C`
+- Adjusts `expressiveness` group surfaces to navy-adjacent neutrals
+- Reduces `density` group insets toward the `sm` end of the scale
+- Sets `--corner-radius-medium` toward `--corner-radius-small` (4px)
+- Strengthens `weight` group (`--border-outline` → more visible)
+- Verifies all `ai-constraint` contrast rules pass
+- Does not touch any `locked` group tokens
 
 ---
 
